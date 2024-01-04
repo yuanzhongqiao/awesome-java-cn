@@ -1,1333 +1,1245 @@
-# Awesome Java [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
-A curated list of awesome Java frameworks, libraries and software.
-
-## Contents
-
-- [Projects](#projects)
-  - [Bean Mapping](#bean-mapping)
-  - [Build](#build)
-  - [Bytecode Manipulation](#bytecode-manipulation)
-  - [Caching](#caching)
-  - [CLI](#cli)
-  - [Cluster Management](#cluster-management)
-  - [Code Analysis](#code-analysis)
-  - [Code Coverage](#code-coverage)
-  - [Code Generators](#code-generators)
-  - [Compiler-compiler](#compiler-compiler)
-  - [Computer Vision](#computer-vision)
-  - [Configuration](#configuration)
-  - [Constraint Satisfaction Problem Solver](#constraint-satisfaction-problem-solver)
-  - [CSV](#csv)
-  - [Data Structures](#data-structures)
-  - [Database](#database)
-  - [Date and Time](#date-and-time)
-  - [Dependency Injection](#dependency-injection)
-  - [Development](#development)
-  - [Distributed Applications](#distributed-applications)
-  - [Distributed Transactions](#distributed-transactions)
-  - [Distribution](#distribution)
-  - [Document Processing](#document-processing)
-  - [Financial](#financial)
-  - [Formal Verification](#formal-verification)
-  - [Functional Programming](#functional-programming)
-  - [Game Development](#game-development)
-  - [Geospatial](#geospatial)
-  - [GUI](#gui)
-  - [High Performance](#high-performance)
-  - [HTTP Clients](#http-clients)
-  - [Hypermedia Types](#hypermedia-types)
-  - [IDE](#ide)
-  - [Imagery](#imagery)
-  - [Introspection](#introspection)
-  - [Job Scheduling](#job-scheduling)
-  - [JSON](#json)
-  - [JVM and JDK](#jvm-and-jdk)
-  - [Logging](#logging)
-  - [Machine Learning](#machine-learning)
-  - [Messaging](#messaging)
-  - [Microservice](#microservice)
-  - [Miscellaneous](#miscellaneous)
-  - [Mobile Development](#mobile-development)
-  - [Monitoring](#monitoring)
-  - [Native](#native)
-  - [Natural Language Processing](#natural-language-processing)
-  - [Networking](#networking)
-  - [ORM](#orm)
-  - [PaaS](#paas)
-  - [PDF](#pdf)
-  - [Performance analysis](#performance-analysis)
-  - [Platform](#platform)
-  - [Processes](#processes)
-  - [Reactive libraries](#reactive-libraries)
-  - [REST Frameworks](#rest-frameworks)
-  - [Science](#science)
-  - [Search](#search)
-  - [Security](#security)
-  - [Serialization](#serialization)
-  - [Server](#server)
-  - [Template Engine](#template-engine)
-  - [Testing](#testing)
-  - [Utility](#utility)
-  - [Version Managers](#version-managers)
-  - [Web Crawling](#web-crawling)
-  - [Web Frameworks](#web-frameworks)
-  - [Workflow Orchestration Engines](#workflow-orchestration-engines)
-- [Resources](#resources)
-  - [Related Awesome Lists](#related-awesome-lists)
-  - [Communities](#communities)
-  - [Frontends](#frontends)
-  - [Influential Books](#influential-books)
-  - [Podcasts and Screencasts](#podcasts-and-screencasts)
-  - [People](#people)
-  - [Websites](#websites)
-- [Contributing](#contributing)
-
-## Projects
-
-### Bean Mapping
-
-_Frameworks that ease bean mapping._
-
-- [dOOv](https://github.com/doov-io/doov) - Provides fluent API for typesafe domain model validation and mapping. It uses annotations, code generation and a type safe DSL to make bean validation and mapping fast and easy.
-- [JMapper](https://github.com/jmapper-framework/jmapper-core) - Uses byte code manipulation for lightning-fast mapping. Supports annotations and API or XML configuration.
-- [MapStruct](https://github.com/mapstruct/mapstruct) - Code generator that simplifies mappings between different bean types, based on a convention-over-configuration approach.
-- [ModelMapper](https://github.com/modelmapper/modelmapper) - Intelligent object mapping library that automatically maps objects to each other.
-- [Orika](https://github.com/orika-mapper/orika) - JavaBean-mapping framework that recursively copies (among other capabilities) data from one object to another.
-- [reMap](https://github.com/remondis-it/remap) - Lambda and method handle-based mapping which requires code and not annotations if objects have different names.
-- [Selma](https://github.com/xebia-france/selma) - Annotation processor-based bean mapper.
-
-### Build
-
-_Tools that handle the build cycle and dependencies of an application._
-
-- [Apache Maven](https://maven.apache.org) - Declarative build and dependency management that favors convention over configuration. It might be preferable to Apache Ant, which uses a rather procedural approach and can be difficult to maintain.
-- [Bazel](https://bazel.build) - Tool from Google that builds code quickly and reliably.
-- [Buck](https://github.com/facebook/buck) - Encourages the creation of small, reusable modules consisting of code and resources.
-- [Gradle](https://gradle.org) - Incremental builds programmed via Groovy instead of declaring XML. Works well with Maven's dependency management.
-
-### Bytecode Manipulation
-
-_Libraries to manipulate bytecode programmatically._
-
-- [ASM](https://asm.ow2.io) - All-purpose, low-level bytecode manipulation and analysis.
-- [Byte Buddy](https://bytebuddy.net) - Further simplifies bytecode generation with a fluent API.
-- [bytecode-viewer](https://github.com/Konloch/bytecode-viewer) - Java 8 Jar & Android APK reverse engineering suite. (GPL-3.0-only)
-- [Byteman](https://byteman.jboss.org) - Manipulate bytecode at runtime via DSL (rules); mainly for testing/troubleshooting. (LGPL-2.1-or-later)
-- [cglib](https://github.com/cglib/cglib) - Bytecode generation library.
-- [Javassist](https://github.com/jboss-javassist/javassist) - Tries to simplify bytecode editing.
-- [Maker](https://github.com/cojen/maker) - Provides low level bytecode generation.
-- [Mixin](https://github.com/SpongePowered/Mixin) - Manipulate bytecode at runtime using real Java code.
-- [Perses](https://github.com/nicolasmanic/perses) - Dynamically injects failure/latency at the bytecode level according to principles of chaos engineering.
-- [Recaf](https://www.coley.software/Recaf/) - JVM reverse engineering toolkit, essentially an IDE for Java bytecode.
-
-### Caching
-
-_Libraries that provide caching facilities._
-
-- [cache2k](https://cache2k.org) - In-memory high performance caching library.
-- [Caffeine](https://github.com/ben-manes/caffeine) - High-performance, near-optimal caching library.
-- [Ehcache](http://www.ehcache.org) - Distributed general-purpose cache.
-- [Infinispan](https://infinispan.org) - Highly concurrent key/value datastore used for caching.
-
-### CLI
-
-_Libraries for everything related to the CLI._
-
-#### Argument Parsing
-
-_Libraries to assist with parsing command line arguments._
-
-- [Airline](https://rvesse.github.io/airline/) - Annotation-based framework for parsing Git-like command-line arguments.
-- [JCommander](http://jcommander.org) - Command-line argument-parsing framework with custom types and validation via implementing interfaces.
-- [jbock](https://github.com/jbock-java/jbock) - Reflectionless command line parser.
-- [JLine](https://github.com/jline/jline3) - Includes features from modern shells like completion or history.
-- [picocli](https://picocli.info) - ANSI colors and styles in usage help with annotation-based POSIX/GNU/any syntax, subcommands, strong typing for both options and positional args.
-
-#### Text-Based User Interfaces
-
-_Libraries that provide TUI frameworks, or building blocks related functions._
-
-- [Jansi](https://github.com/fusesource/jansi) - ANSI escape codes to format console output.
-- [Jexer](https://gitlab.com/klamonte/jexer) - Advanced console (and Swing) text user interface (TUI) library, with mouse-draggable windows, built-in terminal window manager, and sixel image support. Looks like [Turbo Vision](https://en.wikipedia.org/wiki/Turbo_Vision).
-- [Text-IO](https://github.com/beryx/text-io) - Aids the creation of full console-based applications.
-- [Lanterna](https://github.com/mabe02/lanterna) - Easy console text-GUI library, similar to curses. (LGPL-3.0-only)
-
-### Cluster Management
-
-_Frameworks that can dynamically manage applications inside of a cluster._
-
-- [Apache Aurora](https://aurora.apache.org) - Mesos framework for long-running services and cron jobs.
-- [Singularity](http://getsingularity.com) - Mesos framework that makes deployment and operations easy. It supports web services, background workers, scheduled jobs, and one-off tasks.
-
-### Code Analysis
-
-_Tools that provide metrics and quality measurements._
-
-- [Checkstyle](https://github.com/checkstyle/checkstyle) - Static analysis of coding conventions and standards. (LGPL-2.1-or-later)
-- [Error Prone](https://github.com/google/error-prone) - Catches common programming mistakes as compile-time errors.
-- [Error Prone Support](https://github.com/PicnicSupermarket/error-prone-support) - Error Prone extensions: extra bug checkers and a large battery of Refaster templates.
-- [Infer](https://github.com/facebook/infer) - Modern static analysis tool for verifying the correctness of code.
-- [jQAssistant](https://jqassistant.org) - Static code analysis with Neo4J-based query language. (GPL-3.0-only)
-- [NullAway](https://github.com/uber/NullAway) - Eliminates NullPointerExceptions with low build-time overhead.
-- [PMD](https://github.com/pmd/pmd) - Source code analysis for finding bad coding practices.
-- [p3c](https://github.com/alibaba/p3c) - Provides Alibaba's coding guidelines for PMD, IDEA and Eclipse.
-- [RefactorFirst](https://github.com/jimbethancourt/RefactorFirst) - Identifies and prioritizes God Classes and Highly Coupled classes.
-- [SonarJava](https://github.com/SonarSource/sonar-java) - Static analyzer for SonarQube & SonarLint. (LGPL-3.0-only)
-- [Spoon](https://github.com/INRIA/spoon) - Library for analyzing and transforming Java source code.
-- [Spotbugs](https://github.com/spotbugs/spotbugs) - Static analysis of bytecode to find potential bugs. (LGPL-2.1-only)
-
-### Code Coverage
-
-_Frameworks and tools that enable code coverage metrics collection for test suites._
-
-- [Clover](https://www.atlassian.com/software/clover) - Relies on source-code instrumentation instead of bytecode instrumentation.
-- [Cobertura](https://cobertura.github.io/cobertura/) - Relies on offline (or static) bytecode instrumentation and class loading to collect code coverage metrics. (GPL-2.0-only)
-- [JaCoCo](https://www.eclemma.org/jacoco/) - Framework that enables collection of code coverage metrics, using both offline and runtime bytecode instrumentation.
-
-### Code Generators
-
-_Tools that generate patterns for repetitive code in order to reduce verbosity and error-proneness._
-
-- [ADT4J](https://github.com/sviperll/adt4j) - JSR-269 code generator for algebraic data types.
-- [Auto](https://github.com/google/auto) - Generates factory, service, and value classes.
-- [Avaje Http Server](https://avaje.io/http/) - Generates Lightweight JAX-RS style http servers using Javalin or Helidon (Nima) SE.
-- [Bootify ![c]](https://bootify.io) - Browser-based Spring Boot app generation with JPA model and REST API.
-- [FreeBuilder](https://github.com/inferred/FreeBuilder) - Automatically generates the Builder pattern.
-- [Geci](https://github.com/verhas/javageci) - Discovers files that need generated code, updates automatically and writes to the source with a convenient API.
-- [Immutables](https://immutables.github.io) - Annotation processors to generate simple, safe and consistent value objects.
-- [JavaPoet](https://github.com/square/javapoet) - API to generate source files.
-- [JHipster](https://github.com/jhipster/generator-jhipster) - Yeoman source code generator for Spring Boot and AngularJS.
-- [Joda-Beans](https://www.joda.org/joda-beans/) - Small framework that adds queryable properties to Java, enhancing JavaBeans.
-- [JPA Buddy ![c]](https://www.jpa-buddy.com) - Plugin for IntelliJ IDEA. Provides visual tools for generating JPA entities, Spring Data JPA repositories, Liquibase changelogs and SQL scripts. Offers automatic Liquibase/Flyway script generation by comparing model to DB, and reverse engineering JPA entities from DB tables.
-- [Lombok](https://projectlombok.org) - Code generator that aims to reduce verbosity.
-- [Record-Builder](https://github.com/Randgalt/record-builder) - Companion builder class, withers and templates for Java records.
-- [Telosys](https://www.telosys.org/) - Simple and light code generator available as an Eclipse Plugin and also as a CLI.
-
-### Compiler-compiler
-
-_Frameworks that help to create parsers, interpreters or compilers._
-
-- [ANTLR](https://www.antlr.org) - Complex full-featured framework for top-down parsing.
-- [JavaCC](https://javacc.github.io/javacc/) - Parser generator that generates top-down parsers. Allows lexical state switching and permits extended BNF specifications.
-- [JFlex](https://jflex.de) - Lexical analyzer generator.
-
-### Computer Vision
-
-_Libraries which seek to gain high level information from images and videos._
-
-- [BoofCV](https://boofcv.org) - Library for image processing, camera calibration, tracking, SFM, MVS, 3D vision, QR Code and much more.
-- [ImageJ](https://imagej.net/ImageJ) - Medical image processing application with an API.
-- [JavaCV](https://github.com/bytedeco/javacv) - Java interface to OpenCV, FFmpeg, and much more.
-
-### Configuration
-
-_Libraries that provide external configuration._
-
-- [avaje config](https://avaje.io/config/) - Loads yaml and properties files, supports dynamic configuration, plugins, file-watching and config event listeners.
-- [centraldogma](https://github.com/line/centraldogma) - Highly-available version-controlled service configuration repository based on Git, ZooKeeper and HTTP/2.
-- [config](https://github.com/lightbend/config) - Configuration library supporting Java properties, JSON or its human optimized superset HOCON.
-- [Configurate](https://github.com/SpongePowered/Configurate) - Configuration library with support for various configuration formats and transformations.
-- [Curator Framework](https://curator.apache.org/) - High-level API for Apache ZooKeeper.
-- [dotenv](https://github.com/shyiko/dotenv) - Twelve-factor configuration library which uses environment-specific files.
-- [Externalized Properties](https://github.com/joel-jeremy/externalized-properties) - Lightweight yet powerful configuration library which supports resolution of properties from external sources and an extensible post-processing/conversion mechanism.
-- [Gestalt](https://github.com/gestalt-config/gestalt) - Gestalt offers a comprehensive solution to the challenges of configuration management. It allows you to source configuration data from multiple inputs, merge them intelligently, and present them in a structured, type-safe manner.
-- [ini4j](http://ini4j.sourceforge.net) - Provides an API for handling Windows' INI files.
-- [KAConf](https://github.com/mariomac/kaconf) - Annotation-based configuration system for Java and Kotlin.
-- [microconfig](https://microconfig.io) - Configuration system designed for microservices which helps to separate configuration from code. The configuration for different services can have common and specific parts and can be dynamically distributed.
-- [owner](https://github.com/lviggiano/owner) - Reduces boilerplate of properties.
-
-### Constraint Satisfaction Problem Solver
-
-_Libraries that help with implementing optimization and satisfiability problems._
-
-- [Choco](https://choco-solver.org) - Off-the-shelf constraint satisfaction problem solver that uses constraint programming techniques.
-- [JaCoP](https://github.com/radsz/jacop) - Includes an interface for the FlatZinc language, enabling it to execute MiniZinc models. (AGPL-3.0)
-- [OptaPlanner](https://www.optaplanner.org) - Business planning and resource scheduling optimization solver.
-- [Timefold](https://github.com/TimefoldAI/timefold-solver) - Flexible solver with Spring/Quarkus support and quickstarts for the Vehicle Routing Problem, Maintenance Scheduling, Employee Shift Scheduling and much more.
-
-### CSV
-
-_Frameworks and libraries that simplify reading/writing CSV data._
-
-- [FastCSV](https://github.com/osiegmar/FastCSV) - Performance-optimized, dependency-free and RFC 4180 compliant.
-- [jackson-dataformat-csv](https://github.com/FasterXML/jackson-dataformat-csv) - Jackson extension for reading and writing CSV.
-- [opencsv](http://opencsv.sourceforge.net) - Simple CSV parser.
-- [Super CSV](https://super-csv.github.io/super-csv/) - Powerful CSV parser with support for Dozer, Joda-Time and Java 8.
-- [uniVocity-parsers](https://github.com/uniVocity/univocity-parsers) - One of the fastest and most feature-complete parsers. Also comes with parsers for TSV and fixed-width records.
-
-### Data Structures
-
-_Efficient and specific data structures._
-
-- [Apache Avro](https://avro.apache.org) - Data interchange format with dynamic typing, untagged data, and absence of manually assigned IDs.
-- [Apache Orc](https://orc.apache.org) - Fast and efficient columnar storage format for Hadoop-based workloads.
-- [Apache Parquet](https://parquet.apache.org) - Columnar storage format based on assembly algorithms from Google's paper on Dremel.
-- [Apache Thrift](https://thrift.apache.org) - Data interchange format that originated at Facebook.
-- [Big Queue](https://github.com/bulldog2011/bigqueue) - Fast and persistent queue based on memory-mapped files.
-- [HyperMinHash-java](https://github.com/LiveRamp/HyperMinHash-java) - Probabilistic data structure for computing union, intersection, and set cardinality in loglog space.
-- [Persistent Collection](https://github.com/hrldcpr/pcollections) - Persistent and immutable analogue of the Java Collections Framework.
-- [Protobuf](https://github.com/protocolbuffers/protobuf) - Google's data interchange format.
-- [RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap) - Fast and efficient compressed bitmap.
-- [SBE](https://github.com/real-logic/simple-binary-encoding) - Simple Binary Encoding, one of the fastest message formats around.
-- [Tape](https://github.com/square/tape) - Lightning-fast, transactional, file-based FIFO.
-- [Wire](https://github.com/square/wire) - Clean, lightweight protocol buffers.
-
-### Database
-
-_Everything that simplifies interactions with the database._
-
-- [Apache Calcite](https://calcite.apache.org) - Dynamic data management framework. It contains many of the pieces that comprise a typical database management system.
-- [Apache Drill](https://drill.apache.org) - Distributed, schema on-the-fly, ANSI SQL query engine for Big Data exploration.
-- [Apache Phoenix](https://phoenix.apache.org) - High-performance relational database layer over HBase for low-latency applications.
-- [ArangoDB](https://github.com/arangodb/arangodb-java-driver) - ArangoDB Java driver.
-- [Chronicle Map](https://github.com/OpenHFT/Chronicle-Map) - Efficient, in-memory (opt. persisted to disk), off-heap key-value store.
-- [Debezium](https://debezium.io/) - Low latency data streaming platform for change data capture.
-- [druid](https://druid.apache.org) - High-performance, column-oriented, distributed data store.
-- [eXist](https://github.com/eXist-db/exist) - NoSQL document database and application platform. (LGPL-2.1-only)
-- [FlexyPool](https://github.com/vladmihalcea/flexy-pool) - Brings metrics and failover strategies to the most common connection pooling solutions.
-- [Flyway](https://flywaydb.org) - Simple database migration tool.
-- [H2](https://h2database.com) - Small SQL database notable for its in-memory functionality.
-- [HikariCP](https://github.com/brettwooldridge/HikariCP) - High-performance JDBC connection pool.
-- [HSQLDB](https://hsqldb.org/) - HyperSQL 100% Java database.
-- [JDBI](http://jdbi.org) - Convenient abstraction of JDBC.
-- [Jedis](https://github.com/xetorthio/jedis) - Small client for interaction with Redis, with methods for commands.
-- [Jest](https://github.com/searchbox-io/Jest) - Client for the Elasticsearch REST API.
-- [jetcd](https://github.com/justinsb/jetcd) - Client library for etcd.
-- [Jinq](https://github.com/my2iu/Jinq) - Typesafe database queries via symbolic execution of Java 8 Lambdas (on top of JPA or jOOQ).
-- [jOOQ](https://www.jooq.org) - Generates typesafe code based on SQL schema.
-- [Leaf](https://github.com/Meituan-Dianping/Leaf) - Distributed ID generate service.
-- [Lettuce](https://lettuce.io/) - Lettuce is a scalable Redis client for building non-blocking Reactive applications.
-- [Liquibase](http://www.liquibase.org) - Database-independent library for tracking, managing and applying database schema changes.
-- [MapDB](http://www.mapdb.org) - Embedded database engine that provides concurrent collections backed on disk or in off-heap memory.
-- [MariaDB4j](https://github.com/vorburger/MariaDB4j) - Launcher for MariaDB that requires no installation or external dependencies.
-- [Modality](https://github.com/arkanovicz/modality) - Lightweight ORM with database reverse engineering features.
-- [OpenDJ](https://github.com/OpenIdentityPlatform/OpenDJ) - LDAPv3 compliant directory service, developed for the Java platform, providing a high performance, highly available, and secure store for the identities.
-- [Querydsl](http://www.querydsl.com) - Typesafe unified queries.
-- [QueryStream](https://github.com/querystream/querystream) - Build JPA Criteria queries using a Stream-like API.
-- [QuestDB](https://github.com/questdb/questdb) - High-performance SQL database for time series. Supports InfluxDB line protocol, PostgreSQL wire protocol, and REST.
-- [Realm](https://github.com/realm/realm-java) - Mobile database to run directly inside phones, tablets or wearables.
-- [Redisson](https://github.com/redisson/redisson) - Allows for distributed and scalable data structures on top of a Redis server.
-- [requery](https://github.com/requery/requery) - Modern, lightweight but powerful object mapping and SQL generator. Easily map to or create databases, or perform queries and updates from any Java-using platform.
-- [Speedment](https://github.com/speedment/speedment) - Database access library that utilizes Java 8's Stream API for querying.
-- [Spring Data JPA MongoDB Expressions](https://github.com/mhewedy/spring-data-jpa-mongodb-expressions) - Allows you to use MongoDB query language to query your relational database.
-- [Trino](https://trino.io) - Distributed SQL query engine for big data.
-- [Vibur DBCP](https://www.vibur.org) - JDBC connection pool library with advanced performance monitoring capabilities.
-- [Xodus](https://github.com/JetBrains/xodus) - Highly concurrent transactional schema-less and ACID-compliant embedded database.
-- [CosId](https://github.com/Ahoo-Wang/CosId) - Universal, flexible, high-performance distributed ID generator.
-
-### Date and Time
-
-_Libraries related to handling date and time._
-
-- [iCal4j](https://github.com/ical4j/ical4j) - Parse and build iCalendar [RFC 5545](https://tools.ietf.org/html/rfc5545) data models.
-- [Jollyday](https://github.com/svendiedrichsen/jollyday) - Determines the holidays for a given year, country/name and eventually state/region.
-- [ThreeTen-Extra](https://github.com/ThreeTen/threeten-extra) - Additional date-time classes that complement those in JDK 8.
-- [Time4J](https://github.com/MenoData/Time4J) - Advanced date and time library. (LGPL-2.1-only)
-
-### Dependency Injection
-
-_Libraries that help to realize the [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control) paradigm._
-
-- [Apache DeltaSpike](https://deltaspike.apache.org) - CDI extension framework.
-- [Avaje Inject](https://avaje.io/inject/) - Microservice-focused compile-time injection framework without reflection.
-- [Dagger](https://dagger.dev/) - Compile-time injection framework without reflection.
-- [Feather](https://github.com/zsoltherpai/feather) - Ultra-lightweight, JSR-330-compliant dependency injection library.
-- [Governator](https://github.com/Netflix/governator) - Extensions and utilities that enhance Google Guice.
-- [Guice](https://github.com/google/guice) - Lightweight and opinionated framework that completes Dagger.
-- [HK2](https://javaee.github.io/hk2/) - Lightweight and dynamic dependency injection framework.
-- [JayWire](https://github.com/vanillasource/jaywire) - Lightweight dependency injection framework. (LGPL-3.0-only)
-
-### Development
-
-_Augmentation of the development process at a fundamental level._
-
-- [AspectJ](https://www.eclipse.org/aspectj/) - Seamless aspect-oriented programming extension.
-- [DCEVM](https://dcevm.github.io) - JVM modification that allows unlimited redefinition of loaded classes at runtime. (GPL-2.0-only)
-- [Faux Pas](https://github.com/zalando/faux-pas) - Library that simplifies error handling by circumventing the issue that none of the functional interfaces in the Java Runtime is allowed by default to throw checked exceptions.
-- [HotswapAgent](https://github.com/HotswapProjects/HotswapAgent) - Unlimited runtime class and resource redefinition. (GPL-2.0-only)
-- [JavaParser](https://github.com/javaparser/javaparser) - Parse, modify and generate Java code.
-- [JavaSymbolSolver](https://github.com/javaparser/javasymbolsolver) - Symbol solver.
-- [Manifold](https://github.com/manifold-systems/manifold) - Re-energizes Java with powerful features like type-safe metaprogramming, structural typing and extension methods.
-- [NoException](https://noexception.machinezoo.com) - Allows checked exceptions in functional interfaces and converts exceptions to Optional return.
-- [SneakyThrow](https://github.com/rainerhahnekamp/sneakythrow) - Ignores checked exceptions without bytecode manipulation. Can also be used inside Java 8 stream operations.
-- [Tail](https://nrktkt.github.io/tail/) - Enable infinite recursion using tail call optimization.
-
-### Distributed Applications
-
-_Libraries and frameworks for writing distributed and fault-tolerant applications._
-
-- [Apache Geode](https://geode.apache.org) - In-memory data management system that provides reliable asynchronous event notifications and guaranteed message delivery.
-- [Apache Storm](https://storm.apache.org) - Realtime computation system.
-- [Apache ZooKeeper](https://zookeeper.apache.org) - Coordination service with distributed configuration, synchronization, and naming registry for large distributed systems.
-- [Atomix](https://atomix.io) - Fault-tolerant distributed coordination framework.
-- [Axon](https://axoniq.io) - Framework for creating CQRS applications.
-- [Dropwizard Circuit Breaker](https://github.com/mtakaki/dropwizard-circuitbreaker) - Circuit breaker design pattern for Dropwizard. (GPL-2.0-only)
-- [Failsafe](https://github.com/jhalterman/failsafe) - Simple failure handling with retries and circuit breakers.
-- [Hazelcast](https://github.com/hazelcast/hazelcast) - Highly scalable in-memory datagrid with a free open-source version.
-- [JGroups](http://www.jgroups.org) - Toolkit for reliable messaging and cluster creation.
-- [Quasar](http://docs.paralleluniverse.co/quasar/) - Lightweight threads and actors for the JVM.
-- [resilience4j](https://github.com/resilience4j/resilience4j) - Functional fault tolerance library.
-- [OpenIG](https://github.com/OpenIdentityPlatform/OpenIG) - High-performance reverse proxy server with specialized session management and credential replay functionality.
-- [ScaleCube Services](https://github.com/scalecube/scalecube-services) - Embeddable Cluster-Membership library based on SWIM and gossip protocol.
-- [Zuul](https://github.com/Netflix/zuul) - Gateway service that provides dynamic routing, monitoring, resiliency, security, and more.
-
-### Distributed Transactions
-
-_Distributed transactions provide a mechanism for ensuring consistency of data updates in the presence of concurrent access and partial failures._
-
-- [Atomikos](https://www.atomikos.com) - Provides transactions for REST, SOA and microservices with support for JTA and XA.
-- [Bitronix](https://github.com/bitronix/btm) - Simple but complete implementation of the JTA 1.1 API.
-- [Narayana](https://narayana.io) - Provides support for traditional ACID and compensation transactions, also complies with JTA, JTS and other standards. (LGPL-2.1-only)
-- [Seata](https://github.com/seata/seata) - Delivers high performance and easy to use distributed transaction services under a microservices architecture.
-
-### Distribution
-
-_Tools that handle the distribution of applications in native formats._
-
-- [Artipie](https://github.com/artipie/artipie) - Binary artifact management toolkit which hosts them on the file system or S3.
-- [Boxfuse ![c]](https://boxfuse.com) - Deployment of JVM applications to AWS using the principles of immutable infrastructure.
-- [Capsule](https://github.com/puniverse/capsule) - Simple and powerful packaging and deployment. A fat JAR on steroids, or a "Docker for Java" that supports JVM-optimized containers.
-- [Central Repository](https://search.maven.org) - Largest binary component repository available as a free service to the open-source community. Default used by Apache Maven, and available in all other build tools.
-- [Cloudsmith ![c]](https://cloudsmith.io) - Fully managed package management SaaS with support for Maven/Gradle/SBT with a free tier.
-- [Getdown](https://github.com/threerings/getdown) - System for deploying Java applications to end-user computers and keeping them up to date. Developed as an alternative to Java Web Start.
-- [IzPack](http://izpack.org) - Setup authoring tool for cross-platform deployments.
-- [JavaPackager](https://github.com/fvarrui/JavaPackager) - Maven and Gradle plugin which provides an easy way to package Java applications in native Windows, macOS or GNU/Linux executables, and generate installers for them.
-- [jDeploy](https://www.jdeploy.com) - Deploy desktop apps as native Mac, Windows or Linux bundles.
-- [jlink.online](https://github.com/AdoptOpenJDK/jlink.online) - Builds optimized runtimes over HTTP.
-- [Nexus ![c]](https://www.sonatype.com) - Binary management with proxy and caching capabilities.
-- [packr](https://github.com/libgdx/packr) - Packs JARs, assets and the JVM for native distribution on Windows, Linux and macOS.
-- [really-executable-jars-maven-plugin](https://github.com/brianm/really-executable-jars-maven-plugin) - Maven plugin for making self-executing JARs.
-
-### Document Processing
-
-_Libraries that assist with processing office document formats._
-
-- [Apache POI](https://poi.apache.org) - Supports OOXML (XLSX, DOCX, PPTX) as well as OLE2 (XLS, DOC or PPT).
-- [documents4j](https://documents4j.com/#/) - API for document format conversion using third-party converters such as MS Word.
-- [docx4j](https://www.docx4java.org/trac/docx4j) - Create and manipulate Microsoft Open XML files.
-- [fastexcel](https://github.com/dhatim/fastexcel) - High performance library to read and write large Excel (XLSX) worksheets.
-- [zerocell](https://github.com/creditdatamw/zerocell) - Annotation-based API for reading data from Excel sheets into POJOs with focus on reduced overhead.
-
-### Financial
-
-_Libraries related to the financial domain._
-
-- [Cassandre](https://github.com/cassandre-tech/cassandre-trading-bot) - Trading bot framework.
-- [Parity](https://github.com/paritytrading/parity) - Platform for trading venues.
-- [Philadelphia](https://github.com/paritytrading/philadelphia) - Low-latency financial information exchange.
-- [Square](https://github.com/square/connect-java-sdk) - Integration with the Square API.
-- [Stripe](https://github.com/stripe/stripe-java) - Integration with the Stripe API.
-- [ta4j](https://github.com/ta4j/ta4j) - Library for technical analysis.
-
-### Formal Verification
-
-_Formal-methods tools: proof assistants, model checking, symbolic execution, etc._
-
-- [CATG](https://github.com/ksen007/janala2) - Concolic unit testing engine. Automatically generates unit tests using formal methods.
-- [Checker Framework](https://checkerframework.org) - Pluggable type systems. Includes nullness types, physical units, immutability types and more. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [Daikon](https://plse.cs.washington.edu/daikon/) - Detects likely program invariants and generates JML specs based on those invariants.
-- [Java Path Finder (JPF)](https://github.com/javapathfinder/jpf-core) - JVM formal verification tool containing a model checker and more. Created by NASA.
-- [JMLOK 2.0](https://massoni.computacao.ufcg.edu.br/home/jmlok) - Detects inconsistencies between code and JML specification through feedback-directed random tests generation, and suggests a likely cause for each nonconformance detected. (GPL-3.0-only)
-- [KeY](https://www.key-project.org) - Formal software development tool that aims to integrate design, implementation, formal specification, and formal verification of object-oriented software as seamlessly as possible. Uses JML for specification and symbolic execution for verification. (GPL-2.0-or-later)
-- [OpenJML](http://www.openjml.org) - Translates JML specifications into SMT-LIB format and passes the proof problems implied by the program to backend solvers. (GPL-2.0-only)
-
-### Functional Programming
-
-_Libraries that facilitate functional programming._
-
-- [Cyclops](https://github.com/aol/cyclops) - Monad and stream utilities, comprehensions, pattern matching, functional extensions for all JDK collections, future streams, trampolines and much more.
-- [derive4j](https://github.com/derive4j/derive4j) - Java 8 annotation processor and framework for deriving algebraic data types constructors, pattern-matching and morphisms. (GPL-3.0-only)
-- [Fugue](https://bitbucket.org/atlassian/fugue) - Functional extensions to Guava.
-- [Functional Java](http://www.functionaljava.org) - Implements numerous basic and advanced programming abstractions that assist composition-oriented development.
-- [jOOλ](https://github.com/jOOQ/jOOL) - Extension to Java 8 that aims to fix gaps in lambda by providing numerous missing types and a rich set of sequential Stream API additions.
-- [protonpack](https://github.com/poetix/protonpack) - Collection of stream utilities.
-- [StreamEx](https://github.com/amaembo/streamex) - Enhances Java 8 Streams.
-- [Vavr](https://www.vavr.io) - Functional component library that provides persistent data types and functional control structures.
-
-### Game Development
-
-_Frameworks that support the development of games._
-
-- [FXGL](https://almasb.github.io/FXGL/) - JavaFX Game Development Framework.
-- [JBox2D](http://www.jbox2d.org/) - Port of the renowned C++ 2D physics engine.
-- [jMonkeyEngine](https://jmonkeyengine.org) - Game engine for modern 3D development.
-- [libGDX](https://libgdx.com) - All-round cross-platform, high-level framework.
-- [Litiengine](https://litiengine.com/) - AWT-based, lightweight 2D game engine.
-- [LWJGL](https://www.lwjgl.org) - Robust framework that abstracts libraries like OpenGL/CL/AL.
-- [Mini2Dx](https://mini2dx.org) - Beginner-friendly, master-ready framework for rapidly prototyping and building 2D games.
-- [Void2D](https://github.com/xzripper/Void2D) - High-level 2D game engine with built-in physics based on Swing.
-
-### Geospatial
-
-_Libraries for working with geospatial data and algorithms._
-
-- [Apache SIS](https://sis.apache.org) - Library for developing geospatial applications.
-- [ArcGIS Maps SDK for Java ![c]](https://github.com/Esri/arcgis-maps-sdk-java-samples/) - JavaFX library for adding mapping and GIS functionality to desktop apps.
-- [Geo](https://github.com/davidmoten/geo) - GeoHash utilities in Java.
-- [GeoTools](https://geotools.org) - Library that provides tools for geospatial data. (LGPL-2.1-only)
-- [GraphHopper](https://github.com/graphhopper/graphhopper) - Road-routing engine. Used as a Java library or standalone web service.
-- [H2GIS](http://www.h2gis.org) - Spatial extension of the H2 database. (LGPL-3.0-only)
-- [Jgeohash](https://astrapi69.github.io/jgeohash/) - Library for using the GeoHash algorithm.
-- [Mapsforge](https://github.com/mapsforge/mapsforge) - Map rendering based on OpenStreetMap data. (LGPL-3.0-only)
-- [Spatial4j](https://github.com/locationtech/spatial4j) - General-purpose spatial/geospatial library.
-
-### GUI
-
-_Libraries to create modern graphical user interfaces._
-
-- [JavaFX](https://wiki.openjdk.java.net/display/OpenJFX/Main) - Successor of Swing.
-- [Scene Builder](https://gluonhq.com/products/scene-builder/) - Visual layout tool for JavaFX applications.
-- [SnapKit](https://github.com/reportmill/SnapKit) - Modern Java UI library for both desktop and web.
-- [SWT](https://www.eclipse.org/swt/) - Graphical widget toolkit.
-
-### High Performance
-
-_Everything about high-performance computation, from collections to specific libraries._
-
-- [Agrona](https://github.com/real-logic/Agrona) - Data structures and utility methods that are common in high-performance applications.
-- [Disruptor](https://lmax-exchange.github.io/disruptor/) - Inter-thread messaging library.
-- [Eclipse Collections](https://github.com/eclipse/eclipse-collections) - Collections framework inspired by Smalltalk.
-- [fastutil](http://fastutil.di.unimi.it) - Fast and compact type-specific collections.
-- [HPPC](https://labs.carrotsearch.com/hppc.html) - Primitive collections.
-- [JCTools](https://github.com/JCTools/JCTools) - Concurrency tools currently missing from the JDK.
-- [Koloboke](https://github.com/leventov/Koloboke) - Carefully designed extension of the Java Collections Framework with primitive specializations and more.
-
-### HTTP Clients
-
-_Libraries that assist with creating HTTP requests and/or binding responses._
-
-- [Apache HttpComponents](https://hc.apache.org/) - Toolset of low-level Java components focused on HTTP and associated protocols.
-- [Async Http Client](https://github.com/AsyncHttpClient/async-http-client) - Asynchronous HTTP and WebSocket client library.
-- [Avaje Http Client](https://avaje.io/http-client) - Wrapper on JDK 11's HttpClient that adds Feign-like interface among other enhancements.
-- [Feign](https://github.com/OpenFeign/feign) - HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket.
-- [Google HTTP Client](https://github.com/googleapis/google-http-java-client) - Pluggable HTTP transport abstraction with support for java.net.HttpURLConnection, Apache HTTP Client, Android, Google App Engine, XML, Gson, Jackson and Protobuf.
-- [methanol](https://github.com/mizosoft/methanol) - HTTP client extensions library.
-- [Retrofit](https://square.github.io/retrofit/) - Typesafe REST client.
-- [Ribbon](https://github.com/Netflix/ribbon) - Client-side IPC library that is battle-tested in the cloud.
-- [Riptide](https://github.com/zalando/riptide) - Client-side response routing for Spring's RestTemplate.
-- [unirest-java](https://github.com/Kong/unirest-java) - Simplified, lightweight HTTP client library.
-
-### Hypermedia Types
-
-_Libraries that handle serialization to hypermedia types._
-
-- [hate](https://github.com/blackdoor/hate) - Builds hypermedia-friendly objects according to HAL specification.
-- [JSON-LD](https://github.com/jsonld-java/jsonld-java) - JSON-LD implementation.
-- [Siren4J](https://github.com/eserating-chwy/siren4j) - Library for the Siren specification.
-
-### IDE
-
-_Integrated development environments that try to simplify several aspects of development._
-
-- [Eclipse](https://www.eclipse.org) - Established open-source project with support for lots of plugins and languages.
-- [IntelliJ IDEA ![c]](https://www.jetbrains.com/idea/) - Supports many JVM languages and provides good options for Android development. The commercial edition targets the enterprise sector.
-- [jGRASP](https://www.jgrasp.org) - Created to provide software visualizations that work in conjunction with the debugger such as Control Structure Diagrams, UML class diagrams and Object Viewer.
-- [NetBeans](https://netbeans.apache.org) - Provides integration for several Java SE and EE features, from database access to HTML5.
-- [SnapCode](https://reportmill.com/SnapCode/) - Modern IDE for Java running in the browser, focused on education.
-- [Visual Studio Code](https://code.visualstudio.com/docs/languages/java) - Provides Java support for lightweight projects with a simple, modern workflow by using extensions from the internal marketplace.
-
-### Imagery
-
-_Libraries that assist with the creation, evaluation or manipulation of graphical images._
-
-- [Imgscalr](https://github.com/rkalla/imgscalr) - Simple, efficient and hardware-accelerated image-scaling library implemented in pure Java 2D.
-- [Tess4J](https://github.com/nguyenq/tess4j) - JNA wrapper for Tesseract OCR API.
-- [Thumbnailator](https://github.com/coobird/thumbnailator) - High-quality thumbnail generation library.
-- [TwelveMonkeys](https://github.com/haraldk/TwelveMonkeys) - Collection of plugins that extend the number of supported image file formats.
-- [ZXing](https://github.com/zxing/zxing) - Multi-format 1D/2D barcode image processing library.
-- [image-comparison](https://github.com/romankh3/image-comparison) - Library that compares 2 images with the same sizes and shows the differences visually by drawing rectangles. Some parts of the image can be excluded from the comparison.
-
-### Introspection
-
-_Libraries that help make the Java introspection and reflection API easier and faster to use._
-
-- [ClassGraph](https://github.com/classgraph/classgraph) - ClassGraph (formerly FastClasspathScanner) is an uber-fast, ultra-lightweight, parallelized classpath scanner and module scanner for Java, Scala, Kotlin and other JVM languages.
-- [jOOR](https://github.com/jOOQ/jOOR) - jOOR stands for jOOR Object Oriented Reflection. It is a simple wrapper for the java.lang.reflect package.
-- [Mirror](http://projetos.vidageek.net/mirror/mirror/) - Mirror was created to bring light to a simple problem, usually named ReflectionUtil, which is on almost all projects that rely on reflection to do advanced tasks.
-- [Objenesis](http://objenesis.org) - Allows dynamic instantiation without default constructor, e.g. constructors which have required arguments, side effects or throw exceptions.
-- [ReflectASM](https://github.com/EsotericSoftware/reflectasm) - ReflectASM is a very small Java library that provides high performance reflection by using code generation.
-- [Reflections](https://github.com/ronmamo/reflections) - Reflections scans your classpath, indexes the metadata, allows you to query it on runtime and may save and collect that information for many modules within your project.
-
-### Job Scheduling
-
-_Libraries for scheduling background jobs._
-
-- [JobRunr](https://github.com/jobrunr/jobrunr) - Job scheduling library which utilizes lambdas for fire-and-forget, delayed and recurring jobs. Guarantees execution by single scheduler instance using optimistic locking. Has features for persistence, minimal dependencies and is embeddable.
-- [Quartz](https://github.com/quartz-scheduler/quartz) - Feature-rich, open source job scheduling library that can be integrated within virtually any Java application.
-- [Sundial](https://github.com/knowm/Sundial) - Lightweight framework to simply define jobs, define triggers and start the scheduler.
-- [Wisp](https://github.com/Coreoz/Wisp) - Simple library with minimal footprint and straightforward API.
-- [db-scheduler](https://github.com/kagkarlsson/db-scheduler) - Persistent and cluster-friendly scheduler.
-- [easy-batch](https://github.com/j-easy/easy-batch) - Set up batch jobs with simple processing pipelines. Records are read in sequence from a data source, processed in pipeline and written in batches to a data sink.
-- [shedlock](https://github.com/lukas-krecan/ShedLock) - Makes sure that your scheduled tasks are executed at most once at the same time. If a task is being executed on one node, it acquires a lock which prevents execution of the same task from another node or thread.
-
-### JSON
-
-_Libraries for serializing and deserializing JSON to and from Java objects._
-
-- [Avaje Jsonb](https://avaje.io/jsonb/) - Reflection-free Json binding via source code generation with Jackson-like annotations.
-- [DSL-JSON](https://github.com/ngs-doo/dsl-json) - JSON library with advanced compile time databinding.
-- [Genson](http://genson.io) - Powerful and easy-to-use Java-to-JSON conversion library.
-- [Gson](https://github.com/google/gson) - Serializes objects to JSON and vice versa. Good performance with on-the-fly usage.
-- [HikariJSON](https://github.com/brettwooldridge/HikariJSON) - High-performance JSON parser, 2x faster than Jackson.
-- [jackson-modules-java8](https://github.com/FasterXML/jackson-modules-java8) - Set of Jackson modules for Java 8 datatypes and features.
-- [Jackson-datatype-money](https://github.com/zalando/jackson-datatype-money) - Open-source Jackson module to support JSON serialization and deserialization of JavaMoney data types.
-- [Jackson](https://github.com/FasterXML/jackson) - Similar to GSON, but offers performance gains if you need to instantiate the library more often.
-- [JSON-io](https://github.com/jdereg/json-io) - Convert Java to JSON. Convert JSON to Java. Pretty print JSON. Java JSON serializer.
-- [jsoniter](http://jsoniter.com) - Fast and flexible library with iterator and lazy parsing API.
-- [LoganSquare](https://github.com/bluelinelabs/LoganSquare) - JSON parsing and serializing library based on Jackson's streaming API. Outperforms GSON & Jackson's library.
-- [Moshi](https://github.com/square/moshi) - Modern JSON library, less opinionated and uses built-in types like List and Map.
-- [Yasson](https://github.com/eclipse-ee4j/yasson) - Binding layer between classes and JSON documents similar to JAXB.
-- [fastjson](https://github.com/alibaba/fastjson) - Very fast processor with no additional dependencies and full data binding.
-- [Jolt](https://github.com/bazaarvoice/jolt) - JSON to JSON transformation tool.
-- [JsonPath](https://github.com/json-path/JsonPath) - Extract data from JSON using XPATH-like syntax.
-- [JsonSurfer](https://github.com/jsurfer/JsonSurfer) - Streaming JsonPath processor dedicated to processing big and complicated JSON data.
-
-### JVM and JDK
-
-_Current implementations of the JVM/JDK._
-
-- [Adopt Open JDK](https://adoptopenjdk.net) - Community-driven OpenJDK builds, including both HotSpot and OpenJ9.
-- [Avian](https://github.com/ReadyTalk/avian) - JVM with JIT, AOT modes and iOS port.
-- [Corretto](https://aws.amazon.com/corretto/) - No-cost, multiplatform, production-ready distribution of OpenJDK by Amazon. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [Dragonwell8](https://github.com/alibaba/dragonwell8) - Downstream version of OpenJDK optimized for online e-commerce, financial, logistics applications.
-- [Graal](https://github.com/oracle/graal) - Polyglot embeddable JVM. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [Liberica JDK](https://bell-sw.com) - Built from OpenJDK, thoroughly tested and passed the JCK. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [OpenJ9](https://github.com/eclipse/openj9) - High performance, enterprise-calibre, flexibly licensed, openly-governed cross-platform JVM extending and augmenting the runtime technology components from the Eclipse OMR and OpenJDK project.
-- [Open JDK](https://openjdk.java.net) - Open JDK community home. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [ParparVM](https://github.com/codenameone/CodenameOne/tree/master/vm) - VM with non-blocking, concurrent GC for iOS. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [RedHat Open JDK](https://developers.redhat.com/products/openjdk/overview) - RedHat's OpenJDK distribution. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [SAP Machine](https://sap.github.io/SapMachine/) - SAP's no-cost, rigorously tested and JCK-verified OpenJDK friendly fork. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [Zulu](https://www.azul.com/products/zulu-community/) - OpenJDK builds for Windows, Linux, and macOS. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [Microsoft JDK](https://github.com/microsoft/openjdk) - Microsoft Build of OpenJDK, Free, Open Source, Freshly Brewed!
-
-### Logging
-
-_Libraries that log the behavior of an application._
-
-- [Apache Log4j 2](https://logging.apache.org/log4j/) - Complete rewrite with a powerful plugin and configuration architecture.
-- [Echopraxia](https://github.com/tersesystems/echopraxia) - API designed around structured logging, rich context, and conditional logging. There are Logback and Log4J2 implementations, but Echopraxia's API is completely dependency-free, meaning it can be implemented with any logging API.
-- [Graylog](https://www.graylog.org) - Open-source aggregator suited for extended role and permission management. (GPL-3.0-only)
-- [Kibana](https://www.elastic.co/kibana) - Analyzes and visualizes log files. Some features require payment.
-- [Logback](http://logback.qos.ch) - Robust logging library with interesting configuration options via Groovy.
-- [Logbook](https://github.com/zalando/logbook) - Extensible, open-source library for HTTP request and response logging.
-- [Logstash](https://www.elastic.co/logstash) - Tool for managing log files.
-- [p6spy](https://github.com/p6spy/p6spy) - Enables logging for all JDBC transactions without changes to the code.
-- [SLF4J](http://www.slf4j.org) - Abstraction layer/simple logging facade.
-- [tinylog](https://tinylog.org/v2/) - Lightweight logging framework with static logger class.
-- [OpenTracing Toolbox](https://github.com/zalando/opentracing-toolbox) - Collection of libraries that build on top of OpenTracing and provide extensions and plugins to existing instrumentations.
-
-### Machine Learning
-
-_Tools that provide specific statistical algorithms for learning from data._
-
-- [Apache Flink](https://flink.apache.org) - Fast, reliable, large-scale data processing engine.
-- [Apache Mahout](https://mahout.apache.org) - Scalable algorithms focused on collaborative filtering, clustering and classification.
-- [DatumBox](http://www.datumbox.com) - Provides several algorithms and pre-trained models for natural language processing.
-- [Deeplearning4j](https://deeplearning4j.org) - Distributed and multi-threaded deep learning library.
-- [DJL](https://djl.ai) - High-level and engine-agnostic framework for deep learning.
-- [H2O ![c]](https://www.h2o.ai) - Analytics engine for statistics over big data.
-- [Intelligent java](https://github.com/Barqawiz/IntelliJava) - Seamlessly integrate with remote deep learning and language models programmatically.
-- [JSAT](https://github.com/EdwardRaff/JSAT) - Algorithms for pre-processing, classification, regression, and clustering with support for multi-threaded execution. (GPL-3.0-only)
-- [m2cgen](https://github.com/BayesWitnesses/m2cgen) - CLI tool to transpile models into native code.
-- [Neureka](https://github.com/Gleethos/neureka) - A lightweight, platform independent, OpenCL accelerated nd-array/tensor library.
-- [oj! Algorithms](https://www.ojalgo.org/) - High-performance mathematics, linear algebra and optimisation needed for data science, machine learning and scientific computing.
-- [Oryx 2](https://github.com/OryxProject/oryx) - Framework for building real-time, large-scale machine learning applications. Includes end-to-end applications for collaborative filtering, classification, regression, and clustering.
-- [Siddhi](https://github.com/siddhi-io/siddhi) - Cloud native streaming and complex event processing engine.
-- [Smile](https://github.com/haifengl/smile) - Statistical Machine Intelligence and Learning Engine provides a set of machine learning algorithms and a visualization library.
-- [Tribuo](https://tribuo.org/) - Provides tools for classification, regression, clustering, model development and interfaces with other libraries such as scikit-learn, pytorch and TensorFlow.
-- [Weka](https://www.cs.waikato.ac.nz/ml/weka/) - Collection of algorithms for data mining tasks ranging from pre-processing to visualization. (GPL-3.0-only)
-
-### Messaging
-
-_Tools that help send messages between clients to ensure protocol independency._
-
-- [Aeron](https://github.com/real-logic/Aeron) - Efficient, reliable, unicast and multicast message transport.
-- [Apache ActiveMQ](https://activemq.apache.org) - Message broker that implements JMS and converts synchronous to asynchronous communication.
-- [Apache Camel](https://camel.apache.org) - Glues together different transport APIs via Enterprise Integration Patterns.
-- [Apache Kafka](https://kafka.apache.org) - High-throughput distributed messaging system.
-- [Apache Pulsar](https://pulsar.apache.org) - Distributed pub/sub-messaging system.
-- [Apache RocketMQ](https://rocketmq.apache.org) - Fast, reliable, and scalable distributed messaging platform.
-- [Apache Qpid](https://qpid.apache.org) - Apache Qpid makes messaging tools that speak AMQP and support many languages and platforms.
-- [Deezpatch](https://github.com/joel-jeremy/deezpatch) - Simple, lightweight, and performant dispatch library for decoupling messages (requests and events) and message handlers.
-- [EventBus](https://github.com/greenrobot/EventBus) - Simple publish/subscribe event bus.
-- [Hermes](http://hermes.allegro.tech) - Fast and reliable message broker built on top of Kafka.
-- [JeroMQ](https://github.com/zeromq/jeromq) - Implementation of ZeroMQ.
-- [Nakadi](https://github.com/zalando/nakadi) - Provides a RESTful API on top of Kafka.
-- [RabbitMQ Java client](https://github.com/rabbitmq/rabbitmq-java-client) - RabbitMQ client.
-- [Smack](https://github.com/igniterealtime/Smack) - Cross-platform XMPP client library.
-- [NATS client](https://github.com/nats-io/nats.java) - NATS client.
-
-### Microservice
-
-_Tools for creating and managing microservices._
-
-- [ActiveRPC](https://rpc.activej.io) - Lightweight and fast library for complex high-load distributed applications and Memcached-like solutions.
-- [Apollo](https://spotify.github.io/apollo/) - Libraries for writing composable microservices.
-- [Armeria](https://github.com/line/armeria) - Asynchronous RPC/REST client/server library built on top of Java 8, Netty, HTTP/2, Thrift and gRPC.
-- [consul-api](https://github.com/Ecwid/consul-api) - Client for the Consul API: a distributed, highly available and datacenter-aware registry/discovery service.
-- [Eureka](https://github.com/Netflix/eureka) - REST-based service registry for resilient load balancing and failover.
-- [Helidon](https://helidon.io) - Two-style approach for writing microservices: Functional-reactive and as an implementation of MicroProfile.
-- [JDA](https://github.com/DV8FromTheWorld/JDA) - Wrapping of the Discord REST API and its WebSocket events.
-- [KeenType](https://github.com/DaveJarvis/KeenType) - Modernized version of a Java-based implementation of the New Typesetting System, which was heavily based on Donald E. Knuth's original TeX.
-- [kubernetes-client](https://github.com/fabric8io/kubernetes-client) - Client provides access to the full Kubernetes & OpenShift REST APIs via a fluent DSL.
-- [Micronaut](https://micronaut.io) - Modern full-stack framework with focus on modularity, minimal memory footprint and startup time.
-- [Nacos](https://nacos.io) - Dynamic service discovery, configuration and service management platform for building cloud native applications.
-- [OpenAI-Java](https://github.com/TheoKanning/openai-java) - Java libraries for using OpenAI's GPT-3 API.
-- [Quarkus](https://quarkus.io) - Kubernetes stack tailored for the HotSpot and Graal VM.
-- [Sentinel](https://github.com/alibaba/Sentinel) - Flow control component enabling reliability, resilience and monitoring for microservices.
-
-### Miscellaneous
-
-_Everything else._
-
-- [AWS SDK for Java 2.0](https://github.com/aws/aws-sdk-java-v2) - Wrapper around AWS' API.
-- [CQEngine](https://github.com/npgall/cqengine) - Ultra-fast, SQL-like queries on Java collections.
-- [Design Patterns](https://github.com/iluwatar/java-design-patterns) - Implementation and explanation of the most common design patterns.
-- [FF4J](https://github.com/ff4j/ff4j) - Feature Flags for Java.
-- [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition) - No-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes. (No explicit license)
-- [J2ObjC](https://github.com/google/j2objc) - Java-to-Objective-C translator for porting Android libraries to iOS.
-- [JBake](https://jbake.org) - Static website generator.
-- [JBot](https://github.com/rampatra/jbot) - Framework for building chatbots. (GPL-3.0-only)
-- [JCuda](http://jcuda.org) - JCuda offers Java bindings for CUDA and CUDA-related libraries.
-- [Jimfs](https://github.com/google/jimfs) - In-memory file system.
-- [JObfuscator![c]](https://www.pelock.com/products/jobfuscator) - Source code obfuscator.
-- [Joda-Money](https://www.joda.org/joda-money/) - Basic currency and money classes and algorithms not provided by the JDK.
-- [jOOX](https://github.com/jooq/joox) - Simple wrapper for the org.w3c.dom package, to allow for fluent XML document creation and manipulation with an API inspired by jQuery.
-- [JPad](http://jpad.io) - Snippet runner.
-- [jsweet](https://github.com/cincheo/jsweet) - Source transpiler to TypeScript/JavaScript.
-- [Maven Wrapper](https://github.com/takari/maven-wrapper) - Analogue of Gradle Wrapper for Maven, allows building projects without installing maven.
-- [Membrane Service Proxy](https://github.com/membrane/service-proxy) - Open-source, reverse-proxy framework.
-- [MinimalFTP](https://github.com/Guichaguri/MinimalFTP) - Lightweight, small and customizable FTP server.
-- [LittleProxy](https://github.com/adamfisk/LittleProxy) - High performance HTTP proxy atop Netty's event-based networking library.
-- [Modern Java - A Guide to Java 8](https://github.com/winterbe/java8-tutorial) - Popular Java 8 guide.
-- [Modernizer](https://github.com/gaul/modernizer-maven-plugin) - Detect uses of legacy Java APIs.
-- [OctoLinker](https://github.com/OctoLinker/OctoLinker) - Browser extension which allows to navigate through code on GitHub more efficiently.
-- [OpenRefine](http://openrefine.org) - Tool for working with messy data: cleaning, transforming, extending it with web services and linking it to databases.
-- [PipelinR](https://github.com/sizovs/pipelinr) - Small utility library for using handlers and commands with pipelines.
-- [Polyglot for Maven](https://github.com/takari/polyglot-maven) - Extensions for Maven 3.3.1+ that allows writing the POM model in dialects other than XML.
-- [RR4J](https://github.com/Kartikvk1996/RR4J) - RR4J is a tool that records java bytecode execution and later allows developers to replay locally.
-- [Simple Java Mail](https://github.com/bbottema/simple-java-mail) - Mailing with a clean and fluent API.
-- [Smooks](https://github.com/smooks/smooks) - Framework for fragment-based message processing. (Apache-2.0 OR LGPL-3.0-or-later)
-- [Svix](https://github.com/svix/svix-webhooks/tree/main/java) - Library for the Svix API to send webhooks and verify signatures.
-- [Togglz](https://www.togglz.org) - Implementation of the Feature Toggles pattern.
-- [TypeTools](https://github.com/jhalterman/typetools) - Tools for resolving generic types.
-- [XMLBeam](https://github.com/SvenEwald/xmlbeam) - Processes XML by using annotations or XPath within code.
-- [yGuard](https://github.com/yWorks/yGuard) - Obfuscation via renaming and shrinking.
-
-### Mobile Development
-
-_Tools for creating or managing mobile applications._
-
-- [Codename One](https://www.codenameone.com) - Cross-platform solution for writing native mobile apps. (GPL-2.0-only WITH Classpath-exception-2.0)
-- [MobileUI](https://mobileui.dev) - Cross-platform framework for developing mobile apps with native UI in Java and Kotlin.
-- [Multi-OS Engine](https://multi-os-engine.org) - Open-source, cross-platform engine to develop native mobile (iOS, Android, etc.) apps.
-
-### Monitoring
-
-_Tools that observe/monitor applications in production by providing telemetry._
-
-- [Automon](https://github.com/stevensouza/automon) - Combines the power of AOP with monitoring and/or logging tools.
-- [Datadog ![c]](https://github.com/DataDog/dd-trace-java) - Modern monitoring & analytics.
-- [Dropwizard Metrics](https://github.com/dropwizard/metrics) - Expose metrics via JMX or HTTP and send them to a database.
-- [Failsafe Actuator](https://github.com/zalando/failsafe-actuator) - Out of the box monitoring of Failsafe Circuit Breaker in Spring-Boot environment.
-- [Glowroot](https://glowroot.org) - Open-source Java APM.
-- [HertzBeat](https://github.com/dromara/hertzbeat) - Real-time monitoring system with custom-monitor and agentless.
-- [hippo4j](https://github.com/opengoofy/hippo4j/blob/develop/README-EN.md) - Dynamic and observable thread pool framework.
-- [inspectIT](https://www.inspectit.rocks) - Captures detailed run-time information via hooks that can be changed on the fly. It supports tracing over multiple systems via the OpenTracing API and can correlate the data with end user monitoring.
-- [Instrumental ![c]](https://instrumentalapp.com) - Real-time Java application performance monitoring. A commercial service with free development accounts.
-- [Jaeger client](https://github.com/jaegertracing/jaeger-client-java) - Jaeger client.
-- [JavaMelody](https://github.com/javamelody/javamelody) - Performance monitoring and profiling.
-- [jmxtrans](https://github.com/jmxtrans/jmxtrans) - Connect to multiple JVMs and query them for their attributes via JMX. Its query language is based on JSON, which allows non-Java programmers to access the JVM attributes. Supports different output writes, including Graphite, Ganglia, and StatsD.
-- [Jolokia](https://jolokia.org) - JMX over REST.
-- [Micrometer](https://github.com/micrometer-metrics/micrometer) - Vendor-neutral metrics/observability facade for the most popular metrics/observability libraries.
-- [Micrometer Tracing](https://github.com/micrometer-metrics/tracing) - Vendor-neutral distributed tracing facade for the most popular tracer libraries.
-- [nudge4j](https://github.com/lorenzoongithub/nudge4j) - Remote developer console from the browser for Java 8 via bytecode injection.
-- [Pinpoint](https://github.com/naver/pinpoint) - Open-source APM tool.
-- [Prometheus](https://github.com/prometheus/client_java) - Provides a multi-dimensional data model, DSL, autonomous server nodes and much more.
-- [Sentry ![c]](https://github.com/getsentry/sentry-java) - Integration with [Sentry](https://github.com/getsentry/sentry), an application error tracking and performance analysis platform.
-- [SPM ![c]](https://github.com/sematext/sematext-agent-java) - Performance monitor with distributing transaction tracing for JVM apps.
-- [Stagemonitor](https://github.com/stagemonitor/stagemonitor) - Open-source performance monitoring and transaction tracing for JVM apps.
-- [Sysmon](https://github.com/palantir/Sysmon) - Lightweight platform monitoring tool for Java VMs.
-- [zipkin](https://zipkin.io) - Distributed tracing system which gathers timing data needed to troubleshoot latency problems in microservice architectures.
-
-### Native
-
-_For working with platform-specific native libraries._
-
-- [Aparapi](https://github.com/Syncleus/aparapi) - Converts bytecode to OpenCL which allows execution on GPUs.
-- [JavaCPP](https://github.com/bytedeco/javacpp) - Provides efficient and easy access to native C++.
-- [JNA](https://github.com/java-native-access/jna) - Work with native libraries without writing JNI. Also provides interfaces to common system libraries.
-- [JNR](https://github.com/jnr/jnr-ffi) - Work with native libraries without writing JNI. Also provides interfaces to common system libraries. Same goals as JNA, but faster, and serves as the basis for the upcoming [Project Panama](http://openjdk.java.net/projects/panama).
-
-### Natural Language Processing
-
-_Libraries that specialize in processing text._
-
-- [CogCompNLP](https://github.com/CogComp/cogcomp-nlp) - Provides common annotators for plain text input. (Research and Academic Use License)
-- [CoreNLP](https://nlp.stanford.edu/software/corenlp.shtml) - Provides a set of fundamental tools for tasks like tagging, named entity recognition, and sentiment analysis. (GPL-3.0-or-later)
-- [DKPro](https://dkpro.github.io) - Collection of reusable NLP tools for linguistic pre-processing, machine learning, lexical resources, etc.
-- [LingPipe](http://alias-i.com/lingpipe/) - Toolkit for tasks ranging from POS tagging to sentiment analysis.
-
-### Networking
-
-_Libraries for building network servers._
-
-- [Commons-networking](https://github.com/CiscoSE/commons-networking) - Client for server-sent events (SSE).
-- [Comsat](https://github.com/puniverse/comsat) - Integrates standard Java web-related APIs with Quasar fibers and actors.
-- [Dubbo](https://github.com/apache/dubbo) - High-performance RPC framework.
-- [Grizzly](https://javaee.github.io/grizzly/) - NIO framework. Used as a network layer in Glassfish.
-- [gRPC](https://github.com/grpc/grpc-java) - RPC framework based on protobuf and HTTP/2.
-- [KryoNet](https://github.com/EsotericSoftware/kryonet) - Provides a clean and simple API for efficient TCP and UDP client/server network communication using NIO and Kryo.
-- [MINA](https://mina.apache.org) - Abstract, event-driven async I/O API for network operations over TCP/IP and UDP/IP via Java NIO.
-- [Netty](https://netty.io) - Framework for building high-performance network applications.
-- [Drift](https://github.com/airlift/drift) - Easy-to-use, annotation-based library for creating Thrift clients and serializable types.
-- [ServiceTalk](https://github.com/apple/servicetalk) - Framework built on Netty with APIs tailored to specific protocols and support for multiple programming paradigms.
-- [sshj](https://github.com/hierynomus/sshj) - Programmatically use SSH, SCP or SFTP.
-- [TLS Channel](https://github.com/marianobarrios/tls-channel) - Implements a ByteChannel interface over SSLEngine, enabling easy-to-use (socket-like) TLS.
-- [Undertow](http://undertow.io) - Web server providing both blocking and non-blocking APIs based on NIO. Used as a network layer in WildFly. (LGPL-2.1-only)
-- [urnlib](https://github.com/slub/urnlib) - Represent, parse and encode URNs, as in RFC 2141. (GPL-3.0-only)
-- [Fluency](https://github.com/komamitsu/fluency) - High throughput data ingestion logger to Fluentd and Fluent Bit.
-
-### ORM
-
-_APIs that handle the persistence of objects._
-
-- [Apache Cayenne](https://cayenne.apache.org) - Provides a clean, static API for data access. Also includes a GUI Modeler for working with database mappings, and DB reverse engineering and generation.
-- [Doma](https://github.com/domaframework/doma) - Database access framework that verifies and generates source code at compile time using annotation processing as well as native SQL templates called two-way SQL.
-- [Ebean](https://ebean.io) - Provides simple and fast data access.
-- [EclipseLink](https://www.eclipse.org/eclipselink/) - Supports a number of persistence standards: JPA, JAXB, JCA and SDO.
-- [Hibernate](http://hibernate.org/orm/) - Robust and widely used, with an active community. (LGPL-2.1-only)
-- [MyBatis](https://github.com/mybatis/mybatis-3) - Couples objects with stored procedures or SQL statements.
-- [ObjectiveSql](https://github.com/braisdom/ObjectiveSql) - ActiveRecord ORM for rapid development and convention over configuration.
-- [Permazen](https://github.com/permazen/permazen) - Language-natural persistence layer.
-- [SimpleFlatMapper](https://github.com/arnaudroger/SimpleFlatMapper) - Simple database and CSV mapper.
-
-### PaaS
-
-_Java platform as a service._
-
-- [AWS Elastic Beanstalk ![c]](https://aws.amazon.com/elasticbeanstalk/) - AWS-based, with support for Tomcat and Jetty.
-- [AWS Lambda ![c]](https://aws.amazon.com/lambda/) - Serverless computation.
-- [Google Cloud ![c]](https://cloud.google.com) - Google's cloud infrastructure.
-- [Heroku ![c]](https://www.heroku.com) - Abstract computing environments.
-- [Microsoft Azure ![c]](https://azure.microsoft.com/en-us/) - Microsoft's cloud infrastructure.
-- [OpenShift ![c]](https://www.openshift.com) - Provides additionally an on-premise solution.
-
-### PDF
-
-_Tools to help with PDF files._
-
-- [Apache FOP](https://xmlgraphics.apache.org/fop/) - Creates PDFs from XSL-FO.
-- [Apache PDFBox](https://pdfbox.apache.org) - Toolbox for creating and manipulating PDFs.
-- [Dynamic Jasper](http://dynamicjasper.com) - Abstraction layer to JasperReports. (LGPL-3.0-only)
-- [DynamicReports](https://github.com/dynamicreports/dynamicreports) - Simplifies JasperReports. (LGPL-3.0-only)
-- [Eclipse BIRT](https://www.eclipse.org/birt) - Report engine for creating PDF and other formats (DOCX, XLSX, HTML, etc) using Eclipse-based visual editor.
-- [flyingsaucer](https://github.com/flyingsaucerproject/flyingsaucer) - XML/XHTML and CSS 2.1 renderer. (LGPL-2.1-or-later)
-- [iText ![c]](https://itextpdf.com/en) - Creates PDF files programmatically.
-- [JasperReports](https://community.jaspersoft.com/project/jasperreports-library) - Complex reporting engine. (LGPL-3.0-only)
-- [Open HTML to PDF](https://github.com/danfickle/openhtmltopdf) - Properly supports modern PDF standards based on flyingsaucer and Apache PDFBox.
-- [OpenPDF](https://github.com/LibrePDF/OpenPDF) - Open-source iText fork. (LGPL-3.0-only & MPL-2.0)
-- [Tabula](https://github.com/tabulapdf/tabula-java) - Extracts tables from PDF files.
-
-### Performance analysis
-
-_Tools for performance analysis, profiling and benchmarking._
-
-- [fastThread ![c]](https://fastthread.io) - Analyze and visualize thread dumps with a free cloud-based upload interface.
-- [GCeasy ![c]](https://gceasy.io) - Tool to analyze and visualize GC logs. It provides a free cloud-based upload interface.
-- [honest-profiler](https://github.com/jvm-profiling-tools/honest-profiler) - Low-overhead, bias-free sampling profiler.
-- [jHiccup](https://github.com/giltene/jHiccup) - Logs and records platform JVM stalls.
-- [JITWatch](https://github.com/AdoptOpenJDK/jitwatch) - Analyze the JIT compiler optimisations made by the HotSpot JVM.
-- [JMH](http://openjdk.java.net/projects/code-tools/jmh/) - Harness for building, running, and analysing nano/micro/milli/macro benchmarks written in Java and other languages targeting the JVM. (GPL-2.0 only WITH Classpath-exception-2.0)
-- [LatencyUtils](https://github.com/LatencyUtils/LatencyUtils) - Utilities for latency measurement and reporting.
-
-### Platform
-
-_Frameworks that are suites of multiple libraries encompassing several categories._
-
-#### Apache Commons
-
-- [BCEL](http://commons.apache.org/proper/commons-bcel/) - Byte Code Engineering Library - analyze, create, and manipulate Java class files.
-- [BeanUtils](http://commons.apache.org/proper/commons-beanutils/) - Easy-to-use wrappers around the Java reflection and introspection APIs.
-- [BeanUtils2](http://commons.apache.org/sandbox/commons-beanutils2/) - Redesign of Commons BeanUtils.
-- [BSF](http://commons.apache.org/proper/commons-bsf/) - Bean Scripting Framework - interface to scripting languages, including JSR-223.
-- [Chain](http://commons.apache.org/proper/commons-chain/) - Chain of Responsibility pattern implementation.
-- [ClassScan](http://commons.apache.org/sandbox/commons-classscan/) - Find Class interfaces, methods, fields, and annotations without loading.
-- [CLI](http://commons.apache.org/proper/commons-cli/) - Command-line arguments parser.
-- [CLI2](http://commons.apache.org/sandbox/commons-cli2/) - Redesign of Commons CLI.
-- [Codec](http://commons.apache.org/proper/commons-codec/) - General encoding/decoding algorithms, e.g. phonetic, base64 or URL.
-- [Collections](http://commons.apache.org/proper/commons-collections/) - Extends or augments the Java Collections Framework.
-- [Compress](http://commons.apache.org/proper/commons-compress/) - Defines an API for working with tar, zip and bzip2 files.
-- [Configuration](http://commons.apache.org/proper/commons-configuration/) - Reading of configuration/preferences files in various formats.
-- [Convert](http://commons.apache.org/sandbox/commons-convert/) - Commons-Convert aims to provide a single library dedicated to the task of converting an object of one type to another.
-- [CSV](http://commons.apache.org/proper/commons-csv/) - Component for reading and writing comma separated value files.
-- [Daemon](http://commons.apache.org/proper/commons-daemon/) - Alternative invocation mechanism for unix-daemon-like java code.
-- [DBCP](http://commons.apache.org/proper/commons-dbcp/) - Database connection pooling services.
-- [DbUtils](http://commons.apache.org/proper/commons-dbutils/) - JDBC helper library.
-- [Digester](http://commons.apache.org/proper/commons-digester/) - XML-to-Java-object mapping utility.
-- [Email](http://commons.apache.org/proper/commons-email/) - Library for sending e-mail from Java.
-- [Exec](http://commons.apache.org/proper/commons-exec/) - API for dealing with external process execution and environment management in Java.
-- [FileUpload](http://commons.apache.org/proper/commons-fileupload/) - File upload capability for your servlets and web applications.
-- [Finder](http://commons.apache.org/sandbox/commons-finder/) - Java library inspired by the UNIX find command.
-- [Flatfile](http://commons.apache.org/sandbox/commons-flatfile/) - Java library for working with flat data structures.
-- [Functor](http://commons.apache.org/proper/commons-functor/) - Function that can be manipulated as an object, or an object representing a single, generic function.
-- [Graph](http://commons.apache.org/sandbox/commons-graph/) - General purpose graph APIs and algorithms.
-- [I18n](http://commons.apache.org/sandbox/commons-i18n/) - Adds the feature of localized message bundles that consist of one or many localized texts that belong together.
-- [Id](http://commons.apache.org/sandbox/commons-id/) - Id is a component used to generate identifiers.
-- [Imaging](http://commons.apache.org/proper/commons-imaging/) - Image library.
-- [IO](http://commons.apache.org/proper/commons-io/) - Collection of I/O utilities.
-- [Javaflow](http://commons.apache.org/sandbox/commons-javaflow/) - Continuation implementation to capture the state of the application.
-- [JCI](http://commons.apache.org/proper/commons-jci/) - Java Compiler Interface.
-- [JCS](http://commons.apache.org/proper/commons-jcs/) - Java Caching System.
-- [Jelly](http://commons.apache.org/proper/commons-jelly/) - XML based scripting and processing engine.
-- [Jexl](http://commons.apache.org/proper/commons-jexl/) - Expression language which extends the Expression Language of the JSTL.
-- [JNet](http://commons.apache.org/sandbox/commons-jnet/) - JNet allows to use dynamically register url stream handlers through the java.net API.
-- [JXPath](http://commons.apache.org/proper/commons-jxpath/) - Utilities for manipulating Java Beans using the XPath syntax.
-- [Lang](http://commons.apache.org/proper/commons-lang/) - Provides extra functionality for classes in java.lang.
-- [Logging](https://commons.apache.org/proper/commons-logging/) - Wrapper around a variety of logging API implementations.
-- [Math](http://commons.apache.org/proper/commons-math/) - Lightweight, self-contained mathematics and statistics components.
-- [Monitoring](http://commons.apache.org/sandbox/commons-monitoring/) - Monitoring aims to provide a simple but extensible monitoring solution for Java applications.
-- [Nabla](http://commons.apache.org/sandbox/commons-nabla/) - Nabla provides automatic differentiation classes that can generate derivative of any function implemented in the Java language.
-- [Net](http://commons.apache.org/proper/commons-net/) - Collection of network utilities and protocol implementations.
-- [OGNL](http://commons.apache.org/proper/commons-ognl/) - Object-graph navigation language.
-- [OpenPGP](http://commons.apache.org/sandbox/commons-openpgp/) - Interface to signing and verifying data using OpenPGP.
-- [Performance](http://commons.apache.org/sandbox/commons-performance/) - Small framework for microbenchmark clients, with implementations for Commons DBCP and Pool.
-- [Pipeline](http://commons.apache.org/sandbox/commons-pipeline/) - Provides a set of pipeline utilities designed around work queues that run in parallel to sequentially process data objects.
-- [Pool](http://commons.apache.org/proper/commons-pool/) - Generic object pooling component.
-- [Proxy](http://commons.apache.org/proper/commons-proxy/) - Library for creating dynamic proxies.
-- [RDF](https://commons.apache.org/proper/commons-rdf/) - Common implementation of RDF 1.1 that could be implemented by systems on the JVM.
-- [RNG](https://commons.apache.org/proper/commons-rng/) - Commons Rng provides implementations of pseudo-random numbers generators.
-- [SCXML](http://commons.apache.org/proper/commons-scxml/) - Implementation of the State Chart XML specification aimed at creating and maintaining a Java SCXML engine.
-- [Validator](http://commons.apache.org/proper/commons-validator/) - Framework to define validators and validation rules in an xml file.
-- [VFS](http://commons.apache.org/proper/commons-vfs/) - Virtual File System component for treating files, FTP, SMB, ZIP and such like as a single logical file system.
-- [Weaver](http://commons.apache.org/proper/commons-weaver/) - Provides an easy way to enhance (weave) compiled bytecode.
-
-#### Other
-
-- [CUBA Platform](https://www.cuba-platform.com/) - High-level framework for developing enterprise applications with a rich web interface, based on Spring, EclipseLink and Vaadin.
-- [Light-4J](https://github.com/networknt/light-4j/) - Fast, lightweight and productive microservices framework with built-in [security](https://github.com/networknt/light-oauth2/).
-- [Orienteer](https://github.com/OrienteerBAP/Orienteer/) - Open-source business application platform for rapid configuration/development of CRM, ERP, LMS and other applications.
-- [Spring](https://spring.io/projects/) - Provides many packages for dependency injection, aspect-oriented programming, security, etc.
-
-### Processes
-
-_Libraries that help the management of operating system processes._
-
-- [ch.vorburger.exec](https://github.com/vorburger/ch.vorburger.exec) - Convenient API around Apache Commons Exec.
-- [zt-exec](https://github.com/zeroturnaround/zt-exec) - Provides a unified API to Apache Commons Exec and ProcessBuilder.
-- [zt-process-killer](https://github.com/zeroturnaround/zt-process-killer) - Stops processes started from Java or the system processes via PID.
-
-### Reactive libraries
-
-_Libraries for developing reactive applications._
-
-- [Akka](https://akka.io) - Toolkit and runtime for building concurrent, distributed, fault-tolerant and event-driven applications.
-- [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) - Provides a standard for asynchronous stream processing with non-blocking backpressure.
-- [Reactor](https://github.com/reactor/reactor-core) - Library for building reactive fast-data applications.
-- [RxJava](https://github.com/ReactiveX/RxJava) - Allows for composing asynchronous and event-based programs using observable sequences.
-- [vert.x](https://vertx.io) - Polyglot event-driven application framework.
-
-### REST Frameworks
-
-_Frameworks specifically for creating RESTful services._
-
-- [Dropwizard](https://github.com/dropwizard/dropwizard) - Opinionated framework for setting up modern web applications with Jetty, Jackson, Jersey and Metrics.
-- [Elide](https://elide.io) - Opinionated framework for JSON- or GraphQL-APIs based on a JPA data model.
-- [Jersey](https://jersey.github.io) - JAX-RS reference implementation.
-- [Microserver](https://github.com/aol/micro-server) - Convenient, extensible microservices plugin system for Spring & Spring Boot. With more than 30 plugins and growing, it supports both micro-monolith and pure microservices styles.
-- [Rapidoid](https://www.rapidoid.org) - Simple, secure and extremely fast framework consisting of an embedded HTTP server, GUI components and dependency injection.
-- [rest.li](https://github.com/linkedin/rest.li) - Framework for building robust, scalable RESTful architectures using typesafe bindings and asynchronous, non-blocking IO with an end-to-end developer workflow that promotes clean practices, uniform interface design and consistent data modeling.
-- [RESTEasy](https://resteasy.github.io) - Fully certified and portable implementation of the JAX-RS specification.
-- [RestExpress](https://github.com/RestExpress/RestExpress) - Thin wrapper on the JBoss Netty HTTP stack that provides scaling and performance.
-- [Restlet Framework](https://github.com/restlet/restlet-framework-java) - Pioneering framework with powerful routing and filtering capabilities, and a unified client and server API.
-- [Spark](http://sparkjava.com) - Sinatra inspired framework.
-- [Crnk](http://www.crnk.io) - Implementation of the JSON API specification to build resource-oriented REST endpoints with sorting, filtering, paging, linking, object graphs, type-safety, bulk updates, integrations and more.
-- [springdoc-openapi](https://github.com/springdoc/springdoc-openapi) - Automates the generation of API documentation using Spring Boot projects.
-- [Swagger](https://swagger.io) - Standard, language-agnostic interface to REST APIs.
-
-### Science
-
-_Libraries for scientific computing, analysis and visualization._
-
-- [BioJava](https://biojava.org/) - Facilitates processing biological data by providing algorithms, file format parsers, sequencing and 3D visualization commonly used in bioinformatics.
-- [Chart-FX](https://github.com/GSI-CS-CO/chart-fx) - Scientific charting library with focus on performance optimised real-time data visualisation at 25 Hz update rates for large data sets.
-- [DataMelt](https://datamelt.org/) - Environment for scientific computation, data analysis and data visualization. (GPL-3.0-or-later)
-- [Erdos](https://github.com/Erdos-Graph-Framework/Erdos) - Modular, light and easy graph framework for theoretic algorithms.
-- [GraphStream](http://graphstream-project.org) - Library for modeling and analyzing dynamic graphs.
-- [JFreeChart](http://www.jfree.org/jfreechart/) - 2D chart library for Swing, JavaFX and server-side applications. (LGPL-2.1-only)
-- [JGraphT](https://github.com/jgrapht/jgrapht) - Graph library that provides mathematical graph-theory objects and algorithms.
-- [JGraphX](https://github.com/jgraph/jgraphx) - Library for visualizing (mainly Swing) and interacting with node-edge graphs.
-- [LogicNG](https://github.com/logic-ng/LogicNG) - Library for creating, manipulating and solving Boolean and Pseudo-Boolean formulas.
-- [Mines Java Toolkit](https://github.com/MinesJTK/jtk) - Library for geophysical scientific computation, visualization and digital signal analysis.
-- [Morpheus](https://github.com/zavtech/morpheus-core) - Provides a versatile two-dimensional memory efficient tabular data structure called a DataFrame to enable efficient in-memory analytics for scientific computing on the JVM.
-- [Orekit](https://www.orekit.org/) - A low level space flight dynamics library providing basic elements (orbits, dates, attitude, frames...) and various algorithms (conversions, propagations, pointing...) to handle them.
-- [Orson-Charts](https://github.com/jfree/orson-charts) - Generates a wide variety of 3D charts that can be displayed with Swing and JavaFX or exported to PDF, SVG, PNG and JPEG. (GPL-3.0-only)
-- [Tablesaw](https://github.com/jtablesaw/tablesaw) - Includes a data-frame, an embedded column store, and hundreds of methods to transform, summarize, or filter data.
-- [XChart](https://github.com/knowm/XChart) - Light-weight library for plotting data. Many customizable chart types are available.
-
-### Search
-
-_Engines that index documents for search and analysis._
-
-- [Apache Lucene](https://lucene.apache.org) - High-performance, full-featured, cross-platform, text search engine library.
-- [Apache Solr](https://lucene.apache.org/solr/) - Enterprise search engine optimized for high-volume traffic.
-- [Elasticsearch](https://www.elastic.co) - Distributed, multitenant-capable, full-text search engine with a RESTful web interface and schema-free JSON documents.
-- [Indexer4j](https://github.com/haeungun/indexer4j) - Simple and light full text indexing and searching library.
-
-### Security
-
-_Libraries that handle security, authentication, authorization or session management._
-
-- [Apache Shiro](https://shiro.apache.org) - Performs authentication, authorization, cryptography and session management.
-- [Bouncy Castle](https://www.bouncycastle.org/java.html) - All-purpose cryptographic library and JCA provider offering a wide range of functions, from basic helpers to PGP/SMIME operations.
-- [DependencyCheck](https://github.com/jeremylong/DependencyCheck) - Detects publicly disclosed vulnerabilities contained within a project's dependencies.
-- [Cryptomator](https://cryptomator.org) - Multiplatform, transparent, client-side encryption of files in the cloud. (GPL-3.0-only)
-- [Hdiv](https://github.com/hdiv/hdiv) - Runtime application that repels application security risks included in the OWASP Top 10, including SQL injection, cross-site scripting, cross-site request forgery, data tampering, and brute force attacks.
-- [jjwt](https://github.com/jwtk/jjwt) - JSON web token for Java and Android.
-- [jwt-java](https://github.com/BastiaanJansen/jwt-java) - Easily create and parse JSON Web Tokens and create customized JWT validators using a fluent API.
-- [Jwks RSA](https://github.com/auth0/jwks-rsa-java) - JSON Web Key Set parser.
-- [Kalium](https://github.com/abstractj/kalium) - Binding for the Networking and Cryptography (NaCl) library.
-- [Keycloak](https://www.keycloak.org) - Integrated SSO and IDM for browser apps and RESTful web services.
-- [Keywhiz](https://github.com/square/keywhiz) - System for distributing and managing secrets.
-- [Nbvcxz](https://github.com/GoSimpleLLC/nbvcxz) - Advanced password strength estimation.
-- [OACC](http://oaccframework.org) - Provides permission-based authorization services.
-- [OpenAM](https://github.com/OpenIdentityPlatform/OpenAM) - Access management solution that includes authentication, SSO, authorization, federation, entitlements and web services security.
-- [OTP-Java](https://github.com/BastiaanJansen/OTP-Java) - One-time password generator library according to RFC 4226 (HOTP) and RFC 6238 (TOTP).
-- [pac4j](https://github.com/pac4j/pac4j) - Security engine.
-- [Passay](http://www.passay.org/) - Enforce password policy by validating candidate passwords against a configurable rule set.
-- [Password4j](https://github.com/Password4j/password4j) - User-friendly cryptographic library that supports Argon2, Bcrypt, Scrypt, PBKDF2 and various other cryptographic hash functions.
-- [SecurityBuilder](https://github.com/tersesystems/securitybuilder) - Fluent Builder API for JCA and JSSE classes and especially X.509 certificates.
-- [SSLContext-Kickstart](https://github.com/Hakky54/sslcontext-kickstart) - High-level SSL context builder for configuring HTTP clients with SSL/TLS.
-- [Themis](https://github.com/cossacklabs/themis) - Multi-platform high-level cryptographic library provides easy-to-use encryption for protecting sensitive data: secure messaging with forward secrecy, secure data storage (AES256GCM); suits for building end-to-end encrypted applications.
-- [Tink](https://github.com/google/tink) - Provides a simple and misuse-proof API for common cryptographic tasks.
-- [Topaz](https://www.topaz.sh) - Fine-grained authorization for applications with support for RBAC, ABAC, and ReBAC.
-
-### Serialization
-
-_Libraries that handle serialization with high efficiency._
-
-- [FlatBuffers](https://github.com/google/flatbuffers) - Memory-efficient serialization library that can access serialized data without unpacking and parsing it.
-- [FST](https://github.com/RuedigerMoeller/fast-serialization) - JDK-compatible, high-performance object graph serialization.
-- [Fury](https://github.com/alipay/fury) - Blazing fast object graph serialization framework powered by JIT and zero-copy.
-- [Kryo](https://github.com/EsotericSoftware/kryo) - Fast and efficient object graph serialization framework.
-- [MessagePack](https://github.com/msgpack/msgpack-java) - Efficient binary serialization format.
-- [PHP Serializer](https://github.com/marcospassos/java-php-serializer) - Serializing objects in the PHP serialization format.
-
-### Server
-
-_Servers specifically used to deploy applications._
-
-- [Apache Tomcat](https://tomcat.apache.org) - Robust, all-round server for Servlet and JSP.
-- [Apache TomEE](https://tomee.apache.org) - Tomcat plus Java EE.
-- [Jetty](https://www.eclipse.org/jetty/) - Provides a Web server and javax.servlet container, plus support for HTTP/2, WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations.
-- [nanohttpd](https://github.com/NanoHttpd/nanohttpd) - Tiny, easily embeddable HTTP server.
-- [WildFly](https://www.wildfly.org) - Formerly known as JBoss and developed by Red Hat with extensive Java EE support. (LGPL-2.1-only)
-
-### Template Engine
-
-_Tools that substitute expressions in a template._
-
-- [Freemarker](https://freemarker.apache.org) - Library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.
-- [Handlebars.java](https://jknack.github.io/handlebars.java/) - Logicless and semantic Mustache templates.
-- [Jade4J](https://github.com/neuland/jade4j) - Implementation of Pug (formerly known as Jade).
-- [Jamal](https://github.com/verhas/jamal) - Extendable template engine embedded into Maven/JavaDoc, supporting multiple extensions (Groovy, Ruby, JavaScript, JShell, PlantUml) with support for snippet handling.
-- [jstachio](https://github.com/jstachio/jstachio) - Typesafe Mustache templating engine.
-- [jte](https://github.com/casid/jte) - Compiles to classes, and uses an easy syntax, several features to make development easier and provides fast execution and a small footprint.
-- [Jtwig](https://github.com/jtwig/jtwig) - Modular, configurable and fully tested template engine.
-- [Pebble](https://pebbletemplates.io) - Inspired by Twig and separates itself with its inheritance feature and its easy-to-read syntax. It ships with built-in autoescaping for security and it includes integrated support for internationalization.
-- [Rocker](https://github.com/fizzed/rocker) - Optimized, memory efficient and speedy template engine producing statically typed, plain objects.
-- [StringTemplate](https://github.com/antlr/stringtemplate4) - Template engine for generating source code, web pages, emails, or any other formatted text output.
-- [Thymeleaf](https://www.thymeleaf.org) - Aims to be a substitute for JSP and works for XML files.
-
-### Testing
-
-_Tools that test from model to the view._
-
-#### Asynchronous
-
-_Tools that simplify testing asynchronous services._
-
-- [Awaitility](https://github.com/awaitility/awaitility) - DSL for synchronizing asynchronous operations.
-- [ConcurrentUnit](https://github.com/jhalterman/concurrentunit) - Toolkit for testing multi-threaded and asynchronous applications.
-- [GreenMail](https://greenmail-mail-test.github.io/greenmail/) - In-memory email server for integration testing. Supports SMTP, POP3 and IMAP including SSL. (GPL-2.0-only)
-- [Hoverfly Java](https://github.com/SpectoLabs/hoverfly-java) - Native bindings for Hoverfly, a proxy which allows you to simulate HTTP services.
-- [Karate](https://github.com/intuit/karate) - DSL that combines API test-automation, mocks and performance-testing making testing REST/HTTP services easy.
-- [REST Assured](https://github.com/rest-assured/rest-assured) - DSL for easy testing of REST/HTTP services.
-- [WebTau](https://github.com/testingisdocumenting/webtau) - Test across REST-API, Graph QL, Browser, Database, CLI and Business Logic with consistent set of matchers and concepts.
-
-#### BDD
-
-_Testing for the software development process that emerged from TDD and was heavily influenced by DDD and OOAD._
-
-- [Cucumber](https://github.com/cucumber/cucumber-jvm) - Provides a way to describe features in a plain language which customers can understand.
-- [Cukes-REST](https://github.com/ctco/cukes) - Collection of Gherkin steps for REST-service testing using Cucumber.
-- [J8Spec](https://github.com/j8spec/j8spec) - Follows a Jasmine-like syntax.
-- [JBehave](https://jbehave.org) - Extensively configurable framework that describes stories.
-- [JGiven](http://jgiven.org) - Provides a fluent API which allows for simpler composition.
-- [Lamdba Behave](https://github.com/RichardWarburton/lambda-behave) - Aims to provide a fluent API to write tests in long and descriptive sentences that read like plain English.
-- [Serenity BDD](https://github.com/serenity-bdd/serenity-core) - Automated Acceptance testing and reporting library that works with Cucumber, JBehave and JUnit to make it easier to write high quality executable specifications.
-
-#### Fixtures
-
-_Everything related to the creation and handling of random data._
-
-- [Beanmother](https://github.com/keepcosmos/beanmother) - Sets up beans from YAML fixtures.
-- [Datafaker](https://github.com/datafaker-net/datafaker) - Modern fake data generator forked from Java Faker.
-- [Fixture Factory](https://github.com/six2six/fixture-factory) - Generates fake objects from a template.
-- [jFairy](https://github.com/Devskiller/jfairy) - Fake data generator.
-- [Instancio](https://github.com/instancio/instancio) - Automates data setup in unit tests by generating fully-populated, reproducible objects. Includes JUnit 5 extension.
-- [Randomized Testing](https://github.com/randomizedtesting/randomizedtesting) - JUnit test runner and plugins for running JUnit tests with pseudo-randomness.
-- [Java Faker](https://github.com/DiUS/java-faker) - Port of Ruby's fake data generator.
-- [Mockneat](https://github.com/nomemory/mockneat) - Another fake data generator.
-
-#### Frameworks
-
-_Provide environments to run tests for a specific use case._
-
-- [ArchUnit](https://github.com/TNG/ArchUnit) - Test library for specifying and asserting architecture rules.
-- [Apache JMeter](http://jmeter.apache.org) - Functional testing and performance measurements.
-- [Arquillian](http://arquillian.org) - Integration and functional testing platform for Java EE containers.
-- [Citrus](https://citrusframework.org) - Integration testing framework that focuses on both client- and server-side messaging.
-- [Gatling](https://gatling.io) - Load testing tool designed for ease of use, maintainability and high performance.
-- [JUnit](https://junit.org/junit5/) - Common testing framework.
-- [jqwik](https://jqwik.net) - Engine for property-based testing built on JUnit 5.
-- [Pact JVM](https://github.com/DiUS/pact-jvm) - Consumer-driven contract testing.
-- [PIT](http://pitest.org) - Fast mutation-testing framework for evaluating fault-detection abilities of existing JUnit or TestNG test suites.
-
-#### Matchers
-
-_Libraries that provide custom matchers._
-
-- [AssertJ](https://joel-costigliola.github.io/assertj/) - Fluent assertions that improve readability.
-- [Hamcrest](http://hamcrest.org/JavaHamcrest/) - Matchers that can be combined to create flexible expressions of intent.
-- [JSONAssert](http://jsonassert.skyscreamer.org) - Simplifies testing JSON strings.
-- [JsonUnit](https://github.com/lukas-krecan/JsonUnit) - Library that simplifies JSON comparison in tests.
-- [Truth](https://truth.dev) - Google's fluent assertion and proposition framework.
-- [XMLUnit](https://github.com/xmlunit/xmlunit) - Simplifies testing for XML output.
-
-#### Miscellaneous
-
-_Other stuff related to testing._
-
-- [ConsoleCaptor](https://github.com/Hakky54/console-captor) - Captures console output for unit testing purposes.
-- [junit-dataprovider](https://github.com/TNG/junit-dataprovider) - TestNG-like data provider/runner for JUnit.
-- [LogCaptor](https://github.com/Hakky54/log-captor) - Captures log entries for unit testing purposes.
-- [log-capture](https://github.com/dm-drogeriemarkt/log-capture) - Captures log entries and provides assertions for unit and integration testing.
-- [Mutability Detector](https://github.com/MutabilityDetector/MutabilityDetector) - Reports whether instances of a given class are immutable.
-- [raml-tester](https://github.com/nidi3/raml-tester) - Tests if a request/response matches a given RAML definition.
-- [TestContainers](https://github.com/testcontainers/testcontainers-java) - Provides throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.
-- [pojo-tester](https://www.pojo.pl) - Automatically performs tests on basic POJO methods. (LGPL-3.0-only)
-
-#### Mocking
-
-_Tools which mock collaborators to help testing single, isolated units._
-
-- [JMockit](http://jmockit.github.io) - Integration testing, API mocking and faking, and code coverage.
-- [Mockito](https://github.com/mockito/mockito) - Mocking framework that lets you write tests with a clean and simple API.
-- [MockServer](https://www.mock-server.com) - Allows mocking of systems integrated with HTTPS.
-- [Moco](https://github.com/dreamhead/moco) - Concise web services for stubs and mocks.
-- [PowerMock](https://github.com/powermock/powermock) - Mocks static methods, constructors, final classes and methods, private methods, and removal of static initializers.
-- [WireMock](http://wiremock.org) - Stubs and mocks web services.
-- [EasyMock](https://github.com/easymock/easymock) - EasyMock is a Java library that provides an easy way to use Mock Objects in unit testing.
-
-### Utility
-
-_Libraries which provide general utility functions._
-
-- [Arthas](https://github.com/alibaba/arthas) - Allows to troubleshoot production issues for applications without modifying code or restarting servers.
-- [bucket4j](https://github.com/vladimir-bukhtoyarov/bucket4j) - Rate limiting library based on token-bucket algorithm.
-- [cactoos](https://github.com/yegor256/cactoos) - Collection of object-oriented primitives.
-- [Chocotea](https://github.com/cleopatra27/chocotea) - Generates postman collection, environment and integration tests from java code.
-- [CRaSH](http://www.crashub.org) - Provides a shell into a JVM that's running CRaSH. Used by Spring Boot and others. (LGPL-2.1-or-later)
-- [Dex](https://github.com/PatMartin/Dex) - Java/JavaFX tool capable of powerful ETL and data visualization.
-- [dregex](https://github.com/marianobarrios/dregex) - Regular expression engine that uses deterministic finite automata. It supports some Perl-style features and yet retains linear matching time, and also offers set operations.
-- [Embulk](https://github.com/embulk/embulk) - Bulk data loader that helps data transfer between various databases, storages, file formats, and cloud services.
-- [fswatch](https://github.com/vorburger/ch.vorburger.fswatch) - Micro library to watch for directory file system changes, simplifying java.nio.file.WatchService.
-- [Gephi](https://github.com/gephi/gephi) - Cross-platform for visualizing and manipulating large graph networks. (GPL-3.0-only)
-- [Guava](https://github.com/google/guava) - Collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and more.
-- [JADE](https://jade.tilab.com) - Framework and environment for building and debugging multi-agent systems. (LGPL-2.0-only)
-- [Java Diff Utils](https://java-diff-utils.github.io/java-diff-utils/) - Utilities for text or data comparison and patching.
-- [JavaVerbalExpressions](https://github.com/VerbalExpressions/JavaVerbalExpressions) - Library that helps with constructing difficult regular expressions.
-- [JGit](https://www.eclipse.org/jgit/) - Lightweight, pure Java library implementing the Git version control system.
-- [minio-java](https://github.com/minio/minio-java) - Provides simple APIs to access any Amazon S3-compatible object storage server.
-- [Protégé](https://protege.stanford.edu) - Provides an ontology editor and a framework to build knowledge-based systems.
-- [Semver4j](https://github.com/semver4j/semver4j) - Lightweight library that helps you handling semantic versioning with different modes.
-- [Underscore-java](https://github.com/javadev/underscore-java) - Port of Underscore.js functions.
-
-### Version Managers
-
-_Utilities that help create the development shell environment and switch between different Java versions._
-
-- [jabba](https://github.com/shyiko/jabba) - Java Version Manager inspired by nvm. Supports macOS, Linux and Windows.
-- [jenv](https://github.com/jenv/jenv) - Java Version Manager inspired by rbenv. Can configure globally or per project. Tested on Debian and macOS.
-- [SDKMan](https://github.com/sdkman/sdkman-cli) - Java Version Manager inspired by RVM and rbenv. Supports UNIX-based platforms and Windows.
-
-### Web Crawling
-
-_Libraries that analyze the content of websites._
-
-- [Apache Nutch](https://nutch.apache.org) - Highly extensible, highly scalable web crawler for production environments.
-- [Crawler4j](https://github.com/yasserg/crawler4j) - Simple and lightweight web crawler.
-- [jsoup](https://jsoup.org) - Scrapes, parses, manipulates and cleans HTML.
-- [StormCrawler](http://stormcrawler.net) - SDK for building low-latency and scalable web crawlers.
-- [webmagic](https://github.com/code4craft/webmagic) - Scalable crawler with downloading, url management, content extraction and persistent.
-
-### Web Frameworks
-
-_Frameworks that handle the communication between the layers of a web application._
-
-- [ActiveJ](https://activej.io) - Lightweight asynchronous framework built from the ground up for developing high-performance web applications.
-- [Apache Tapestry](https://tapestry.apache.org) - Component-oriented framework for creating dynamic, robust, highly scalable web applications.
-- [Apache Wicket](https://wicket.apache.org) - Component-based web application framework similar to Tapestry, with a stateful GUI.
-- [Blade](https://github.com/lets-blade/blade) - Lightweight, modular framework that aims to be elegant and simple.
-- [Bootique](https://bootique.io) - Minimally opinionated framework for runnable apps.
-- [Firefly](http://www.fireflysource.com) - Asynchronous framework for rapid development of high-performance web application.
-- [Javalin](https://javalin.io/) - Microframework for web applications.
-- [Jooby](http://www.jooby.org) - Scalable, fast and modular micro-framework that offers multiple programming models.
-- [Ninja](http://www.ninjaframework.org) - Full-stack web framework.
-- [Pippo](http://www.pippo.ro) - Small, highly modularized, Sinatra-like framework.
-- [Play](https://www.playframework.com) - Built on Akka, it provides predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications in Java and Scala.
-- [PrimeFaces](https://www.primefaces.org) - JSF framework with both free and commercial/support versions and frontend components.
-- [Ratpack](https://ratpack.io) - Set of libraries that facilitate fast, efficient, evolvable and well-tested HTTP applications.
-- [Takes](https://github.com/yegor256/takes) - Opinionated web framework which is built around the concepts of True Object-Oriented Programming and immutability.
-- [Vaadin](https://vaadin.com) - Event-driven framework that uses standard web components. Server-side architecture with Ajax on the client side.
-
-### Workflow Orchestration Engines
-
-- [Cadence](https://cadenceworkflow.io) - Stateful code platform from Uber.
-- [flowable](https://github.com/flowable/flowable-engine) - Compact and efficient workflow and business process management platform.
-- [Temporal](https://temporal.io) - Microservice orchestration platform, forked from Cadence but gRPC based.
-
-## Resources
-
-### Related Awesome Lists
-
-_Awesome Lists related to the Java & JVM ecosystem._
-
-- [Awesome Annotation Processing](https://github.com/gunnarmorling/awesome-annotation-processing)
-- [Awesome Graal](https://github.com/neomatrix369/awesome-graal)
-- [Awesome Gradle Plugins](https://github.com/ksoichiro/awesome-gradle)
-- [AwesomeJavaFX](https://github.com/mhrimaz/AwesomeJavaFX)
-- [Awesome JVM](https://github.com/deephacks/awesome-jvm)
-- [Awesome Microservices](https://github.com/mfornos/awesome-microservices)
-- [Awesome REST](https://github.com/marmelab/awesome-rest)
-- [Awesome Selenium](https://github.com/christian-bromann/awesome-selenium)
-- [ciandcd](https://github.com/ciandcd/awesome-ciandcd)
-- [Useful Java Links](https://github.com/Vedenin/useful-java-links)
-- [Java Concurrency Checklist](https://github.com/code-review-checklists/java-concurrency)
-- [Java Developer Roadmap](https://github.com/s4kibs4mi/java-developer-roadmap)
-
-### Communities
-
-_Active discussions._
-
-- [r/java](https://www.reddit.com/r/java/) - Subreddit for the Java community.
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/java) - Question/answer platform.
-
-### Frontends
-
-_Websites that provide a frontend for this list. Please note, there won't be an official website. We don't associate with a particular website and everybody is allowed to create one._
-
-- [java.libhunt.com](https://java.libhunt.com)
-
-### Influential Books
-
-_Books that made a big impact and are still worth reading._
-
-- [Core Java Volume I--Fundamentals](https://www.amazon.com/Core-Java-I-Fundamentals-10th/dp/0134177304)
-- [Core Java, Volume II--Advanced Features](https://www.amazon.com/Core-Java-II-Advanced-Features-10th/dp/0134177290)
-- [Effective Java (3rd Edition)](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)
-- [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
-- [Thinking in Java](https://www.amazon.com/Thinking-Java-Edition-Bruce-Eckel/dp/0131872486)
-- [Head First Java (3rd Edition)](https://www.oreilly.com/library/view/head-first-java/9781492091646/)
-
-### Podcasts and Screencasts
-
-_Something to look at or listen to while programming._
-
-- [140 Second Ducklings](https://twitter.com/debugagent/status/1491075324805001219) - Short videos on Twitter explaining Java debugging in depth.
-- [A Bootiful Podcast](https://bootifulpodcast.fm)
-- [Foojay Podcast](https://foojay.io/today/category/podcast/)
-- [Inside Java](https://inside.java/podcast) (Official)
-- [Java Off Heap](http://www.javaoffheap.com)
-- [The Java Posse](http://www.javaposse.com) - Discontinued as of 02/2015.
-
-### People
-
-#### Twitter
-
-_Active accounts to follow. Descriptions from Twitter._
-
-- [Adam Bien](https://twitter.com/AdamBien) - Freelance author, JavaOne Rockstar speaker, consultant, Java Champion.
-- [Aleksey Shipilëv](https://twitter.com/shipilev) - Performance geek, benchmarking czar, concurrency bug hunter.
-- [Antonio Goncalves](https://twitter.com/agoncal) - Java Champion, JUG Leader, Devoxx France, Java EE 6/7, JCP, Author.
-- [Arun Gupta](https://twitter.com/arungupta) - Java Champion, JavaOne Rockstar, JUG Leader, Devoxx4Kids-er, VP of Developer Advocacy at Couchbase.
-- [Brian Goetz](https://twitter.com/BrianGoetz) - Java Language Architect at Oracle.
-- [Bruno Borges](https://twitter.com/brunoborges) - Product Manager/Java Jock at Oracle.
-- [Chris Engelbert](https://twitter.com/noctarius2k) - Open Source Enthusiast, Speaker, Developer, Developer Advocacy at TimescaleDB.
-- [Chris Richardson](https://twitter.com/crichardson) - Software architect, consultant, and serial entrepreneur, Java Champion, JavaOne Rock Star, \*POJOs in Action- author.
-- [Ed Burns](https://twitter.com/edburns) - Consulting Member of the Technical Staff at Oracle.
-- [Eugen Paraschiv](https://twitter.com/baeldung) - Author of the Spring Security Course.
-- [Heinz Kabutz](https://twitter.com/heinzkabutz) - Java Champion, speaker, author of The Java Specialists' Newsletter, concurrency performance expert.
-- [Holly Cummins](https://twitter.com/holly_cummins) - Technical Lead of IBM London's Bluemix Garage, Java Champion, developer, author, JavaOne rockstar.
-- [James Weaver](https://twitter.com/JavaFXpert) - Java/JavaFX/IoT developer, author and speaker.
-- [Java EE](https://twitter.com/Java_EE) - Official Java EE Twitter account.
-- [Java Magazine](https://twitter.com/Oraclejavamag) - Official Java Magazine account.
-- [Java](https://twitter.com/java) - Official Java Twitter account.
-- [Javin Paul](https://twitter.com/javinpaul) - Well-known Java blogger.
-- [Josh Long](https://twitter.com/starbuxman) - Spring Advocate at Pivotal, author of O'Reilly's Cloud Native Java- and Building Microservices with Spring Boot, JavaOne Rock Star.
-- [Lukas Eder](https://twitter.com/lukaseder) - Java Champion, speaker, Founder and CEO Data Geekery (jOOQ).
-- [Mani Sarkar](https://twitter.com/theNeomatrix369) - Java champion, Polyglot, Software Crafter involved with @graalvm, AI/ML/DL, Data Science, Developer communities, speaker & blogger. Creator of couple of awesome lists like this one.
-- [Mario Fusco](https://twitter.com/mariofusco) - RedHatter, JUG coordinator, frequent speaker and author.
-- [Mark Heckler](https://twitter.com/MkHeck) - Pivotal Principal Technologist and Developer Advocate, conference speaker, published author, and Java Champion, focusing on Internet of Things and the cloud.
-- [Mark Reinhold](https://twitter.com/mreinhold) - Chief Architect, Java Platform Group, Oracle.
-- [Markus Eisele](https://twitter.com/myfear) - Java EE evangelist, Red Hat.
-- [Martijn Verburg](https://twitter.com/karianna) - London JUG co-leader, speaker, author, Java Champion and much more.
-- [Martin Thompson](https://twitter.com/mjpt777) - Pasty faced performance gangster.
-- [Monica Beckwith](https://twitter.com/mon_beck) - Performance consultant, JavaOne Rock Star.
-- [OpenJDK](https://twitter.com/OpenJDK) - Official OpenJDK account.
-- [Peter Lawrey](https://twitter.com/PeterLawrey) - Peter Lawrey, Java performance expert.
-- [Randy Shoup](https://twitter.com/randyshoup) - Stitch Fix VP Engineering, speaker, JavaOne Rock Star.
-- [Reza Rahman](https://twitter.com/reza_rahman) - Java EE/GlassFish/WebLogic evangelist, author, speaker, open source hacker.
-- [Sander Mak](https://twitter.com/Sander_Mak) - Java Champion, author.
-- [Simon Maple](https://twitter.com/sjmaple) - Java Champion, VirtualJUG founder, LJC leader, RebelLabs author.
-- [Spencer Gibb](https://twitter.com/spencerbgibb) - Software Engineer, Dad, Geek, Co-founder and Lead of Spring Cloud Core @pivotal.
-- [Stephen Colebourne](https://twitter.com/jodastephen) - Java Champion, speaker.
-- [Trisha Gee](https://twitter.com/trisha_gee) - Java Champion and speaker.
-- [Venkat Subramaniam](https://twitter.com/venkat_s) - Author, University of Houston professor, MicroSoft MVP award recipient, JavaOne Rock Star, Java Champion.
-- [Vlad Mihalcea](https://twitter.com/vlad_mihalcea) - Java Champion working on Hypersistence Optimizer, database aficionado, author of High-Performance Java Persistence book.
-
-#### Other
-
-- [Groundbreakers](https://apexapps.oracle.com/pls/apex/f?p=119297:3::::::) - Oracle ACEs, Groundbreaker Ambassadors and Java Champions.
-
-### Websites
-
-_Sites to read._
-
-- [Baeldung](https://www.baeldung.com)
-- [Dzone](https://dzone.com)
-- [foojay.io](https://foojay.io)
-- [Google Java Style](https://google.github.io/styleguide/javaguide.html)
-- [InfoQ](https://www.infoq.com)
-- [Java Algorithms and Clients](https://algs4.cs.princeton.edu/code)
-- [Java, SQL, and jOOQ](https://blog.jooq.org)
-- [Java.net](https://community.oracle.com/community/java)
-- [Javalobby](https://dzone.com/java-jdk-development-tutorials-tools-news)
-- [JavaWorld](https://www.javaworld.com)
-- [JAXenter](https://jaxenter.com)
-- [RebelLabs](https://zeroturnaround.com/rebellabs)
-- [OverOps Blog](https://blog.overops.com)
-- [TheServerSide.com](http://www.theserverside.com)
-- [Vanilla Java](https://vanilla-java.github.io)
-- [Voxxed](https://www.voxxed.com)
-- [Java Weekly](https://discu.eu/weekly/java/)
-
-## Contributing
-
-Contributions are very welcome!
-
-Please have a look at the [CONTRIBUTING](https://github.com/akullpp/awesome-java/blob/master/CONTRIBUTING.md) guidelines and [the validation tools](https://github.com/akullpp/awesome-java-lint).
-
-[c]: https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-awesome-java-" class="anchor" aria-hidden="true" tabindex="-1" href="#awesome-java-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的Java</font></font><a href="https://awesome.re" rel="nofollow"><img src="https://camo.githubusercontent.com/715ee701c8a9a0dbe30aac69ed79f5712a6542f5a482a3940084ce76d494a779/68747470733a2f2f617765736f6d652e72652f62616467652e737667" alt="惊人的" data-canonical-src="https://awesome.re/badge.svg" style="max-width: 100%;"></a></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精选的精彩 Java 框架、库和软件列表。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contents" class="anchor" aria-hidden="true" tabindex="-1" href="#contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内容</font></font></h2>
+<ul dir="auto">
+<li><a href="#projects"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目</font></font></a>
+<ul dir="auto">
+<li><a href="#bean-mapping"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bean 映射</font></font></a></li>
+<li><a href="#build"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建造</font></font></a></li>
+<li><a href="#bytecode-manipulation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">字节码操作</font></font></a></li>
+<li><a href="#caching"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">缓存</font></font></a></li>
+<li><a href="#cli"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令行界面</font></font></a></li>
+<li><a href="#cluster-management"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集群管理</font></font></a></li>
+<li><a href="#code-analysis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码分析</font></font></a></li>
+<li><a href="#code-coverage"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码覆盖率</font></font></a></li>
+<li><a href="#code-generators"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码生成器</font></font></a></li>
+<li><a href="#compiler-compiler"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编译器-编译器</font></font></a></li>
+<li><a href="#computer-vision"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">计算机视觉</font></font></a></li>
+<li><a href="#configuration"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></a></li>
+<li><a href="#constraint-satisfaction-problem-solver"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约束满足问题求解器</font></font></a></li>
+<li><a href="#csv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSV</font></font></a></li>
+<li><a href="#data-structures"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据结构</font></font></a></li>
+<li><a href="#database"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据库</font></font></a></li>
+<li><a href="#date-and-time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">日期和时间</font></font></a></li>
+<li><a href="#dependency-injection"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖注入</font></font></a></li>
+<li><a href="#development"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></a></li>
+<li><a href="#distributed-applications"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式应用程序</font></font></a></li>
+<li><a href="#distributed-transactions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式事务</font></font></a></li>
+<li><a href="#distribution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分配</font></font></a></li>
+<li><a href="#document-processing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件处理</font></font></a></li>
+<li><a href="#financial"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">金融的</font></font></a></li>
+<li><a href="#formal-verification"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">形式验证</font></font></a></li>
+<li><a href="#functional-programming"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">函数式编程</font></font></a></li>
+<li><a href="#game-development"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">游戏开发</font></font></a></li>
+<li><a href="#geospatial"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">地理空间</font></font></a></li>
+<li><a href="#gui"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图形用户界面</font></font></a></li>
+<li><a href="#high-performance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高性能</font></font></a></li>
+<li><a href="#http-clients"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTTP 客户端</font></font></a></li>
+<li><a href="#hypermedia-types"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">超媒体类型</font></font></a></li>
+<li><a href="#ide"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集成开发环境</font></font></a></li>
+<li><a href="#imagery"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图像</font></font></a></li>
+<li><a href="#introspection"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内省</font></font></a></li>
+<li><a href="#job-scheduling"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作业调度</font></font></a></li>
+<li><a href="#json"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSON</font></font></a></li>
+<li><a href="#jvm-and-jdk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JVM 和 JDK</font></font></a></li>
+<li><a href="#logging"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">记录</font></font></a></li>
+<li><a href="#machine-learning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机器学习</font></font></a></li>
+<li><a href="#messaging"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">消息传递</font></font></a></li>
+<li><a href="#microservice"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微服务</font></font></a></li>
+<li><a href="#miscellaneous"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">各种各样的</font></font></a></li>
+<li><a href="#mobile-development"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移动开发</font></font></a></li>
+<li><a href="#monitoring"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">监控</font></font></a></li>
+<li><a href="#native"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本国的</font></font></a></li>
+<li><a href="#natural-language-processing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自然语言处理</font></font></a></li>
+<li><a href="#networking"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">联网</font></font></a></li>
+<li><a href="#orm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ORM</font></font></a></li>
+<li><a href="#paas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台即服务</font></font></a></li>
+<li><a href="#pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PDF</font></font></a></li>
+<li><a href="#performance-analysis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性能分析</font></font></a></li>
+<li><a href="#platform"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台</font></font></a></li>
+<li><a href="#processes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流程</font></font></a></li>
+<li><a href="#reactive-libraries"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">反应式库</font></font></a></li>
+<li><a href="#rest-frameworks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REST 框架</font></font></a></li>
+<li><a href="#science"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">科学</font></font></a></li>
+<li><a href="#search"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索</font></font></a></li>
+<li><a href="#security"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全</font></font></a></li>
+<li><a href="#serialization"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">序列化</font></font></a></li>
+<li><a href="#server"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器</font></font></a></li>
+<li><a href="#template-engine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模板引擎</font></font></a></li>
+<li><a href="#testing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></a></li>
+<li><a href="#utility"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">公用事业</font></font></a></li>
+<li><a href="#version-managers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版本管理器</font></font></a></li>
+<li><a href="#web-crawling"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网络爬行</font></font></a></li>
+<li><a href="#web-frameworks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网络框架</font></font></a></li>
+<li><a href="#workflow-orchestration-engines"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作流编排引擎</font></font></a></li>
+</ul>
+</li>
+<li><a href="#resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资源</font></font></a>
+<ul dir="auto">
+<li><a href="#related-awesome-lists"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">相关精彩列表</font></font></a></li>
+<li><a href="#communities"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></a></li>
+<li><a href="#frontends"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">前端</font></font></a></li>
+<li><a href="#influential-books"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有影响力的书籍</font></font></a></li>
+<li><a href="#podcasts-and-screencasts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">播客和截屏视频</font></font></a></li>
+<li><a href="#people"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">人们</font></font></a></li>
+<li><a href="#websites"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></a></li>
+</ul>
+</li>
+<li><a href="#contributing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-projects" class="anchor" aria-hidden="true" tabindex="-1" href="#projects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目</font></font></h2>
+<h3 tabindex="-1" dir="auto"><a id="user-content-bean-mapping" class="anchor" aria-hidden="true" tabindex="-1" href="#bean-mapping"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bean 映射</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简化 bean 映射的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/doov-io/doov"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dOOv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为类型安全域模型验证和映射提供流畅的 API。</font><font style="vertical-align: inherit;">它使用注释、代码生成和类型安全 DSL 来使 Bean 验证和映射变得快速而简单。</font></font></li>
+<li><a href="https://github.com/jmapper-framework/jmapper-core"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMapper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用字节码操作进行快速映射。</font><font style="vertical-align: inherit;">支持注释和 API 或 XML 配置。</font></font></li>
+<li><a href="https://github.com/mapstruct/mapstruct"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MapStruct</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于约定优于配置的方法，简化不同 bean 类型之间映射的代码生成器。</font></font></li>
+<li><a href="https://github.com/modelmapper/modelmapper"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ModelMapper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 智能对象映射库，可自动将对象相互映射。</font></font></li>
+<li><a href="https://github.com/orika-mapper/orika"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Orika</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JavaBean 映射框架，可将数据（以及其他功能）从一个对象递归复制到另一个对象。</font></font></li>
+<li><a href="https://github.com/remondis-it/remap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reMap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Lambda 和基于方法句柄的映射，如果对象具有不同名称，则需要代码而不是注释。</font></font></li>
+<li><a href="https://github.com/xebia-france/selma"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Selma</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于注释处理器的 bean 映射器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-build" class="anchor" aria-hidden="true" tabindex="-1" href="#build"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建造</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">处理应用程序的构建周期和依赖性的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://maven.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Maven</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 声明式构建和依赖关系管理，有利于约定优于配置。</font><font style="vertical-align: inherit;">它可能比 Apache Ant 更好，后者使用相当程序化的方法并且可能难以维护。</font></font></li>
+<li><a href="https://bazel.build" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bazel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 来自 Google 的工具，可快速可靠地构建代码。</font></font></li>
+<li><a href="https://github.com/facebook/buck"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buck</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 鼓励创建由代码和资源组成的小型、可重用模块。</font></font></li>
+<li><a href="https://gradle.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gradle</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 Groovy 编程的增量构建，而不是声明 XML。</font><font style="vertical-align: inherit;">与 Maven 的依赖管理配合良好。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-bytecode-manipulation" class="anchor" aria-hidden="true" tabindex="-1" href="#bytecode-manipulation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">字节码操作</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以编程方式操作字节码的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://asm.ow2.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ASM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用、低级字节码操作和分析。</font></font></li>
+<li><a href="https://bytebuddy.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Byte Buddy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过流畅的 API 进一步简化字节码生成。</font></font></li>
+<li><a href="https://github.com/Konloch/bytecode-viewer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bytecode-viewer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 8 Jar 和 Android APK 逆向工程套件。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://byteman.jboss.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Byteman</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 DSL（规则）在运行时操作字节码；</font><font style="vertical-align: inherit;">主要用于测试/故障排除。</font><font style="vertical-align: inherit;">（LGPL-2.1 或更高版本）</font></font></li>
+<li><a href="https://github.com/cglib/cglib"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cglib</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 字节码生成库。</font></font></li>
+<li><a href="https://github.com/jboss-javassist/javassist"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javassist</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 尝试简化字节码编辑。</font></font></li>
+<li><a href="https://github.com/cojen/maker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供低级字节码生成。</font></font></li>
+<li><a href="https://github.com/SpongePowered/Mixin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mixin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用真实的 Java 代码在运行时操作字节码。</font></font></li>
+<li><a href="https://github.com/nicolasmanic/perses"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Perses</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 根据混沌工程原理在字节码级别动态注入故障/延迟。</font></font></li>
+<li><a href="https://www.coley.software/Recaf/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recaf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JVM 逆向工程工具包，本质上是 Java 字节码的 IDE。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-caching" class="anchor" aria-hidden="true" tabindex="-1" href="#caching"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">缓存</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供缓存设施的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://cache2k.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cache2k</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 内存中高性能缓存库。</font></font></li>
+<li><a href="https://github.com/ben-manes/caffeine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Caffeine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能、近乎最佳的缓存库。</font></font></li>
+<li><a href="http://www.ehcache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ehcache</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式通用缓存。</font></font></li>
+<li><a href="https://infinispan.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Infinispan</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于缓存的高度并发键/值数据存储。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-cli" class="anchor" aria-hidden="true" tabindex="-1" href="#cli"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令行界面</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与 CLI 相关的所有内容的库。</font></font></em></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-argument-parsing" class="anchor" aria-hidden="true" tabindex="-1" href="#argument-parsing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参数解析</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">协助解析命令行参数的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://rvesse.github.io/airline/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Airline</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于注释的框架，用于解析类似 Git 的命令行参数。</font></font></li>
+<li><a href="http://jcommander.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JCommander</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 命令行参数解析框架，具有自定义类型和通过实现接口进行验证。</font></font></li>
+<li><a href="https://github.com/jbock-java/jbock"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jbock</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无反射命令行解析器。</font></font></li>
+<li><a href="https://github.com/jline/jline3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JLine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 包括现代 shell 的功能，例如完成或历史记录。</font></font></li>
+<li><a href="https://picocli.info" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">picocli</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用中的 ANSI 颜色和样式有助于基于注释的 POSIX/GNU/任何语法、子命令、选项和位置参数的强类型。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-text-based-user-interfaces" class="anchor" aria-hidden="true" tabindex="-1" href="#text-based-user-interfaces"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于文本的用户界面</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供 TUI 框架或构建块相关功能的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/fusesource/jansi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jansi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于格式化控制台输出的 ANSI 转义码。</font></font></li>
+<li><a href="https://gitlab.com/klamonte/jexer" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jexer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高级控制台（和 Swing）文本用户界面（TUI）库，具有可鼠标拖动的窗口、内置终端窗口管理器和 Sixel 图像支持。</font><font style="vertical-align: inherit;">看起来像</font></font><a href="https://en.wikipedia.org/wiki/Turbo_Vision" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">涡轮视觉</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://github.com/beryx/text-io"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text-IO</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 帮助创建完整的基于控制台的应用程序。</font></font></li>
+<li><a href="https://github.com/mabe02/lanterna"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lanterna</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单的控制台文本 GUI 库，类似于诅咒。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-cluster-management" class="anchor" aria-hidden="true" tabindex="-1" href="#cluster-management"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集群管理</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以动态管理集群内应用程序的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://aurora.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Aurora</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于长时间运行的服务和 cron 作业的 Mesos 框架。</font></font></li>
+<li><a href="http://getsingularity.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Singularity</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Mesos 框架，使部署和操作变得简单。</font><font style="vertical-align: inherit;">它支持 Web 服务、后台工作人员、计划作业和一次性任务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-code-analysis" class="anchor" aria-hidden="true" tabindex="-1" href="#code-analysis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码分析</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供指标和质量测量的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/checkstyle/checkstyle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Checkstyle</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 编码约定和标准的静态分析。</font><font style="vertical-align: inherit;">（LGPL-2.1 或更高版本）</font></font></li>
+<li><a href="https://github.com/google/error-prone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">容易出错</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 将常见的编程错误捕获为编译时错误。</font></font></li>
+<li><a href="https://github.com/PicnicSupermarket/error-prone-support"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">容易出错的支持</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 容易出错的扩展：额外的错误检查器和大量的 Refaster 模板。</font></font></li>
+<li><a href="https://github.com/facebook/infer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Infer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于验证代码正确性的现代静态分析工具。</font></font></li>
+<li><a href="https://jqassistant.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jQAssistant</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用基于 Neo4J 的查询语言进行静态代码分析。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/uber/NullAway"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NullAway</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以较低的构建时间开销消除 NullPointerExceptions。</font></font></li>
+<li><a href="https://github.com/pmd/pmd"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PMD</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于查找不良编码实践的源代码分析。</font></font></li>
+<li><a href="https://github.com/alibaba/p3c"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">p3c</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供阿里巴巴的 PMD、IDEA 和 Eclipse 编码指南。</font></font></li>
+<li><a href="https://github.com/jimbethancourt/RefactorFirst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RefactorFirst</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 识别上帝类和高度耦合类并确定优先级。</font></font></li>
+<li><a href="https://github.com/SonarSource/sonar-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SonarJava</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - SonarQube 和 SonarLint 的静态分析器。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://github.com/INRIA/spoon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spoon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于分析和转换 Java 源代码的库。</font></font></li>
+<li><a href="https://github.com/spotbugs/spotbugs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spotbugs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 字节码的静态分析以查找潜在的错误。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-code-coverage" class="anchor" aria-hidden="true" tabindex="-1" href="#code-coverage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码覆盖率</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持测试套件代码覆盖率指标收集的框架和工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.atlassian.com/software/clover" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clover</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 依赖源代码检测而不是字节码检测。</font></font></li>
+<li><a href="https://cobertura.github.io/cobertura/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cobertura</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 依靠离线（或静态）字节码检测和类加载来收集代码覆盖率指标。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+<li><a href="https://www.eclemma.org/jacoco/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JaCoCo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用离线和运行时字节码检测来收集代码覆盖率指标的框架。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-code-generators" class="anchor" aria-hidden="true" tabindex="-1" href="#code-generators"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码生成器</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为重复代码生成模式以减少冗长和容易出错的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/sviperll/adt4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ADT4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于代数数据类型的 JSR-269 代码生成器。</font></font></li>
+<li><a href="https://github.com/google/auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自动</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 生成工厂、服务和值类。</font></font></li>
+<li><a href="https://avaje.io/http/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Avaje Http Server</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Javalin 或 Helidon (Nima) SE 生成轻量级 JAX-RS 风格的 http 服务器。</font></font></li>
+<li><a href="https://bootify.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootify</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 JPA 模型和 REST API 生成基于浏览器的 Spring Boot 应用程序。</font></font></li>
+<li><a href="https://github.com/inferred/FreeBuilder"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FreeBuilder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自动生成 Builder 模式。</font></font></li>
+<li><a href="https://github.com/verhas/javageci"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Geci</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 发现需要生成代码的文件，自动更新并使用方便的 API 写入源。</font></font></li>
+<li><a href="https://immutables.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Immutables</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于生成简单、安全且一致的值对象的注释处理器。</font></font></li>
+<li><a href="https://github.com/square/javapoet"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaPoet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于生成源文件的 API。</font></font></li>
+<li><a href="https://github.com/jhipster/generator-jhipster"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JHipster</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 Spring Boot 和 AngularJS 的 Yeoman 源代码生成器。</font></font></li>
+<li><a href="https://www.joda.org/joda-beans/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Joda-Beans</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 小型框架，向 Java 添加可查询属性，增强 JavaBeans。</font></font></li>
+<li><a href="https://www.jpa-buddy.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JPA Buddy</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - IntelliJ IDEA 插件。</font><font style="vertical-align: inherit;">提供用于生成 JPA 实体、Spring Data JPA 存储库、Liquibase 变更日志和 SQL 脚本的可视化工具。</font><font style="vertical-align: inherit;">通过将模型与数据库进行比较，以及从数据库表逆向工程 JPA 实体，提供自动 Liquibase/Flyway 脚本生成。</font></font></li>
+<li><a href="https://projectlombok.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lombok</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 旨在减少冗长的代码生成器。</font></font></li>
+<li><a href="https://github.com/Randgalt/record-builder"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Record-Builder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 记录的配套构建器类、withers 和模板。</font></font></li>
+<li><a href="https://www.telosys.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telosys</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单、轻便的代码生成器，可作为 Eclipse 插件和 CLI 使用。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-compiler-compiler" class="anchor" aria-hidden="true" tabindex="-1" href="#compiler-compiler"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编译器-编译器</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助创建解析器、解释器或编译器的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.antlr.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ANTLR</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于自顶向下解析的复杂的全功能框架。</font></font></li>
+<li><a href="https://javacc.github.io/javacc/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaCC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 生成自顶向下解析器的解析器生成器。</font><font style="vertical-align: inherit;">允许词法状态切换并允许扩展 BNF 规范。</font></font></li>
+<li><a href="https://jflex.de" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JFlex</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 词法分析器生成器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-computer-vision" class="anchor" aria-hidden="true" tabindex="-1" href="#computer-vision"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">计算机视觉</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">寻求从图像和视频中获取高级信息的图书馆。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://boofcv.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BoofCV</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于图像处理、相机校准、跟踪、SFM、MVS、3D 视觉、QR 码等的库。</font></font></li>
+<li><a href="https://imagej.net/ImageJ" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ImageJ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有 API 的医学图像处理应用程序。</font></font></li>
+<li><a href="https://github.com/bytedeco/javacv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaCV</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - OpenCV、FFmpeg 等的 Java 接口。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-configuration" class="anchor" aria-hidden="true" tabindex="-1" href="#configuration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供外部配置的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://avaje.io/config/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">avaje config</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 加载 yaml 和属性文件，支持动态配置、插件、文件监视和配置事件侦听器。</font></font></li>
+<li><a href="https://github.com/line/centraldogma"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">centraldogma</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Git、ZooKeeper 和 HTTP/2 的高可用版本控制服务配置存储库。</font></font></li>
+<li><a href="https://github.com/lightbend/config"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">config</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持 Java 属性、JSON 或其人类优化超集 HOCON 的配置库。</font></font></li>
+<li><a href="https://github.com/SpongePowered/Configurate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 支持各种配置格式和转换的配置库。</font></font></li>
+<li><a href="https://curator.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Curator Framework</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Apache ZooKeeper 的高级 API。</font></font></li>
+<li><a href="https://github.com/shyiko/dotenv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dotenv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用特定于环境的文件的十二因素配置库。</font></font></li>
+<li><a href="https://github.com/joel-jeremy/externalized-properties"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">外部化属性</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 轻量级但功能强大的配置库，支持从外部源解析属性和可扩展的后处理/转换机制。</font></font></li>
+<li><a href="https://github.com/gestalt-config/gestalt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gestalt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Gestalt 为配置管理的挑战提供了全面的解决方案。</font><font style="vertical-align: inherit;">它允许您从多个输入中获取配置数据，智能地合并它们，并以结构化、类型安全的方式呈现它们。</font></font></li>
+<li><a href="http://ini4j.sourceforge.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ini4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供用于处理 Windows 的 INI 文件的 API。</font></font></li>
+<li><a href="https://github.com/mariomac/kaconf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KAConf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Java 和 Kotlin 的基于注释的配置系统。</font></font></li>
+<li><a href="https://microconfig.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">microconfig</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为微服务设计的配置系统，有助于将配置与代码分离。</font><font style="vertical-align: inherit;">不同服务的配置可以具有公共部分和特定部分，并且可以动态分布。</font></font></li>
+<li><a href="https://github.com/lviggiano/owner"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 减少属性的样板。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-constraint-satisfaction-problem-solver" class="anchor" aria-hidden="true" tabindex="-1" href="#constraint-satisfaction-problem-solver"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约束满足问题求解器</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助解决优化和可满足性问题的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://choco-solver.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Choco</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用约束编程技术的现成约束满足问题求解器。</font></font></li>
+<li><a href="https://github.com/radsz/jacop"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JaCoP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 包括 FlatZinc 语言的接口，使其能够执行 MiniZinc 模型。</font><font style="vertical-align: inherit;">(AGPL-3.0)</font></font></li>
+<li><a href="https://www.optaplanner.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OptaPlanner</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 业务规划和资源调度优化求解器。</font></font></li>
+<li><a href="https://github.com/TimefoldAI/timefold-solver"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Timefold</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 灵活的求解器，支持 Spring/Quarkus 以及车辆路线问题、维护计划、员工轮班计划等的快速入门。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-csv" class="anchor" aria-hidden="true" tabindex="-1" href="#csv"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSV</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简化读取/写入 CSV 数据的框架和库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/osiegmar/FastCSV"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FastCSV</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 性能优化、无依赖性且符合 RFC 4180。</font></font></li>
+<li><a href="https://github.com/FasterXML/jackson-dataformat-csv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jackson-dataformat-csv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于读取和写入 CSV 的 Jackson 扩展.</font></font></li>
+<li><a href="http://opencsv.sourceforge.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">opencsv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单的 CSV 解析器。</font></font></li>
+<li><a href="https://super-csv.github.io/super-csv/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super CSV</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 强大的 CSV 解析器，支持 Dozer、Joda-Time 和 Java 8.</font></font></li>
+<li><a href="https://github.com/uniVocity/univocity-parsers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">uniVocity-parsers</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 最快且功能最齐全的解析器之一。</font><font style="vertical-align: inherit;">还附带 TSV 和固定宽度记录的解析器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-data-structures" class="anchor" aria-hidden="true" tabindex="-1" href="#data-structures"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据结构</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高效且特定的数据结构。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://avro.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Avro</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有动态类型、未标记数据且无需手动分配 ID 的数据交换格式。</font></font></li>
+<li><a href="https://orc.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Orc</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于基于 Hadoop 的工作负载的快速高效的列式存储格式。</font></font></li>
+<li><a href="https://parquet.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Parquet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Google 关于 Dremel 论文的汇编算法的列式存储格式。</font></font></li>
+<li><a href="https://thrift.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Thrift</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 起源于 Facebook 的数据交换格式。</font></font></li>
+<li><a href="https://github.com/bulldog2011/bigqueue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Big Queue</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于内存映射文件的快速且持久的队列。</font></font></li>
+<li><a href="https://github.com/LiveRamp/HyperMinHash-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HyperMinHash-java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于计算 loglog 空间中的并集、交集和集合基数的概率数据结构。</font></font></li>
+<li><a href="https://github.com/hrldcpr/pcollections"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">持久集合</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Java 集合框架的持久且不可变的类似物。</font></font></li>
+<li><a href="https://github.com/protocolbuffers/protobuf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Protobuf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Google 的数据交换格式。</font></font></li>
+<li><a href="https://github.com/RoaringBitmap/RoaringBitmap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RoaringBitmap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速高效的压缩位图。</font></font></li>
+<li><a href="https://github.com/real-logic/simple-binary-encoding"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SBE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单二进制编码，最快的消息格式之一。</font></font></li>
+<li><a href="https://github.com/square/tape"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">磁带</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 快如闪电、事务性、基于文件的 FIFO。</font></font></li>
+<li><a href="https://github.com/square/wire"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wire</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 干净、轻量级的协议缓冲区。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-database" class="anchor" aria-hidden="true" tabindex="-1" href="#database"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据库</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一切都简化了与数据库的交互。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://calcite.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Calcite</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 动态数据管理框架。</font><font style="vertical-align: inherit;">它包含构成典型数据库管理系统的许多部分。</font></font></li>
+<li><a href="https://drill.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Drill</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于大数据探索的分布式、动态模式、ANSI SQL 查询引擎。</font></font></li>
+<li><a href="https://phoenix.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Phoenix</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - HBase 上的高性能关系数据库层，适用于低延迟应用程序。</font></font></li>
+<li><a href="https://github.com/arangodb/arangodb-java-driver"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ArangoDB</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - ArangoDB Java 驱动程序。</font></font></li>
+<li><a href="https://github.com/OpenHFT/Chronicle-Map"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chronicle Map</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高效、内存中（选择持久化到磁盘）、堆外键值存储。</font></font></li>
+<li><a href="https://debezium.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Debezium</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于变更数据捕获的低延迟数据流平台。</font></font></li>
+<li><a href="https://druid.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">druid</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能、面向列的分布式数据存储。</font></font></li>
+<li><a href="https://github.com/eXist-db/exist"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">eXist</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - NoSQL 文档数据库和应用程序平台。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/vladmihalcea/flexy-pool"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FlexyPool</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将指标和故障转移策略引入最常见的连接池解决方案。</font></font></li>
+<li><a href="https://flywaydb.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flyway</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单的数据库迁移工具。</font></font></li>
+<li><a href="https://h2database.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">H2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 小型 SQL 数据库，以其内存功能而闻名。</font></font></li>
+<li><a href="https://github.com/brettwooldridge/HikariCP"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HikariCP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能 JDBC 连接池。</font></font></li>
+<li><a href="https://hsqldb.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HSQLDB</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - HyperSQL 100% Java 数据库。</font></font></li>
+<li><a href="http://jdbi.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDBI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDBC 的便捷抽象。</font></font></li>
+<li><a href="https://github.com/xetorthio/jedis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jedis</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于与 Redis 交互的小型客户端，具有命令方法。</font></font></li>
+<li><a href="https://github.com/searchbox-io/Jest"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jest</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Elasticsearch REST API 的客户端。</font></font></li>
+<li><a href="https://github.com/justinsb/jetcd"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jetcd</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -etcd 的客户端库。</font></font></li>
+<li><a href="https://github.com/my2iu/Jinq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jinq</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 Java 8 Lambda 的符号执行（在 JPA 或 jOOQ 之上）进行类型安全数据库查询。</font></font></li>
+<li><a href="https://www.jooq.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jOOQ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 SQL 模式生成类型安全代码。</font></font></li>
+<li><a href="https://github.com/Meituan-Dianping/Leaf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leaf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式 ID 生成服务。</font></font></li>
+<li><a href="https://lettuce.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lettuce</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -Lettuce 是一个可扩展的 Redis 客户端，用于构建非阻塞响应式应用程序。</font></font></li>
+<li><a href="http://www.liquibase.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Liquibase</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 独立于数据库的库，用于跟踪、管理和应用数据库模式更改。</font></font></li>
+<li><a href="http://www.mapdb.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MapDB</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 嵌入式数据库引擎，提供支持在磁盘或堆外内存中的并发集合。</font></font></li>
+<li><a href="https://github.com/vorburger/MariaDB4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MariaDB4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - MariaDB 的启动器，无需安装或外部依赖项。</font></font></li>
+<li><a href="https://github.com/arkanovicz/modality"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modality</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有数据库逆向工程功能的轻量级 ORM。</font></font></li>
+<li><a href="https://github.com/OpenIdentityPlatform/OpenDJ"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenDJ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 符合 LDAPv3 的目录服务，为 Java 平台开发，为身份提供高性能、高可用性和安全的存储。</font></font></li>
+<li><a href="http://www.querydsl.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Querydsl</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 类型安全统一查询。</font></font></li>
+<li><a href="https://github.com/querystream/querystream"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">QueryStream</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用类似 Stream 的 API 构建 JPA Criteria 查询。</font></font></li>
+<li><a href="https://github.com/questdb/questdb"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">QuestDB</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于时间序列的高性能 SQL 数据库。</font><font style="vertical-align: inherit;">支持 InfluxDB 线路协议、PostgreSQL 线路协议和 REST。</font></font></li>
+<li><a href="https://github.com/realm/realm-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Realm</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 直接在手机、平板电脑或可穿戴设备内运行的移动数据库。</font></font></li>
+<li><a href="https://github.com/redisson/redisson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Redisson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许在 Redis 服务器上使用分布式且可扩展的数据结构。</font></font></li>
+<li><a href="https://github.com/requery/requery"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">requery</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 现代、轻量级但功能强大的对象映射和 SQL 生成器。</font><font style="vertical-align: inherit;">轻松映射或创建数据库，或从任何使用 Java 的平台执行查询和更新。</font></font></li>
+<li><a href="https://github.com/speedment/speedment"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Speedment</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 利用 Java 8 的 Stream API 进行查询的数据库访问库。</font></font></li>
+<li><a href="https://github.com/mhewedy/spring-data-jpa-mongodb-expressions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spring Data JPA MongoDB 表达式</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 允许您使用 MongoDB 查询语言来查询关系数据库。</font></font></li>
+<li><a href="https://trino.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trino</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于大数据的分布式 SQL 查询引擎。</font></font></li>
+<li><a href="https://www.vibur.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vibur DBCP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有高级性能监控功能的 JDBC 连接池库。</font></font></li>
+<li><a href="https://github.com/JetBrains/xodus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Xodus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高度并发事务无模式且符合 ACID 的嵌入式数据库。</font></font></li>
+<li><a href="https://github.com/Ahoo-Wang/CosId"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CosId</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用、灵活、高性能的分布式 ID 生成器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-date-and-time" class="anchor" aria-hidden="true" tabindex="-1" href="#date-and-time"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">日期和时间</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与处理日期和时间相关的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/ical4j/ical4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">iCal4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 解析和构建 iCalendar </font></font><a href="https://tools.ietf.org/html/rfc5545" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RFC 5545</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据模型。</font></font></li>
+<li><a href="https://github.com/svendiedrichsen/jollyday"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jollyday</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 确定给定年份、国家/名称以及最终州/地区的假期。</font></font></li>
+<li><a href="https://github.com/ThreeTen/threeten-extra"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ThreeTen-Extra</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 补充 JDK 8 中的附加日期时间类。</font></font></li>
+<li><a href="https://github.com/MenoData/Time4J"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Time4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高级日期和时间库。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-dependency-injection" class="anchor" aria-hidden="true" tabindex="-1" href="#dependency-injection"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖注入</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有助于实现</font></font><a href="https://en.wikipedia.org/wiki/Inversion_of_control" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">控制反转</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">范式的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://deltaspike.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache DeltaSpike</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - CDI 扩展框架。</font></font></li>
+<li><a href="https://avaje.io/inject/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Avaje Inject</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于微服务的编译时注入框架，无需反射。</font></font></li>
+<li><a href="https://dagger.dev/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dagger</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无反射的编译时注入框架。</font></font></li>
+<li><a href="https://github.com/zsoltherpai/feather"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Feather</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 超轻量级、符合 JSR-330 的依赖注入库。</font></font></li>
+<li><a href="https://github.com/Netflix/governator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Governator</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 增强 Google Guice 的扩展和实用程序。</font></font></li>
+<li><a href="https://github.com/google/guice"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guice</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 完成 Dagger 的轻量级且固执己见的框架。</font></font></li>
+<li><a href="https://javaee.github.io/hk2/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HK2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级动态依赖注入框架。</font></font></li>
+<li><a href="https://github.com/vanillasource/jaywire"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JayWire</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级依赖注入框架。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-development" class="anchor" aria-hidden="true" tabindex="-1" href="#development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从根本上增强开发过程。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.eclipse.org/aspectj/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AspectJ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无缝的面向方面的编程扩展。</font></font></li>
+<li><a href="https://dcevm.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DCEVM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JVM 修改，允许在运行时无限制地重新定义加载的类。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+<li><a href="https://github.com/zalando/faux-pas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Faux Pas</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过规避默认情况下不允许 Java 运行时中的任何功能接口抛出检查异常的问题来简化错误处理的库。</font></font></li>
+<li><a href="https://github.com/HotswapProjects/HotswapAgent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HotswapAgent</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无限制的运行时类和资源重新定义。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+<li><a href="https://github.com/javaparser/javaparser"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaParser</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 解析、修改和生成 Java 代码。</font></font></li>
+<li><a href="https://github.com/javaparser/javasymbolsolver"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaSymbolSolver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 符号求解器。</font></font></li>
+<li><a href="https://github.com/manifold-systems/manifold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Manifold</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过类型安全元编程、结构类型和扩展方法等强大功能重新激活 Java。</font></font></li>
+<li><a href="https://noexception.machinezoo.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NoException</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许在功能接口中检查异常并将异常转换为可选返回。</font></font></li>
+<li><a href="https://github.com/rainerhahnekamp/sneakythrow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SneakyThrow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 忽略检查的异常而不进行字节码操作。</font><font style="vertical-align: inherit;">也可以在 Java 8 流操作中使用。</font></font></li>
+<li><a href="https://nrktkt.github.io/tail/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用尾调用优化启用无限递归。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-distributed-applications" class="anchor" aria-hidden="true" tabindex="-1" href="#distributed-applications"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式应用程序</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于编写分布式和容错应用程序的库和框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://geode.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Geode</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 内存数据管理系统，提供可靠的异步事件通知和有保证的消息传递。</font></font></li>
+<li><a href="https://storm.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Storm</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实时计算系统。</font></font></li>
+<li><a href="https://zookeeper.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache ZooKeeper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 大型分布式系统的分布式配置、同步和命名注册表的协调服务。</font></font></li>
+<li><a href="https://atomix.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Atomix</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 容错分布式协调框架。</font></font></li>
+<li><a href="https://axoniq.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Axon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于创建 CQRS 应用程序的框架。</font></font></li>
+<li><a href="https://github.com/mtakaki/dropwizard-circuitbreaker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dropwizard Circuit Breaker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Dropwizard 的断路器设计模式. </font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+<li><a href="https://github.com/jhalterman/failsafe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">故障安全</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 通过重试和断路器进行简单的故障处理。</font></font></li>
+<li><a href="https://github.com/hazelcast/hazelcast"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hazelcast</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高度可扩展的内存数据网格，具有免费的开源版本。</font></font></li>
+<li><a href="http://www.jgroups.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JGroups</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于可靠消息传递和集群创建的工具包。</font></font></li>
+<li><a href="http://docs.paralleluniverse.co/quasar/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quasar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JVM 的轻量级线程和参与者。</font></font></li>
+<li><a href="https://github.com/resilience4j/resilience4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">resilience4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 功能容错库。</font></font></li>
+<li><a href="https://github.com/OpenIdentityPlatform/OpenIG"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenIG</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有专门会话管理和凭证重播功能的高性能反向代理服务器。</font></font></li>
+<li><a href="https://github.com/scalecube/scalecube-services"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ScaleCube Services</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 SWIM 和 gossip 协议的嵌入式集群成员库。</font></font></li>
+<li><a href="https://github.com/Netflix/zuul"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zuul</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供动态路由、监控、弹性、安全性等的网关服务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-distributed-transactions" class="anchor" aria-hidden="true" tabindex="-1" href="#distributed-transactions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式事务</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分布式事务提供了一种在并发访问和部分失败的情况下确保数据更新一致性的机制。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.atomikos.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Atomikos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 REST、SOA 和微服务提供事务，并支持 JTA 和 XA。</font></font></li>
+<li><a href="https://github.com/bitronix/btm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bitronix</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JTA 1.1 API 的简单但完整的实现。</font></font></li>
+<li><a href="https://narayana.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narayana</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供对传统ACID和补偿事务的支持，也符合JTA、JTS等标准。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/seata/seata"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Seata</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在微服务架构下提供高性能且易于使用的分布式事务服务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-distribution" class="anchor" aria-hidden="true" tabindex="-1" href="#distribution"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分配</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以本机格式处理应用程序分发的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/artipie/artipie"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Artipie</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 二进制工件管理工具包，将它们托管在文件系统或 S3 上。</font></font></li>
+<li><a href="https://boxfuse.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Boxfuse</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用不可变基础设施的原则将 JVM 应用程序部署到 AWS。</font></font></li>
+<li><a href="https://github.com/puniverse/capsule"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Capsule</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单而强大的打包和部署。</font><font style="vertical-align: inherit;">类固醇的胖 JAR，或支持 JVM 优化容器的“Docker for Java”。</font></font></li>
+<li><a href="https://search.maven.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中央存储库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 最大的二进制组件存储库，可作为免费服务向开源社区提供。</font><font style="vertical-align: inherit;">默认由 Apache Maven 使用，并且可在所有其他构建工具中使用。</font></font></li>
+<li><a href="https://cloudsmith.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cloudsmith</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 完全托管的包管理 SaaS，支持 Maven/Gradle/SBT 并提供免费套餐。</font></font></li>
+<li><a href="https://github.com/threerings/getdown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Getdown</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于将 Java 应用程序部署到最终用户计算机并使其保持最新的系统。</font><font style="vertical-align: inherit;">开发作为 Java Web Start 的替代方案。</font></font></li>
+<li><a href="http://izpack.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IzPack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于跨平台部署的设置创作工具。</font></font></li>
+<li><a href="https://github.com/fvarrui/JavaPackager"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaPackager</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Maven 和 Gradle 插件，提供了一种简单的方法来将 Java 应用程序打包到本机 Windows、macOS 或 GNU/Linux 可执行文件中，并为其生成安装程序。</font></font></li>
+<li><a href="https://www.jdeploy.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jDeploy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将桌面应用程序部署为本机 Mac、Windows 或 Linux 捆绑包。</font></font></li>
+<li><a href="https://github.com/AdoptOpenJDK/jlink.online"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jlink.online</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 HTTP 构建优化的运行时。</font></font></li>
+<li><a href="https://www.sonatype.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nexus</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有代理和缓存功能的二进制管理。</font></font></li>
+<li><a href="https://github.com/libgdx/packr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">packr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 打包 JAR、资产和 JVM，以便在 Windows、Linux 和 macOS 上进行本机分发。</font></font></li>
+<li><a href="https://github.com/brianm/really-executable-jars-maven-plugin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real-executable-jars-maven-plugin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于制作自执行 JAR 的 Maven 插件.</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-document-processing" class="anchor" aria-hidden="true" tabindex="-1" href="#document-processing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件处理</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">协助处理办公文档格式的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://poi.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache POI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持 OOXML（XLSX、DOCX、PPTX）以及 OLE2（XLS、DOC 或 PPT）。</font></font></li>
+<li><a href="https://documents4j.com/#/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documents4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用第三方转换器（例如 MS Word）进行文档格式转换的 API。</font></font></li>
+<li><a href="https://www.docx4java.org/trac/docx4j" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">docx4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 创建和操作 Microsoft Open XML 文件。</font></font></li>
+<li><a href="https://github.com/dhatim/fastexcel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fastexcel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于读取和写入大型 Excel (XLSX) 工作表的高性能库。</font></font></li>
+<li><a href="https://github.com/creditdatamw/zerocell"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zerocell</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于注释的 API，用于将数据从 Excel 工作表读取到 POJO，重点是减少开销。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-financial" class="anchor" aria-hidden="true" tabindex="-1" href="#financial"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">金融的</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与金融领域相关的图书馆。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/cassandre-tech/cassandre-trading-bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cassandre</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 交易机器人框架。</font></font></li>
+<li><a href="https://github.com/paritytrading/parity"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parity</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 交易场所平台。</font></font></li>
+<li><a href="https://github.com/paritytrading/philadelphia"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">费城</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 低延迟金融信息交换。</font></font></li>
+<li><a href="https://github.com/square/connect-java-sdk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Square</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 与 Square API 集成。</font></font></li>
+<li><a href="https://github.com/stripe/stripe-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stripe</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 与 Stripe API 集成。</font></font></li>
+<li><a href="https://github.com/ta4j/ta4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ta4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于技术分析的库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-formal-verification" class="anchor" aria-hidden="true" tabindex="-1" href="#formal-verification"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">形式验证</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">形式化方法工具：证明助手、模型检查、符号执行等。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/ksen007/janala2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CATG</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Concolic 单元测试引擎。</font><font style="vertical-align: inherit;">使用形式化方法自动生成单元测试。</font></font></li>
+<li><a href="https://checkerframework.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Checker Framework</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可插入类型系统。</font><font style="vertical-align: inherit;">包括空类型、物理单位、不变性类型等等。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://plse.cs.washington.edu/daikon/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daikon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 检测可能的程序不变量并根据这些不变量生成 JML 规范。</font></font></li>
+<li><a href="https://github.com/javapathfinder/jpf-core"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java Path Finder (JPF)</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JVM 形式验证工具，包含模型检查器等。</font><font style="vertical-align: inherit;">由美国宇航局创建。</font></font></li>
+<li><a href="https://massoni.computacao.ufcg.edu.br/home/jmlok" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMLOK 2.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过生成反馈导向的随机测试来检测代码和 JML 规范之间的不一致，并建议检测到的每个不符合项的可能原因。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://www.key-project.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KeY</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 形式化软件开发工具，旨在尽可能无缝地集成面向对象软件的设计、实现、形式化规范和形式化验证。</font><font style="vertical-align: inherit;">使用 JML 进行规范并使用符号执行进行验证。</font><font style="vertical-align: inherit;">（GPL-2.0 或更高版本）</font></font></li>
+<li><a href="http://www.openjml.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenJML</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将 JML 规范转换为 SMT-LIB 格式，并将程序隐含的证明问题传递给后端求解器。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-functional-programming" class="anchor" aria-hidden="true" tabindex="-1" href="#functional-programming"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">函数式编程</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">促进函数式编程的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/aol/cyclops"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cyclops</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Monad 和流实用程序、理解、模式匹配、所有 JDK 集合的功能扩展、未来流、蹦床等等。</font></font></li>
+<li><a href="https://github.com/derive4j/derive4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">derive4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于派生代数数据类型构造函数、模式匹配和态射的 Java 8 注释处理器和框架。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://bitbucket.org/atlassian/fugue" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fugue</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Guava 的功能扩展。</font></font></li>
+<li><a href="http://www.functionaljava.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Function Java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实现许多基本和高级编程抽象，以帮助面向组合的开发。</font></font></li>
+<li><a href="https://github.com/jOOQ/jOOL"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jOOλ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 8 的扩展，旨在通过提供大量缺失的类型和一组丰富的顺序 Stream API 添加来修复 lambda 中的空白。</font></font></li>
+<li><a href="https://github.com/poetix/protonpack"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">protonpack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 流实用程序的集合。</font></font></li>
+<li><a href="https://github.com/amaembo/streamex"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">StreamEx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 增强 Java 8 流。</font></font></li>
+<li><a href="https://www.vavr.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vavr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供持久数据类型和功能控制结构的功能组件库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-game-development" class="anchor" aria-hidden="true" tabindex="-1" href="#game-development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">游戏开发</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持游戏开发的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://almasb.github.io/FXGL/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FXGL</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JavaFX 游戏开发框架。</font></font></li>
+<li><a href="http://www.jbox2d.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JBox2D</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 著名的 C++ 2D 物理引擎的端口。</font></font></li>
+<li><a href="https://jmonkeyengine.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jMonkeyEngine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于现代 3D 开发的游戏引擎。</font></font></li>
+<li><a href="https://libgdx.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">libGDX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 全方位跨平台、高级框架。</font></font></li>
+<li><a href="https://litiengine.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Litiengine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 AWT 的轻量级 2D 游戏引擎。</font></font></li>
+<li><a href="https://www.lwjgl.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LWJGL</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 强大的框架，抽象 OpenGL/CL/AL 等库。</font></font></li>
+<li><a href="https://mini2dx.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mini2Dx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适合初学者、精通的框架，用于快速原型设计和构建 2D 游戏。</font></font></li>
+<li><a href="https://github.com/xzripper/Void2D"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Void2D</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Swing 的具有内置物理功能的高级 2D 游戏引擎。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-geospatial" class="anchor" aria-hidden="true" tabindex="-1" href="#geospatial"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">地理空间</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于处理地理空间数据和算法的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://sis.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache SIS</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于开发地理空间应用程序的库。</font></font></li>
+<li><a href="https://github.com/Esri/arcgis-maps-sdk-java-samples/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ArcGIS Maps SDK for Java</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于向桌面应用程序添加地图和 GIS 功能的 JavaFX 库。</font></font></li>
+<li><a href="https://github.com/davidmoten/geo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Geo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 中的 GeoHash 实用程序.</font></font></li>
+<li><a href="https://geotools.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GeoTools</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供地理空间数据工具的库。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/graphhopper/graphhopper"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GraphHopper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 道路路由引擎。</font><font style="vertical-align: inherit;">用作 Java 库或独立的 Web 服务。</font></font></li>
+<li><a href="http://www.h2gis.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">H2GIS</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - H2 数据库的空间扩展。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://astrapi69.github.io/jgeohash/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jgeohash</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 GeoHash 算法的库。</font></font></li>
+<li><a href="https://github.com/mapsforge/mapsforge"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mapsforge</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 OpenStreetMap 数据的地图渲染。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://github.com/locationtech/spatial4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spatial4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用空间/地理空间库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-gui" class="anchor" aria-hidden="true" tabindex="-1" href="#gui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图形用户界面</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建现代图形用户界面的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://wiki.openjdk.java.net/display/OpenJFX/Main" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaFX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Swing 的继承者。</font></font></li>
+<li><a href="https://gluonhq.com/products/scene-builder/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Scene Builder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 JavaFX 应用程序的可视化布局工具。</font></font></li>
+<li><a href="https://github.com/reportmill/SnapKit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SnapKit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于桌面和 Web 的现代 Java UI 库。</font></font></li>
+<li><a href="https://www.eclipse.org/swt/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SWT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 图形小部件工具包。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-high-performance" class="anchor" aria-hidden="true" tabindex="-1" href="#high-performance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高性能</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于高性能计算的一切，从集合到特定库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/real-logic/Agrona"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Agrona</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能应用程序中常见的数据结构和实用方法。</font></font></li>
+<li><a href="https://lmax-exchange.github.io/disruptor/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Disruptor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 线程间消息传递库。</font></font></li>
+<li><a href="https://github.com/eclipse/eclipse-collections"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eclipse Collections</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受 Smalltalk 启发的集合框架.</font></font></li>
+<li><a href="http://fastutil.di.unimi.it" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fastutil</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速且紧凑的特定类型集合。</font></font></li>
+<li><a href="https://labs.carrotsearch.com/hppc.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HPPC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 原始集合。</font></font></li>
+<li><a href="https://github.com/JCTools/JCTools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JCTools</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDK 目前缺少并发工具。</font></font></li>
+<li><a href="https://github.com/leventov/Koloboke"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Koloboke</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 精心设计的 Java 集合框架的扩展，具有原始专业化等。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-http-clients" class="anchor" aria-hidden="true" tabindex="-1" href="#http-clients"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTTP 客户端</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助创建 HTTP 请求和/或绑定响应的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://hc.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache HttpComponents</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于 HTTP 和相关协议的低级 Java 组件工具集。</font></font></li>
+<li><a href="https://github.com/AsyncHttpClient/async-http-client"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Async Http Client</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 异步 HTTP 和 WebSocket 客户端库。</font></font></li>
+<li><a href="https://avaje.io/http-client" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Avaje Http Client</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDK 11 的 HttpClient 的包装器，在其他增强功能中添加了类似 Feign 的接口。</font></font></li>
+<li><a href="https://github.com/OpenFeign/feign"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Feign</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - HTTP 客户端绑定器，受到 Retrofit、JAXRS-2.0 和 WebSocket 的启发。</font></font></li>
+<li><a href="https://github.com/googleapis/google-http-java-client"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Google HTTP Client</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可插入 HTTP 传输抽象，支持 java.net.HttpURLConnection、Apache HTTP Client、Android、Google App Engine、XML、Gson、Jackson 和 Protobuf。</font></font></li>
+<li><a href="https://github.com/mizosoft/methanol"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">甲醇</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- HTTP 客户端扩展库。</font></font></li>
+<li><a href="https://square.github.io/retrofit/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">改造</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 类型安全的 REST 客户端。</font></font></li>
+<li><a href="https://github.com/Netflix/ribbon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ribbon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在云中经过实战测试的客户端 IPC 库。</font></font></li>
+<li><a href="https://github.com/zalando/riptide"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Riptide</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Spring 的 RestTemplate 的客户端响应路由.</font></font></li>
+<li><a href="https://github.com/Kong/unirest-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">unirest-java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化的轻量级 HTTP 客户端库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-hypermedia-types" class="anchor" aria-hidden="true" tabindex="-1" href="#hypermedia-types"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">超媒体类型</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">处理超媒体类型序列化的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/blackdoor/hate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 根据 HAL 规范构建超媒体友好的对象。</font></font></li>
+<li><a href="https://github.com/jsonld-java/jsonld-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSON-LD</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JSON-LD 实现。</font></font></li>
+<li><a href="https://github.com/eserating-chwy/siren4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Siren4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Siren 规范的库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-ide" class="anchor" aria-hidden="true" tabindex="-1" href="#ide"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集成开发环境</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集成开发环境试图简化开发的多个方面。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.eclipse.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eclipse</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 建立了开源项目，支持大量插件和语言。</font></font></li>
+<li><a href="https://www.jetbrains.com/idea/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IntelliJ IDEA</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持多种 JVM 语言，并为 Android 开发提供良好的选择。</font><font style="vertical-align: inherit;">商业版针对企业部门。</font></font></li>
+<li><a href="https://www.jgrasp.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jGRASP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 创建用于提供与调试器结合使用的软件可视化，例如控制结构图、UML 类图和对象查看器。</font></font></li>
+<li><a href="https://netbeans.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NetBeans</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供多种 Java SE 和 EE 功能的集成，从数据库访问到 HTML5。</font></font></li>
+<li><a href="https://reportmill.com/SnapCode/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SnapCode</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在浏览器中运行的现代 Java IDE，专注于教育。</font></font></li>
+<li><a href="https://code.visualstudio.com/docs/languages/java" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Visual Studio Code</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过使用内部市场的扩展，通过简单、现代的工作流程为轻量级项目提供 Java 支持。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-imagery" class="anchor" aria-hidden="true" tabindex="-1" href="#imagery"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">图像</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助创建、评估或操作图形图像的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/rkalla/imgscalr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Imgscalr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以纯 Java 2D 实现的简单、高效和硬件加速的图像缩放库。</font></font></li>
+<li><a href="https://github.com/nguyenq/tess4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tess4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Tesseract OCR API 的 JNA 包装器。</font></font></li>
+<li><a href="https://github.com/coobird/thumbnailator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thumbnailator</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高品质缩略图生成库。</font></font></li>
+<li><a href="https://github.com/haraldk/TwelveMonkeys"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TwelveMonkeys</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 扩展支持的图像文件格式数量的插件集合。</font></font></li>
+<li><a href="https://github.com/zxing/zxing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ZXing</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多格式一维/二维条码图像处理库。</font></font></li>
+<li><a href="https://github.com/romankh3/image-comparison"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">image-comparison</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 比较 2 个相同大小的图像并通过绘制矩形直观地显示差异的库。</font><font style="vertical-align: inherit;">图像的某些部分可以从比较中排除。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-introspection" class="anchor" aria-hidden="true" tabindex="-1" href="#introspection"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">内省</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有助于使 Java 自省和反射 API 更容易、更快速使用的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/classgraph/classgraph"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ClassGraph</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -ClassGraph（以前称为 FastClasspathScanner）是一个超快、超轻量级、并行的类路径扫描器和模块扫描器，适用于 Java、Scala、Kotlin 和其他 JVM 语言。</font></font></li>
+<li><a href="https://github.com/jOOQ/jOOR"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jOOR</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - jOOR 代表 jOOR 面向对象反射。</font><font style="vertical-align: inherit;">它是 java.lang.reflect 包的简单包装器。</font></font></li>
+<li><a href="http://projetos.vidageek.net/mirror/mirror/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mirror</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Mirror 的创建是为了解决一个简单的问题，通常名为 ReflectionUtil，它几乎适用于所有依赖反射来完成高级任务的项目。</font></font></li>
+<li><a href="http://objenesis.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Objenesis</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许动态实例化，无需默认构造函数，例如具有必需参数、副作用或抛出异常的构造函数。</font></font></li>
+<li><a href="https://github.com/EsotericSoftware/reflectasm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ReflectASM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - ReflectASM 是一个非常小的 Java 库，它通过使用代码生成提供高性能反射。</font></font></li>
+<li><a href="https://github.com/ronmamo/reflections"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reflections</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Reflections 扫描您的类路径，索引元数据，允许您在运行时查询它，并可以保存和收集项目中许多模块的信息。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-job-scheduling" class="anchor" aria-hidden="true" tabindex="-1" href="#job-scheduling"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作业调度</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于调度后台作业的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/jobrunr/jobrunr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JobRunr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 作业调度库，利用 lambda 进行即发即忘、延迟和重复作业。</font><font style="vertical-align: inherit;">使用乐观锁定保证单个调度程序实例的执行。</font><font style="vertical-align: inherit;">具有持久性、最小依赖性和可嵌入的特性。</font></font></li>
+<li><a href="https://github.com/quartz-scheduler/quartz"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quartz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 功能丰富的开源作业调度库，几乎可以集成到任何 Java 应用程序中。</font></font></li>
+<li><a href="https://github.com/knowm/Sundial"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sundial</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级框架，用于简单地定义作业、定义触发器和启动调度程序。</font></font></li>
+<li><a href="https://github.com/Coreoz/Wisp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wisp</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有最小占用空间和简单 API 的简单库。</font></font></li>
+<li><a href="https://github.com/kagkarlsson/db-scheduler"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">db-scheduler</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 持久且集群友好的调度程序。</font></font></li>
+<li><a href="https://github.com/j-easy/easy-batch"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">easy-batch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用简单的处理管道设置批处理作业。</font><font style="vertical-align: inherit;">记录从数据源按顺序读取，在管道中处理并批量写入数据接收器。</font></font></li>
+<li><a href="https://github.com/lukas-krecan/ShedLock"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">shedlock</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 确保您的计划任务最多同时执行一次。</font><font style="vertical-align: inherit;">如果一个任务正在一个节点上执行，它会获取一个锁，以防止从另一个节点或线程执行同一任务。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-json" class="anchor" aria-hidden="true" tabindex="-1" href="#json"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSON</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于将 JSON 序列化到 Java 对象以及从 Java 对象反序列化 JSON 的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://avaje.io/jsonb/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Avaje Jsonb</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过源代码生成和类似 Jackson 的注释进行无反射 Json 绑定.</font></font></li>
+<li><a href="https://github.com/ngs-doo/dsl-json"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DSL-JSON</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有高级编译时数据绑定的 JSON 库。</font></font></li>
+<li><a href="http://genson.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Genson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 功能强大且易于使用的 Java 到 JSON 转换库。</font></font></li>
+<li><a href="https://github.com/google/gson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将对象序列化为 JSON，反之亦然。</font><font style="vertical-align: inherit;">即时使用时性能良好。</font></font></li>
+<li><a href="https://github.com/brettwooldridge/HikariJSON"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HikariJSON</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能 JSON 解析器，比 Jackson 快 2 倍。</font></font></li>
+<li><a href="https://github.com/FasterXML/jackson-modules-java8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jackson-modules-java8</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Java 8 数据类型和功能的 Jackson 模块集。</font></font></li>
+<li><a href="https://github.com/zalando/jackson-datatype-money"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jackson-datatype-money</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源 Jackson 模块，支持 JavaMoney 数据类型的 JSON 序列化和反序列化。</font></font></li>
+<li><a href="https://github.com/FasterXML/jackson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jackson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 与 GSON 类似，但如果您需要更频繁地实例化库，则可以提高性能。</font></font></li>
+<li><a href="https://github.com/jdereg/json-io"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSON-io</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将 Java 转换为 JSON。</font><font style="vertical-align: inherit;">将 JSON 转换为 Java。</font><font style="vertical-align: inherit;">漂亮的打印 JSON。</font><font style="vertical-align: inherit;">Java JSON 序列化器。</font></font></li>
+<li><a href="http://jsoniter.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jsoniter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速灵活的库，具有迭代器和惰性解析 API。</font></font></li>
+<li><a href="https://github.com/bluelinelabs/LoganSquare"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LoganSquare</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Jackson 的流 API 的 JSON 解析和序列化库。</font><font style="vertical-align: inherit;">优于 GSON 和 Jackson 的库。</font></font></li>
+<li><a href="https://github.com/square/moshi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Moshi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 现代 JSON 库，不那么固执己见，并使用 List 和 Map 等内置类型。</font></font></li>
+<li><a href="https://github.com/eclipse-ee4j/yasson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yasson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 类和 JSON 文档之间的绑定层，类似于 JAXB。</font></font></li>
+<li><a href="https://github.com/alibaba/fastjson"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fastjson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 非常快的处理器，没有额外的依赖项和完整的数据绑定。</font></font></li>
+<li><a href="https://github.com/bazaarvoice/jolt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jolt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JSON 到 JSON 转换工具。</font></font></li>
+<li><a href="https://github.com/json-path/JsonPath"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JsonPath</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用类似 XPATH 的语法从 JSON 中提取数据。</font></font></li>
+<li><a href="https://github.com/jsurfer/JsonSurfer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JsonSurfer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 流式 JsonPath 处理器，专用于处理大型且复杂的 JSON 数据。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-jvm-and-jdk" class="anchor" aria-hidden="true" tabindex="-1" href="#jvm-and-jdk"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JVM 和 JDK</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JVM/JDK 的当前实现。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://adoptopenjdk.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">采用 Open JDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 社区驱动的 OpenJDK 构建，包括 HotSpot 和 OpenJ9。</font></font></li>
+<li><a href="https://github.com/ReadyTalk/avian"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Avian</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有 JIT、AOT 模式和 iOS 端口的 JVM。</font></font></li>
+<li><a href="https://aws.amazon.com/corretto/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Corretto</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Amazon 提供的免费、多平台、生产就绪的 OpenJDK 发行版。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://github.com/alibaba/dragonwell8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dragonwell8</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - OpenJDK 的下游版本，针对在线电子商务、金融、物流应用程序进行了优化。</font></font></li>
+<li><a href="https://github.com/oracle/graal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Graal</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多语言嵌入式 JVM。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://bell-sw.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Liberica JDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 由 OpenJDK 构建，经过彻底测试并通过了 JCK。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://github.com/eclipse/openj9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenJ9</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能、企业级、灵活许可、开放管理的跨平台 JVM，扩展和增强了 Eclipse OMR 和 OpenJDK 项目的运行时技术组件。</font></font></li>
+<li><a href="https://openjdk.java.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Open JDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 打开 JDK 社区主页。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://github.com/codenameone/CodenameOne/tree/master/vm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ParparVM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 iOS 的具有非阻塞并发 GC 的 VM. </font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://developers.redhat.com/products/openjdk/overview" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RedHat Open JDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - RedHat 的 OpenJDK 发行版。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://sap.github.io/SapMachine/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAP Machine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - SAP 的免费、经过严格测试和 JCK 验证的 OpenJDK 友好分支。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://www.azul.com/products/zulu-community/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zulu</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - OpenJDK 为 Windows、Linux 和 macOS 构建。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://github.com/microsoft/openjdk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Microsoft JDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - OpenJDK 的 Microsoft 版本，免费、开源、新鲜制作！</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-logging" class="anchor" aria-hidden="true" tabindex="-1" href="#logging"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">记录</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">记录应用程序行为的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://logging.apache.org/log4j/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Log4j 2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用强大的插件和配置架构进行完全重写。</font></font></li>
+<li><a href="https://github.com/tersesystems/echopraxia"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Echopraxia</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 围绕结构化日志记录、丰富上下文和条件日志记录设计的 API。</font><font style="vertical-align: inherit;">有 Logback 和 Log4J2 实现，但 Echopraxia 的 API 完全无依赖性，这意味着它可以使用任何日志记录 API 来实现。</font></font></li>
+<li><a href="https://www.graylog.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Graylog</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适合扩展角色和权限管理的开源聚合器。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://www.elastic.co/kibana" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kibana</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分析和可视化日志文件。</font><font style="vertical-align: inherit;">有些功能需要付费。</font></font></li>
+<li><a href="http://logback.qos.ch" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logback</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 强大的日志库，通过 Groovy 提供有趣的配置选项。</font></font></li>
+<li><a href="https://github.com/zalando/logbook"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logbook</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 HTTP 请求和响应日志记录的可扩展开源库。</font></font></li>
+<li><a href="https://www.elastic.co/logstash" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logstash</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于管理日志文件的工具。</font></font></li>
+<li><a href="https://github.com/p6spy/p6spy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">p6spy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 启用所有 JDBC 事务的日志记录，无需更改代码。</font></font></li>
+<li><a href="http://www.slf4j.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SLF4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 抽象层/简单日志记录外观。</font></font></li>
+<li><a href="https://tinylog.org/v2/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tinylog</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有静态记录器类的轻量级日志记录框架。</font></font></li>
+<li><a href="https://github.com/zalando/opentracing-toolbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenTracing Toolbox</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 构建在 OpenTracing 之上并为现有仪器提供扩展和插件的库集合。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-machine-learning" class="anchor" aria-hidden="true" tabindex="-1" href="#machine-learning"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机器学习</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供用于从数据中学习的特定统计算法的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://flink.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Flink</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速、可靠、大规模数据处理引擎。</font></font></li>
+<li><a href="https://mahout.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Mahout</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于协作过滤、聚类和分类的可扩展算法。</font></font></li>
+<li><a href="http://www.datumbox.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DatumBox</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供多种用于自然语言处理的算法和预训练模型。</font></font></li>
+<li><a href="https://deeplearning4j.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deeplearning4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式多线程深度学习库。</font></font></li>
+<li><a href="https://djl.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DJL</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 与引擎无关的高级深度学习框架。</font></font></li>
+<li><a href="https://www.h2o.ai" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">H2O</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于大数据统计的分析引擎。</font></font></li>
+<li><a href="https://github.com/Barqawiz/IntelliJava"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">智能 java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以编程方式与远程深度学习和语言模型无缝集成。</font></font></li>
+<li><a href="https://github.com/EdwardRaff/JSAT"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSAT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持多线程执行的预处理、分类、回归和聚类算法。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/BayesWitnesses/m2cgen"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">m2cgen</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于将模型转换为本机代码的 CLI 工具。</font></font></li>
+<li><a href="https://github.com/Gleethos/neureka"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Neureka</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个轻量级、独立于平台、OpenCL 加速的 nd 数组/张量库。</font></font></li>
+<li><a href="https://www.ojalgo.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">哦！</font><font style="vertical-align: inherit;">算法</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 数据科学、机器学习和科学计算所需的高性能数学、线性代数和优化。</font></font></li>
+<li><a href="https://github.com/OryxProject/oryx"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oryx 2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建实时、大规模机器学习应用程序的框架。</font><font style="vertical-align: inherit;">包括用于协作过滤、分类、回归和聚类的端到端应用程序。</font></font></li>
+<li><a href="https://github.com/siddhi-io/siddhi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Siddhi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 云原生流和复杂事件处理引擎。</font></font></li>
+<li><a href="https://github.com/haifengl/smile"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Smile</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 统计机器智能和学习引擎提供了一组机器学习算法和可视化库。</font></font></li>
+<li><a href="https://tribuo.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tribuo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供用于分类、回归、聚类、模型开发的工具以及与其他库（例如 scikit-learn、pytorch 和 TensorFlow）的接口。</font></font></li>
+<li><a href="https://www.cs.waikato.ac.nz/ml/weka/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weka</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于从预处理到可视化的数据挖掘任务的算法集合。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-messaging" class="anchor" aria-hidden="true" tabindex="-1" href="#messaging"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">消息传递</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助在客户端之间发送消息以确保协议独立性的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/real-logic/Aeron"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aeron</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高效、可靠的单播和多播消息传输。</font></font></li>
+<li><a href="https://activemq.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache ActiveMQ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实现 JMS 并将同步通信转换为异步通信的消息代理。</font></font></li>
+<li><a href="https://camel.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Camel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过企业集成模式将不同的传输 API 粘合在一起。</font></font></li>
+<li><a href="https://kafka.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Kafka</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高吞吐量分布式消息系统。</font></font></li>
+<li><a href="https://pulsar.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Pulsar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式发布/订阅消息系统。</font></font></li>
+<li><a href="https://rocketmq.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache RocketMQ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速、可靠且可扩展的分布式消息传递平台。</font></font></li>
+<li><a href="https://qpid.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Qpid</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Apache Qpid 制作使用 AMQP 并支持多种语言和平台的消息传递工具。</font></font></li>
+<li><a href="https://github.com/joel-jeremy/deezpatch"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deezpatch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单、轻量级且高性能的调度库，用于解耦消息（请求和事件）和消息处理程序。</font></font></li>
+<li><a href="https://github.com/greenrobot/EventBus"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EventBus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单的发布/订阅事件总线。</font></font></li>
+<li><a href="http://hermes.allegro.tech" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hermes</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 构建在 Kafka 之上的快速可靠的消息代理。</font></font></li>
+<li><a href="https://github.com/zeromq/jeromq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JeroMQ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - ZeroMQ 的实现。</font></font></li>
+<li><a href="https://github.com/zalando/nakadi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nakadi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 Kafka 之上提供 RESTful API。</font></font></li>
+<li><a href="https://github.com/rabbitmq/rabbitmq-java-client"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RabbitMQ Java 客户端</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- RabbitMQ 客户端。</font></font></li>
+<li><a href="https://github.com/igniterealtime/Smack"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Smack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 跨平台 XMPP 客户端库。</font></font></li>
+<li><a href="https://github.com/nats-io/nats.java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NATS 客户端</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- NATS 客户端。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-microservice" class="anchor" aria-hidden="true" tabindex="-1" href="#microservice"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微服务</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于创建和管理微服务的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://rpc.activej.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ActiveRPC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于复杂高负载分布式应用程序和类似 Memcached 的解决方案的轻量级快速库。</font></font></li>
+<li><a href="https://spotify.github.io/apollo/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apollo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于编写可组合微服务的库。</font></font></li>
+<li><a href="https://github.com/line/armeria"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Armeria</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Java 8、Netty、HTTP/2、Thrift 和 gRPC 构建的异步 RPC/REST 客户端/服务器库。</font></font></li>
+<li><a href="https://github.com/Ecwid/consul-api"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">consul-api</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Consul API 的客户端：分布式、高度可用且数据中心感知的注册/发现服务。</font></font></li>
+<li><a href="https://github.com/Netflix/eureka"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eureka</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 REST 的服务注册表，用于弹性负载平衡和故障转移。</font></font></li>
+<li><a href="https://helidon.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Helidon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 编写微服务的两种风格的方法：功能反应式和作为 MicroProfile 的实现。</font></font></li>
+<li><a href="https://github.com/DV8FromTheWorld/JDA"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDA</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Discord REST API 及其 WebSocket 事件的包装。</font></font></li>
+<li><a href="https://github.com/DaveJarvis/KeenType"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KeenType</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 新排版系统的基于 Java 实现的现代化版本，很大程度上基于 Donald E. Knuth 的原始 TeX。</font></font></li>
+<li><a href="https://github.com/fabric8io/kubernetes-client"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">kubernetes-client</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 客户端通过流畅的 DSL 提供对完整 Kubernetes 和 OpenShift REST API 的访问。</font></font></li>
+<li><a href="https://micronaut.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Micronaut</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 现代全栈框架，专注于模块化、最小内存占用和启动时间。</font></font></li>
+<li><a href="https://nacos.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nacos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建云原生应用程序的动态服务发现、配置和服务管理平台。</font></font></li>
+<li><a href="https://github.com/TheoKanning/openai-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenAI-Java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于使用 OpenAI 的 GPT-3 API 的 Java 库。</font></font></li>
+<li><a href="https://quarkus.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quarkus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专为 HotSpot 和 Graal VM 定制的 Kubernetes 堆栈。</font></font></li>
+<li><a href="https://github.com/alibaba/Sentinel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sentinel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 流量控制组件，可实现微服务的可靠性、弹性和监控。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-miscellaneous" class="anchor" aria-hidden="true" tabindex="-1" href="#miscellaneous"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">各种各样的</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他一切。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/aws/aws-sdk-java-v2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AWS SDK for Java 2.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - AWS API 的包装器。</font></font></li>
+<li><a href="https://github.com/npgall/cqengine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CQEngine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 对 Java 集合进行超快速、类似 SQL 的查询。</font></font></li>
+<li><a href="https://github.com/iluwatar/java-design-patterns"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设计模式</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 最常见设计模式的实现和解释。</font></font></li>
+<li><a href="https://github.com/ff4j/ff4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FF4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 的功能标志。</font></font></li>
+<li><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FizzBu&ZeroWidthSpace;&ZeroWidthSpace;zz Enterprise Edition</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 由严肃的商人出于严肃的商业目的而进行的 FizzBu&ZeroWidthSpace;&ZeroWidthSpace;zz 的严肃实现。</font><font style="vertical-align: inherit;">（无明确许可）</font></font></li>
+<li><a href="https://github.com/google/j2objc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">J2ObjC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 到 Objective-C 的转换器，用于将 Android 库移植到 iOS。</font></font></li>
+<li><a href="https://jbake.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JBake</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 静态网站生成器。</font></font></li>
+<li><a href="https://github.com/rampatra/jbot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JBot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建聊天机器人的框架。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="http://jcuda.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JCuda</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -JCuda 为 CUDA 和 CUDA 相关库提供 Java 绑定.</font></font></li>
+<li><a href="https://github.com/google/jimfs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jimfs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 内存文件系统。</font></font></li>
+<li><a href="https://www.pelock.com/products/jobfuscator" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JObfuscator</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 源代码混淆器。</font></font></li>
+<li><a href="https://www.joda.org/joda-money/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Joda-Money</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDK 未提供的基本货币和货币类和算法。</font></font></li>
+<li><a href="https://github.com/jooq/joox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jOOX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - org.w3c.dom 包的简单包装器，允许使用受 jQuery 启发的 API 进行流畅的 XML 文档创建和操作。</font></font></li>
+<li><a href="http://jpad.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JPad</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&ZeroWidthSpace;&ZeroWidthSpace; - 片段运行器。</font></font></li>
+<li><a href="https://github.com/cincheo/jsweet"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jsweet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - TypeScript/JavaScript 的源代码转换器。</font></font></li>
+<li><a href="https://github.com/takari/maven-wrapper"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maven Wrapper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Maven 的 Gradle Wrapper 的类似物，允许在不安装 Maven 的情况下构建项目.</font></font></li>
+<li><a href="https://github.com/membrane/service-proxy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Membrane Service Proxy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源反向代理框架。</font></font></li>
+<li><a href="https://github.com/Guichaguri/MinimalFTP"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MinimalFTP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级、小型且可定制的 FTP 服务器。</font></font></li>
+<li><a href="https://github.com/adamfisk/LittleProxy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LittleProxy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Netty 基于事件的网络库之上的高性能 HTTP 代理。</font></font></li>
+<li><a href="https://github.com/winterbe/java8-tutorial"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modern Java - Java 8 指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 流行的 Java 8 指南。</font></font></li>
+<li><a href="https://github.com/gaul/modernizer-maven-plugin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modernizer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 检测旧版 Java API 的使用。</font></font></li>
+<li><a href="https://github.com/OctoLinker/OctoLinker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OctoLinker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 浏览器扩展，允许更有效地浏览 GitHub 上的代码。</font></font></li>
+<li><a href="http://openrefine.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenRefine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于处理混乱数据的工具：清理、转换、使用 Web 服务扩展数据并将其链接到数据库。</font></font></li>
+<li><a href="https://github.com/sizovs/pipelinr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PipelinR</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于在管道中使用处理程序和命令的小型实用程序库。</font></font></li>
+<li><a href="https://github.com/takari/polyglot-maven"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Polyglot for Maven</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Maven 3.3.1+ 的扩展，允许使用 XML 以外的方言编写 POM 模型。</font></font></li>
+<li><a href="https://github.com/Kartikvk1996/RR4J"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RR4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - RR4J 是一个记录 java 字节码执行情况并允许开发人员在本地重放的工具。</font></font></li>
+<li><a href="https://github.com/bbottema/simple-java-mail"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Simple Java Mail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用干净流畅的 API 进行邮件发送。</font></font></li>
+<li><a href="https://github.com/smooks/smooks"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Smooks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于片段的消息处理框架。</font><font style="vertical-align: inherit;">（Apache-2.0 或 LGPL-3.0 或更高版本）</font></font></li>
+<li><a href="https://github.com/svix/svix-webhooks/tree/main/java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Svix</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Svix API 的库，用于发送 webhooks 和验证签名。</font></font></li>
+<li><a href="https://www.togglz.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Togglz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 功能切换模式的实现。</font></font></li>
+<li><a href="https://github.com/jhalterman/typetools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TypeTools</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于解析泛型类型的工具。</font></font></li>
+<li><a href="https://github.com/SvenEwald/xmlbeam"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XMLBeam</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过在代码中使用注释或 XPath 来处理 XML。</font></font></li>
+<li><a href="https://github.com/yWorks/yGuard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yGuard</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过重命名和缩小进行混淆。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-mobile-development" class="anchor" aria-hidden="true" tabindex="-1" href="#mobile-development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移动开发</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于创建或管理移动应用程序的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.codenameone.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Codename One</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于编写本机移动应用程序的跨平台解决方案。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0，带有 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://mobileui.dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MobileUI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于使用 Java 和 Kotlin 中的本机 UI 开发移动应用程序的跨平台框架。</font></font></li>
+<li><a href="https://multi-os-engine.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多操作系统引擎</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 用于开发本机移动（iOS、Android 等）应用程序的开源跨平台引擎。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-monitoring" class="anchor" aria-hidden="true" tabindex="-1" href="#monitoring"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">监控</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过提供遥测来观察/监控生产中的应用程序的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/stevensouza/automon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Automon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将 AOP 的功能与监控和/或日志记录工具相结合。</font></font></li>
+<li><a href="https://github.com/DataDog/dd-trace-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Datadog</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 现代监控和分析。</font></font></li>
+<li><a href="https://github.com/dropwizard/metrics"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dropwizard Metrics</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 JMX 或 HTTP 公开指标并将其发送到数据库。</font></font></li>
+<li><a href="https://github.com/zalando/failsafe-actuator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">故障安全执行器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Spring-Boot 环境中故障安全断路器的开箱即用监控。</font></font></li>
+<li><a href="https://glowroot.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Glowroot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源 Java APM。</font></font></li>
+<li><a href="https://github.com/dromara/hertzbeat"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HertzBeat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有自定义监视器和无代理的实时监控系统。</font></font></li>
+<li><a href="https://github.com/opengoofy/hippo4j/blob/develop/README-EN.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hippo4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 动态且可观察的线程池框架。</font></font></li>
+<li><a href="https://www.inspectit.rocks" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">spectIT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过可以动态更改的钩子捕获详细的运行时信息。</font><font style="vertical-align: inherit;">它支持通过 OpenTracing API 在多个系统上进行跟踪，并且可以将数据与最终用户监控相关联。</font></font></li>
+<li><a href="https://instrumentalapp.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Instrumental</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实时 Java 应用程序性能监控。</font><font style="vertical-align: inherit;">具有免费开发帐户的商业服务。</font></font></li>
+<li><a href="https://github.com/jaegertracing/jaeger-client-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jaeger 客户端</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Jaeger 客户端。</font></font></li>
+<li><a href="https://github.com/javamelody/javamelody"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaMelody</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 性能监控和分析。</font></font></li>
+<li><a href="https://github.com/jmxtrans/jmxtrans"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jmxtrans</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 连接到多个 JVM 并通过 JMX 查询它们的属性。</font><font style="vertical-align: inherit;">它的查询语言基于 JSON，允许非 Java 程序员访问 JVM 属性。</font><font style="vertical-align: inherit;">支持不同的输出写入，包括 Graphite、Ganglia 和 StatsD。</font></font></li>
+<li><a href="https://jolokia.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jolokia</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 REST 的 JMX。</font></font></li>
+<li><a href="https://github.com/micrometer-metrics/micrometer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Micrometer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 供应商中立的指标/可观察性外观，适用于最流行的指标/可观察性库。</font></font></li>
+<li><a href="https://github.com/micrometer-metrics/tracing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Micrometer Tracing</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 供应商中立的分布式跟踪外观，适用于最流行的跟踪器库。</font></font></li>
+<li><a href="https://github.com/lorenzoongithub/nudge4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nudge4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过字节码注入从浏览器为 Java 8 提供远程开发人员控制台。</font></font></li>
+<li><a href="https://github.com/naver/pinpoint"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pinpoint</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源 APM 工具。</font></font></li>
+<li><a href="https://github.com/prometheus/client_java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prometheus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供多维数据模型、DSL、自治服务器节点等等。</font></font></li>
+<li><a href="https://github.com/getsentry/sentry-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sentry - 与</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"></font><a href="https://github.com/getsentry/sentry"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sentry</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集成</font><font style="vertical-align: inherit;">，Sentry 是一个应用程序错误跟踪和性能分析平台。</font></font></li>
+<li><a href="https://github.com/sematext/sematext-agent-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SPM</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有 JVM 应用程序分布式事务跟踪的性能监视器。</font></font></li>
+<li><a href="https://github.com/stagemonitor/stagemonitor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stagemonitor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JVM 应用程序的开源性能监控和事务跟踪。</font></font></li>
+<li><a href="https://github.com/palantir/Sysmon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sysmon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Java VM 的轻量级平台监控工具。</font></font></li>
+<li><a href="https://zipkin.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">zipkin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式跟踪系统，收集解决微服务架构中的延迟问题所需的计时数据。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-native" class="anchor" aria-hidden="true" tabindex="-1" href="#native"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本国的</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于使用特定于平台的本机库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/Syncleus/aparapi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aparapi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将字节码转换为 OpenCL，允许在 GPU 上执行。</font></font></li>
+<li><a href="https://github.com/bytedeco/javacpp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaCPP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供对本机 C++ 的高效且轻松的访问。</font></font></li>
+<li><a href="https://github.com/java-native-access/jna"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JNA</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用本机库而无需编写 JNI。</font><font style="vertical-align: inherit;">还提供通用系统库的接口。</font></font></li>
+<li><a href="https://github.com/jnr/jnr-ffi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JNR</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用本机库而无需编写 JNI。</font><font style="vertical-align: inherit;">还提供通用系统库的接口。</font></font><a href="http://openjdk.java.net/projects/panama" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与 JNA 目标相同，但速度更快，并作为即将推出的巴拿马项目的</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基础</font><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-natural-language-processing" class="anchor" aria-hidden="true" tabindex="-1" href="#natural-language-processing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自然语言处理</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">专门处理文本的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/CogComp/cogcomp-nlp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CogCompNLP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为纯文本输入提供通用注释器。</font><font style="vertical-align: inherit;">（研究和学术使用许可）</font></font></li>
+<li><a href="https://nlp.stanford.edu/software/corenlp.shtml" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CoreNLP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为标记、命名实体识别和情感分析等任务提供一组基本工具。</font><font style="vertical-align: inherit;">（GPL-3.0 或更高版本）</font></font></li>
+<li><a href="https://dkpro.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DKPro</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可重复使用的 NLP 工具集合，用于语言预处理、机器学习、词汇资源等。</font></font></li>
+<li><a href="http://alias-i.com/lingpipe/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LingPipe</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于从 POS 标记到情感分析等任务的工具包。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-networking" class="anchor" aria-hidden="true" tabindex="-1" href="#networking"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">联网</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于构建网络服务器的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/CiscoSE/commons-networking"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commons-networking</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 服务器发送事件（SSE）的客户端。</font></font></li>
+<li><a href="https://github.com/puniverse/comsat"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comsat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将标准 Java Web 相关 API 与 Quasar 光纤和参与者集成。</font></font></li>
+<li><a href="https://github.com/apache/dubbo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dubbo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能 RPC 框架。</font></font></li>
+<li><a href="https://javaee.github.io/grizzly/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grizzly</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - NIO 框架。</font><font style="vertical-align: inherit;">用作 Glassfish 中的网络层。</font></font></li>
+<li><a href="https://github.com/grpc/grpc-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gRPC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 protobuf 和 HTTP/2 的 RPC 框架。</font></font></li>
+<li><a href="https://github.com/EsotericSoftware/kryonet"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KryoNet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 NIO 和 Kryo 提供干净、简单的 API，用于高效的 TCP 和 UDP 客户端/服务器网络通信。</font></font></li>
+<li><a href="https://mina.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MINA</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 抽象的、事件驱动的异步 I/O API，用于通过 Java NIO 通过 TCP/IP 和 UDP/IP 进行网络操作。</font></font></li>
+<li><a href="https://netty.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Netty</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建高性能网络应用程序的框架。</font></font></li>
+<li><a href="https://github.com/airlift/drift"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Drift</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 易于使用、基于注释的库，用于创建 Thrift 客户端和可序列化类型。</font></font></li>
+<li><a href="https://github.com/apple/servicetalk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ServiceTalk</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Netty 构建的框架，具有针对特定协议定制的 API 并支持多种编程范例。</font></font></li>
+<li><a href="https://github.com/hierynomus/sshj"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sshj</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以编程方式使用 SSH、SCP 或 SFTP。</font></font></li>
+<li><a href="https://github.com/marianobarrios/tls-channel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TLS Channel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过 SSLEngine 实现 ByteChannel 接口，从而实现易于使用（类似套接字）的 TLS。</font></font></li>
+<li><a href="http://undertow.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Undertow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 NIO 提供阻塞和非阻塞 API 的 Web 服务器。</font><font style="vertical-align: inherit;">在 WildFly 中用作网络层。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/slub/urnlib"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urnlib</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 表示、解析和编码 URN，如 RFC 2141 中所示。（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/komamitsu/fluency"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fluency</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Fluentd 和 Fluent Bit 的高吞吐量数据摄取记录器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-orm" class="anchor" aria-hidden="true" tabindex="-1" href="#orm"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ORM</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">处理对象持久性的 API。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://cayenne.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Cayenne</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供干净、静态的数据访问 API。</font><font style="vertical-align: inherit;">还包括一个 GUI 建模器，用于处理数据库映射、数据库逆向工程和生成。</font></font></li>
+<li><a href="https://github.com/domaframework/doma"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doma</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 数据库访问框架，使用注释处理以及称为双向 SQL 的本机 SQL 模板在编译时验证和生成源代码。</font></font></li>
+<li><a href="https://ebean.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ebean</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供简单快速的数据访问。</font></font></li>
+<li><a href="https://www.eclipse.org/eclipselink/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EclipseLink</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持多种持久性标准：JPA、JAXB、JCA 和 SDO。</font></font></li>
+<li><a href="http://hibernate.org/orm/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hibernate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 强大且广泛使用，拥有活跃的社区。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/mybatis/mybatis-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MyBatis</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 将对象与存储过程或 SQL 语句结合起来。</font></font></li>
+<li><a href="https://github.com/braisdom/ObjectiveSql"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ObjectiveSql</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - ActiveRecord ORM 用于快速开发和约定优于配置。</font></font></li>
+<li><a href="https://github.com/permazen/permazen"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permazen</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 语言自然持久层。</font></font></li>
+<li><a href="https://github.com/arnaudroger/SimpleFlatMapper"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SimpleFlatMapper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单的数据库和 CSV 映射器。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-paas" class="anchor" aria-hidden="true" tabindex="-1" href="#paas"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台即服务</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 平台即服务。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://aws.amazon.com/elasticbeanstalk/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AWS Elastic Beanstalk</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 AWS，支持 Tomcat 和 Jetty。</font></font></li>
+<li><a href="https://aws.amazon.com/lambda/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AWS Lambda</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无服务器计算。</font></font></li>
+<li><a href="https://cloud.google.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Google Cloud</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Google 的云基础设施。</font></font></li>
+<li><a href="https://www.heroku.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Heroku</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 抽象计算环境。</font></font></li>
+<li><a href="https://azure.microsoft.com/en-us/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Microsoft Azure</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 微软的云基础设施。</font></font></li>
+<li><a href="https://www.openshift.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenShift</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 另外提供本地解决方案。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-pdf" class="anchor" aria-hidden="true" tabindex="-1" href="#pdf"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PDF</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助处理 PDF 文件的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://xmlgraphics.apache.org/fop/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache FOP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 XSL-FO 创建 PDF。</font></font></li>
+<li><a href="https://pdfbox.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PDFBox</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于创建和操作 PDF 的工具箱。</font></font></li>
+<li><a href="http://dynamicjasper.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dynamic Jasper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -JasperReports 的抽象层. </font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://github.com/dynamicreports/dynamicreports"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DynamicReports</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化 JasperReports。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://www.eclipse.org/birt" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eclipse BIRT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用基于 Eclipse 的可视化编辑器创建 PDF 和其他格式（DOCX、XLSX、HTML 等）的报告引擎。</font></font></li>
+<li><a href="https://github.com/flyingsaucerproject/flyingsaucer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flyingsaucer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - XML/XHTML 和 CSS 2.1 渲染器。</font><font style="vertical-align: inherit;">（LGPL-2.1 或更高版本）</font></font></li>
+<li><a href="https://itextpdf.com/en" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">iText</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以编程方式创建 PDF 文件。</font></font></li>
+<li><a href="https://community.jaspersoft.com/project/jasperreports-library" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JasperReports</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 复杂的报告引擎。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+<li><a href="https://github.com/danfickle/openhtmltopdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打开 HTML 到 PDF</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 正确支持基于 Flyingsaucer 和 Apache PDFBox 的现代 PDF 标准。</font></font></li>
+<li><a href="https://github.com/LibrePDF/OpenPDF"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenPDF</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源 iText 分支。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0 和 MPL-2.0）</font></font></li>
+<li><a href="https://github.com/tabulapdf/tabula-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tabula</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 PDF 文件中提取表格。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-performance-analysis" class="anchor" aria-hidden="true" tabindex="-1" href="#performance-analysis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性能分析</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于性能分析、分析和基准测试的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://fastthread.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fastThread</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用基于云的免费上传界面分析和可视化线程转储。</font></font></li>
+<li><a href="https://gceasy.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GCeasy</font></font><img src="https://camo.githubusercontent.com/fd00e3dc306a2f372c74c586422c0269ac9fa3bb8aad842468a97cd15f6d2dd0/68747470733a2f2f63646e2e7261776769742e636f6d2f616b756c6c70702f32333234366361383332626461383262623530353233306266333533386532612f7261772f643962636462373639626630323532393266396336626331323930663031663166636431663836342f636f6d6d65726369616c2e737667" alt="C" data-canonical-src="https://cdn.rawgit.com/akullpp/23246ca832bda82bb505230bf3538e2a/raw/d9bcdb769bf025292f9c6bc1290f01f1fcd1f864/commercial.svg" style="max-width: 100%;"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分析和可视化 GC 日志的工具。</font><font style="vertical-align: inherit;">它提供了一个免费的基于云的上传接口。</font></font></li>
+<li><a href="https://github.com/jvm-profiling-tools/honest-profiler"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">诚实分析器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 低开销、无偏差的采样分析器。</font></font></li>
+<li><a href="https://github.com/giltene/jHiccup"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jHiccup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 记录和记录平台 JVM 停顿。</font></font></li>
+<li><a href="https://github.com/AdoptOpenJDK/jitwatch"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JITWatch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分析 HotSpot JVM 进行的 JIT 编译器优化。</font></font></li>
+<li><a href="http://openjdk.java.net/projects/code-tools/jmh/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMH</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建、运行和分析以 Java 和其他针对 JVM 的语言编写的纳/微米/毫/宏观基准测试的工具。</font><font style="vertical-align: inherit;">（GPL-2.0 仅适用于 Classpath-exception-2.0）</font></font></li>
+<li><a href="https://github.com/LatencyUtils/LatencyUtils"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LatencyUtils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于延迟测量和报告的实用程序。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-platform" class="anchor" aria-hidden="true" tabindex="-1" href="#platform"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">框架是包含多个类别的多个库的套件。</font></font></em></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-apache-commons" class="anchor" aria-hidden="true" tabindex="-1" href="#apache-commons"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇共享区</font></font></h4>
+<ul dir="auto">
+<li><a href="http://commons.apache.org/proper/commons-bcel/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BCEL</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 字节代码工程库 - 分析、创建和操作 Java 类文件。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-beanutils/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BeanUtils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 反射和内省 API 的易于使用的包装器。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-beanutils2/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BeanUtils2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 重新设计 Commons BeanUtils.</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-bsf/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BSF</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Bean 脚本框架 - 脚本语言的接口，包括 JSR-223。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-chain/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">链</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 责任链模式的实现。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-classscan/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ClassScan</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无需加载即可查找类接口、方法、字段和注释。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-cli/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CLI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 命令行参数解析器。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-cli2/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CLI2</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 重新设计 Commons CLI。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-codec/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编解码器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 通用编码/解码算法，例如语音、base64 或 URL。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-collections/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集合</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 扩展或增强 Java 集合框架。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-compress/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压缩</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 定义用于处理 tar、zip 和 bzip2 文件的 API。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-configuration/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 读取各种格式的配置/首选项文件。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-convert/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Convert</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Commons-Convert 旨在提供一个专用于将一种类型的对象转换为另一种类型的任务的单一库。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-csv/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSV</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于读取和写入逗号分隔值文件的组件。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-daemon/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daemon</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 类似 unix-daemon 的 java 代码的替代调用机制。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-dbcp/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DBCP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 数据库连接池服务。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-dbutils/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DbUtils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDBC 帮助程序库。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-digester/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Digester</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - XML 到 Java 对象的映射实用程序。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-email/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于从 Java 发送电子邮件的库。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-exec/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exec</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 中用于处理外部进程执行和环境管理的 API。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-fileupload/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FileUpload</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - servlet 和 Web 应用程序的文件上传功能。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-finder/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Finder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受 UNIX find 命令启发的 Java 库。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-flatfile/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flatfile</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于处理平面数据结构的 Java 库。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-functor/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Functor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可以作为对象进行操作的函数，或者表示单个通用函数的对象。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-graph/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Graph</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用图形 API 和算法。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-i18n/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">I18n</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 添加本地化消息包的功能，该消息包由一个或多个属于在一起的本地化文本组成。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-id/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Id</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Id 是用于生成标识符的组件。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-imaging/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">成像</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 图像库。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IO</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - I/O 实用程序的集合。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-javaflow/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javaflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 捕获应用程序状态的连续实现。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-jci/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JCI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 编译器接口。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-jcs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JCS</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ——Java 缓存系统。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-jelly/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jelly</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 XML 的脚本和处理引擎。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-jexl/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jexl</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 扩展了 JSTL 表达式语言的表达式语言。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-jnet/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JNet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JNet 允许通过 java.net API 动态使用注册 url 流处理程序。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-jxpath/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JXPath</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 XPath 语法操作 Java Bean 的实用程序。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-lang/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lang</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 java.lang 中的类提供额外的功能。</font></font></li>
+<li><a href="https://commons.apache.org/proper/commons-logging/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">日志记录</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 各种日志记录 API 实现的包装。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-math/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数学</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 轻量级、独立的数学和统计组件。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-monitoring/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">监控</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 监控旨在为 Java 应用程序提供简单但可扩展的监控解决方案。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-nabla/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nabla</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Nabla 提供自动微分类，可以生成用 Java 语言实现的任何函数的导数。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-net/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 网络实用程序和协议实现的集合。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-ognl/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OGNL</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 对象图导航语言。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-openpgp/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenPGP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 OpenPGP 签名和验证数据的接口。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-performance/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性能</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 用于微基准测试客户端的小型框架，具有 Commons DBCP 和 Pool 的实现。</font></font></li>
+<li><a href="http://commons.apache.org/sandbox/commons-pipeline/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">管道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 提供一组围绕工作队列设计的管道实用程序，这些实用程序并行运行以顺序处理数据对象。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-pool/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pool</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用对象池组件。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-proxy/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proxy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于创建动态代理的库。</font></font></li>
+<li><a href="https://commons.apache.org/proper/commons-rdf/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RDF</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - RDF 1.1 的常见实现，可以由 JVM 上的系统实现。</font></font></li>
+<li><a href="https://commons.apache.org/proper/commons-rng/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RNG</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Commons Rng 提供伪随机数生成器的实现。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-scxml/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SCXML</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 状态图 XML 规范的实现，旨在创建和维护 Java SCXML 引擎。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-validator/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Validator</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 在 xml 文件中定义验证器和验证规则的框架。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-vfs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VFS</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 虚拟文件系统组件，用于将文件、FTP、SMB、ZIP 等视为单个逻辑文件系统。</font></font></li>
+<li><a href="http://commons.apache.org/proper/commons-weaver/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weaver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供一种简单的方法来增强（编织）编译的字节码。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-other" class="anchor" aria-hidden="true" tabindex="-1" href="#other"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他</font></font></h4>
+<ul dir="auto">
+<li><a href="https://www.cuba-platform.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CUBA 平台</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 用于开发具有丰富 Web 界面的企业应用程序的高级框架，基于 Spring、EclipseLink 和 Vaadin。</font></font></li>
+<li><a href="https://github.com/networknt/light-4j/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Light-4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有内置</font></font><a href="https://github.com/networknt/light-oauth2/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全性</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的快速、轻量级和高效的微服务框架。</font></font></li>
+<li><a href="https://github.com/OrienteerBAP/Orienteer/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Orienteer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 开源业务应用程序平台，用于快速配置/开发 CRM、ERP、LMS 和其他应用程序。</font></font></li>
+<li><a href="https://spring.io/projects/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spring</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供了许多用于依赖注入、面向方面编程、安全性等的包。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-processes" class="anchor" aria-hidden="true" tabindex="-1" href="#processes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流程</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助管理操作系统进程的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/vorburger/ch.vorburger.exec"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ch.vorburger.exec</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 围绕 Apache Commons Exec 的便捷 API.</font></font></li>
+<li><a href="https://github.com/zeroturnaround/zt-exec"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">zt-exec</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为 Apache Commons Exec 和 ProcessBuilder 提供统一的 API。</font></font></li>
+<li><a href="https://github.com/zeroturnaround/zt-process-killer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">zt-process-killer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 停止从 Java 启动的进程或通过 PID 的系统进程。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-reactive-libraries" class="anchor" aria-hidden="true" tabindex="-1" href="#reactive-libraries"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">反应式库</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于开发反应式应用程序的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://akka.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Akka</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建并发、分布式、容错和事件驱动应用程序的工具包和运行时。</font></font></li>
+<li><a href="https://github.com/reactive-streams/reactive-streams-jvm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">反应式流</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 提供具有非阻塞背压的异步流处理标准。</font></font></li>
+<li><a href="https://github.com/reactor/reactor-core"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reactor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建反应式快速数据应用程序的库。</font></font></li>
+<li><a href="https://github.com/ReactiveX/RxJava"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RxJava</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许使用可观察序列编写异步和基于事件的程序。</font></font></li>
+<li><a href="https://vertx.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">vert.x</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多语言事件驱动的应用程序框架。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-rest-frameworks" class="anchor" aria-hidden="true" tabindex="-1" href="#rest-frameworks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REST 框架</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">专门用于创建 RESTful 服务的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/dropwizard/dropwizard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dropwizard</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Jetty、Jackson、Jersey 和 Metrics 设置现代 Web 应用程序的框架。</font></font></li>
+<li><a href="https://elide.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Elide</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 JPA 数据模型的 JSON 或 GraphQL-API 的自有框架。</font></font></li>
+<li><a href="https://jersey.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jersey</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JAX-RS 参考实现。</font></font></li>
+<li><a href="https://github.com/aol/micro-server"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Microserver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 Spring 和 Spring Boot 的方便、可扩展的微服务插件系统。</font><font style="vertical-align: inherit;">它拥有 30 多个插件并且还在不断增加，支持微单体和纯微服务风格。</font></font></li>
+<li><a href="https://www.rapidoid.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rapidoid</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单、安全且极其快速的框架，由嵌入式 HTTP 服务器、GUI 组件和依赖项注入组成。</font></font></li>
+<li><a href="https://github.com/linkedin/rest.li"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rest.li</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用类型安全绑定和异步、非阻塞 IO 以及端到端开发人员工作流程构建健壮、可扩展的 RESTful 架构的框架，可促进清洁实践、统一的接口设计和一致的数据建模。</font></font></li>
+<li><a href="https://resteasy.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RESTEasy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JAX-RS 规范的完全认证和可移植实现。</font></font></li>
+<li><a href="https://github.com/RestExpress/RestExpress"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RestExpress</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JBoss Netty HTTP 堆栈上的瘦包装器，提供扩展和性能。</font></font></li>
+<li><a href="https://github.com/restlet/restlet-framework-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Restlet Framework</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有强大路由和过滤功能的开创性框架，以及统一的客户端和服务器 API。</font></font></li>
+<li><a href="http://sparkjava.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spark</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Sinatra 启发的框架。</font></font></li>
+<li><a href="http://www.crnk.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crnk</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实施 JSON API 规范，以构建面向资源的 REST 端点，包括排序、过滤、分页、链接、对象图、类型安全、批量更新、集成等。</font></font></li>
+<li><a href="https://github.com/springdoc/springdoc-openapi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">springdoc-openapi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Spring Boot 项目自动生成 API 文档。</font></font></li>
+<li><a href="https://swagger.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Swagger</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 与语言无关的标准 REST API 接口。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-science" class="anchor" aria-hidden="true" tabindex="-1" href="#science"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">科学</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于科学计算、分析和可视化的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://biojava.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BioJava</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过提供生物信息学中常用的算法、文件格式解析器、测序和 3D 可视化来促进生物数据的处理。</font></font></li>
+<li><a href="https://github.com/GSI-CS-CO/chart-fx"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chart-FX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 科学图表库，重点关注大型数据集以 25 Hz 更新率进行性能优化的实时数据可视化。</font></font></li>
+<li><a href="https://datamelt.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DataMelt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 科学计算、数据分析和数据可视化的环境。</font><font style="vertical-align: inherit;">（GPL-3.0 或更高版本）</font></font></li>
+<li><a href="https://github.com/Erdos-Graph-Framework/Erdos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Erdos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于理论算法的模块化、轻量级和简单的图形框架。</font></font></li>
+<li><a href="http://graphstream-project.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GraphStream</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于建模和分析动态图的库。</font></font></li>
+<li><a href="http://www.jfree.org/jfreechart/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JFreeChart</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Swing、JavaFX 和服务器端应用程序的 2D 图表库。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+<li><a href="https://github.com/jgrapht/jgrapht"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JGraphT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供数学图论对象和算法的图库。</font></font></li>
+<li><a href="https://github.com/jgraph/jgraphx"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JGraphX</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于可视化（主要是 Swing）并与节点边缘图交互的库。</font></font></li>
+<li><a href="https://github.com/logic-ng/LogicNG"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LogicNG</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于创建、操作和求解布尔和伪布尔公式的库。</font></font></li>
+<li><a href="https://github.com/MinesJTK/jtk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mines Java Toolkit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于地球物理科学计算、可视化和数字信号分析的库。</font></font></li>
+<li><a href="https://github.com/zavtech/morpheus-core"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Morpheus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供一种称为 DataFrame 的多功能二维内存高效表格数据结构，可为 JVM 上的科学计算提供高效的内存分析。</font></font></li>
+<li><a href="https://www.orekit.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Orekit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一个低级太空飞行动力学库，提供基本元素（轨道、日期、姿态、框架...）和各种算法（转换、传播、指向...）来处理它们。</font></font></li>
+<li><a href="https://github.com/jfree/orson-charts"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Orson-Charts</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 生成各种 3D 图表，可以使用 Swing 和 JavaFX 显示或导出为 PDF、SVG、PNG 和 JPEG。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/jtablesaw/tablesaw"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tablesaw</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 包括数据框、嵌入式列存储以及数百种转换、汇总或过滤数据的方法。</font></font></li>
+<li><a href="https://github.com/knowm/XChart"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XChart</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于绘制数据的轻量级库。</font><font style="vertical-align: inherit;">有许多可定制的图表类型可用。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-search" class="anchor" aria-hidden="true" tabindex="-1" href="#search"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">索引文档以进行搜索和分析的引擎。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://lucene.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Lucene</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高性能、全功能、跨平台的文本搜索引擎库。</font></font></li>
+<li><a href="https://lucene.apache.org/solr/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Solr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 针对大流量优化的企业搜索引擎。</font></font></li>
+<li><a href="https://www.elastic.co" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Elasticsearch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 分布式、支持多租户的全文搜索引擎，具有 RESTful Web 界面和无模式 JSON 文档。</font></font></li>
+<li><a href="https://github.com/haeungun/indexer4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Indexer4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单、轻便的全文索引和搜索库。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-security" class="anchor" aria-hidden="true" tabindex="-1" href="#security"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">处理安全、身份验证、授权或会话管理的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://shiro.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Shiro</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 执行身份验证、授权、加密和会话管理。</font></font></li>
+<li><a href="https://www.bouncycastle.org/java.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bouncy Castle</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用加密库和 JCA 提供程序，提供广泛的功能，从基本帮助程序到 PGP/SMIME 操作。</font></font></li>
+<li><a href="https://github.com/jeremylong/DependencyCheck"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DependencyCheck</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 检测项目依赖项中包含的公开披露的漏洞。</font></font></li>
+<li><a href="https://cryptomator.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cryptomator</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 云中文件的多平台、透明、客户端加密。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/hdiv/hdiv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hdiv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 运行时应用程序，可消除 OWASP Top 10 中的应用程序安全风险，包括 SQL 注入、跨站点脚本、跨站点请求伪造、数据篡改和暴力攻击。</font></font></li>
+<li><a href="https://github.com/jwtk/jjwt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jjwt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 Java 和 Android 的 JSON Web 令牌。</font></font></li>
+<li><a href="https://github.com/BastiaanJansen/jwt-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jwt-java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用流畅的 API 轻松创建和解析 JSON Web 令牌并创建自定义的 JWT 验证器。</font></font></li>
+<li><a href="https://github.com/auth0/jwks-rsa-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jwks RSA</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JSON Web 密钥集解析器。</font></font></li>
+<li><a href="https://github.com/abstractj/kalium"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kalium</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 网络和密码学 (NaCl) 库的绑定。</font></font></li>
+<li><a href="https://www.keycloak.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Keycloak</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于浏览器应用程序和 RESTful Web 服务的集成 SSO 和 IDM。</font></font></li>
+<li><a href="https://github.com/square/keywhiz"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Keywhiz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于分发和管理秘密的系统。</font></font></li>
+<li><a href="https://github.com/GoSimpleLLC/nbvcxz"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nbvcxz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高级密码强度估计。</font></font></li>
+<li><a href="http://oaccframework.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OACC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供基于权限的授权服务。</font></font></li>
+<li><a href="https://github.com/OpenIdentityPlatform/OpenAM"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenAM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 访问管理解决方案，包括身份验证、SSO、授权、联合、权利和 Web 服务安全。</font></font></li>
+<li><a href="https://github.com/BastiaanJansen/OTP-Java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OTP-Java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 根据 RFC 4226 (HOTP) 和 RFC 6238 (TOTP) 的一次性密码生成器库。</font></font></li>
+<li><a href="https://github.com/pac4j/pac4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pac4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 安全引擎。</font></font></li>
+<li><a href="http://www.passay.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Passay</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过根据可配置的规则集验证候选密码来实施密码策略。</font></font></li>
+<li><a href="https://github.com/Password4j/password4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Password4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用户友好的加密库，支持 Argon2、Bcrypt、Scrypt、PBKDF2 和各种其他加密哈希函数。</font></font></li>
+<li><a href="https://github.com/tersesystems/securitybuilder"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SecurityBuilder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于 JCA 和 JSSE 类，尤其是 X.509 证书的 Fluent Builder API。</font></font></li>
+<li><a href="https://github.com/Hakky54/sslcontext-kickstart"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SSLContext-Kickstart</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于使用 SSL/TLS 配置 HTTP 客户端的高级 SSL 上下文构建器。</font></font></li>
+<li><a href="https://github.com/cossacklabs/themis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Themis</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 多平台高级加密库提供易于使用的加密来保护敏感数据：前向保密的安全消息传递、安全数据存储 (AES256GCM)；</font><font style="vertical-align: inherit;">适合构建端到端加密应用程序。</font></font></li>
+<li><a href="https://github.com/google/tink"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tink</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为常见的加密任务提供简单且防误用的 API。</font></font></li>
+<li><a href="https://www.topaz.sh" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topaz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 支持 RBAC、ABAC 和 ReBAC 的应用程序细粒度授权。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-serialization" class="anchor" aria-hidden="true" tabindex="-1" href="#serialization"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">序列化</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高效处理序列化的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/google/flatbuffers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FlatBuffers</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 内存高效的序列化库，可以访问序列化数据而无需解包和解析它。</font></font></li>
+<li><a href="https://github.com/RuedigerMoeller/fast-serialization"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FST</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JDK 兼容的高性能对象图序列化。</font></font></li>
+<li><a href="https://github.com/alipay/fury"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fury</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 由 JIT 和零拷贝支持的极快的对象图序列化框架。</font></font></li>
+<li><a href="https://github.com/EsotericSoftware/kryo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kryo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速高效的对象图序列化框架。</font></font></li>
+<li><a href="https://github.com/msgpack/msgpack-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MessagePack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 高效的二进制序列化格式。</font></font></li>
+<li><a href="https://github.com/marcospassos/java-php-serializer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PHP Serializer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以 PHP 序列化格式序列化对象。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-server" class="anchor" aria-hidden="true" tabindex="-1" href="#server"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">专门用于部署应用程序的服务器。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://tomcat.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Tomcat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Servlet 和 JSP 的强大、全能服务器。</font></font></li>
+<li><a href="https://tomee.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache TomEE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Tomcat 加 Java EE。</font></font></li>
+<li><a href="https://www.eclipse.org/jetty/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jetty</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供 Web 服务器和 javax.servlet 容器，并支持 HTTP/2、WebSocket、OSGi、JMX、JNDI、JAAS 和许多其他集成。</font></font></li>
+<li><a href="https://github.com/NanoHttpd/nanohttpd"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nanohttpd</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 微型、易于嵌入的 HTTP 服务器。</font></font></li>
+<li><a href="https://www.wildfly.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WildFly</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 以前称为 JBoss，由 Red Hat 开发，具有广泛的 Java EE 支持。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.1）</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-template-engine" class="anchor" aria-hidden="true" tabindex="-1" href="#template-engine"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模板引擎</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">替换模板中的表达式的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://freemarker.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Freemarker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于模板和更改数据生成文本输出（HTML 网页、电子邮件、配置文件、源代码等）的库。</font></font></li>
+<li><a href="https://jknack.github.io/handlebars.java/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Handlebars.java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 无逻辑和语义的 Mustache 模板。</font></font></li>
+<li><a href="https://github.com/neuland/jade4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jade4J</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Pug（以前称为 Jade）的实现。</font></font></li>
+<li><a href="https://github.com/verhas/jamal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jamal</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 嵌入到 Maven/JavaDoc 中的可扩展模板引擎，支持多种扩展（Groovy、Ruby、JavaScript、JShell、PlantUml）并支持片段处理。</font></font></li>
+<li><a href="https://github.com/jstachio/jstachio"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jstachio</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Typesafe Mustache 模板引擎。</font></font></li>
+<li><a href="https://github.com/casid/jte"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jte</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 编译为类，并使用简单的语法和多种功能，使开发更容易，并提供快速执行和较小的占用空间。</font></font></li>
+<li><a href="https://github.com/jtwig/jtwig"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jtwig</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 模块化、可配置且经过充分测试的模板引擎。</font></font></li>
+<li><a href="https://pebbletemplates.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pebble</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受到 Twig 的启发，以其继承功能和易于阅读的语法而与众不同。</font><font style="vertical-align: inherit;">它带有内置的自动转义功能以确保安全，并且包括对国际化的集成支持。</font></font></li>
+<li><a href="https://github.com/fizzed/rocker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rocker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 优化、内存高效且快速的模板引擎，可生成静态类型的普通对象。</font></font></li>
+<li><a href="https://github.com/antlr/stringtemplate4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">StringTemplate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于生成源代码、网页、电子邮件或任何其他格式化文本输出的模板引擎。</font></font></li>
+<li><a href="https://www.thymeleaf.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thymeleaf</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 旨在替代 JSP，适用于 XML 文件。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-testing" class="anchor" aria-hidden="true" tabindex="-1" href="#testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从模型到视图进行测试的工具。</font></font></em></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-asynchronous" class="anchor" aria-hidden="true" tabindex="-1" href="#asynchronous"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">异步</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简化异步服务测试的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/awaitility/awaitility"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Awaitility</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于同步异步操作的 DSL。</font></font></li>
+<li><a href="https://github.com/jhalterman/concurrentunit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ConcurrentUnit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于测试多线程和异步应用程序的工具包。</font></font></li>
+<li><a href="https://greenmail-mail-test.github.io/greenmail/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GreenMail</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于集成测试的内存电子邮件服务器。</font><font style="vertical-align: inherit;">支持 SMTP、POP3 和 IMAP（包括 SSL）。</font><font style="vertical-align: inherit;">（仅限 GPL-2.0）</font></font></li>
+<li><a href="https://github.com/SpectoLabs/hoverfly-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hoverfly Java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Hoverfly 的本机绑定，它是一个允许您模拟 HTTP 服务的代理。</font></font></li>
+<li><a href="https://github.com/intuit/karate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Karate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 结合了 API 测试自动化、模拟和性能测试的 DSL，使测试 REST/HTTP 服务变得容易。</font></font></li>
+<li><a href="https://github.com/rest-assured/rest-assured"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REST Assured</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于轻松测试 REST/HTTP 服务的 DSL。</font></font></li>
+<li><a href="https://github.com/testingisdocumenting/webtau"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WebTau</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用一致的匹配器和概念集跨 REST-API、Graph QL、浏览器、数据库、CLI 和业务逻辑进行测试。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-bdd" class="anchor" aria-hidden="true" tabindex="-1" href="#bdd"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BDD</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软件开发过程的测试源自 TDD，并深受 DDD 和 OOAD 的影响。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/cucumber/cucumber-jvm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cucumber</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供一种以客户可以理解的简单语言描述功能的方法。</font></font></li>
+<li><a href="https://github.com/ctco/cukes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cukes-REST</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用 Cucumber 进行 REST 服务测试的 Gherkin 步骤的集合.</font></font></li>
+<li><a href="https://github.com/j8spec/j8spec"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">J8Spec</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 遵循类似 Jasmine 的语法。</font></font></li>
+<li><a href="https://jbehave.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JBehave</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 描述故事的可广泛配置的框架。</font></font></li>
+<li><a href="http://jgiven.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JGiven</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供流畅的 API，允许更简单的组合。</font></font></li>
+<li><a href="https://github.com/RichardWarburton/lambda-behave"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lamdba Behave</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 旨在提供一个流畅的 API，用读起来像简单英语的长描述性句子编写测试。</font></font></li>
+<li><a href="https://github.com/serenity-bdd/serenity-core"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Serenity BDD</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自动验收测试和报告库，可与 Cucumber、JBehave 和 JUnit 配合使用，使编写高质量的可执行规范变得更加容易。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-fixtures" class="anchor" aria-hidden="true" tabindex="-1" href="#fixtures"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">固定装置</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与随机数据的创建和处理相关的一切。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/keepcosmos/beanmother"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beanmother</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 YAML 装置设置 bean。</font></font></li>
+<li><a href="https://github.com/datafaker-net/datafaker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Datafaker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 Java Faker 分叉的现代假数据生成器。</font></font></li>
+<li><a href="https://github.com/six2six/fixture-factory"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fixture Factory</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从模板生成假对象。</font></font></li>
+<li><a href="https://github.com/Devskiller/jfairy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jFairy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 假数据生成器。</font></font></li>
+<li><a href="https://github.com/instancio/instancio"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Instancio</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过生成完全填充的、可重现的对象来自动化单元测试中的数据设置。</font><font style="vertical-align: inherit;">包括 JUnit 5 扩展。</font></font></li>
+<li><a href="https://github.com/randomizedtesting/randomizedtesting"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">随机测试</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- JUnit 测试运行程序和插件，用于以伪随机性运行 JUnit 测试。</font></font></li>
+<li><a href="https://github.com/DiUS/java-faker"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java Faker</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Ruby 假数据生成器的端口。</font></font></li>
+<li><a href="https://github.com/nomemory/mockneat"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mockneat</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 另一个假数据生成器。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-frameworks" class="anchor" aria-hidden="true" tabindex="-1" href="#frameworks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构架</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供针对特定用例运行测试的环境。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/TNG/ArchUnit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ArchUnit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于指定和断言架构规则的测试库。</font></font></li>
+<li><a href="http://jmeter.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache JMeter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 功能测试和性能测量。</font></font></li>
+<li><a href="http://arquillian.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arquillian</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java EE 容器的集成和功能测试平台。</font></font></li>
+<li><a href="https://citrusframework.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Citrus</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 专注于客户端和服务器端消息传递的集成测试框架。</font></font></li>
+<li><a href="https://gatling.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ga特林</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 负载测试工具，旨在易于使用、可维护性和高性能。</font></font></li>
+<li><a href="https://junit.org/junit5/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JUnit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通用测试框架。</font></font></li>
+<li><a href="https://jqwik.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jqwik</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 JUnit 5 构建的基于属性的测试引擎。</font></font></li>
+<li><a href="https://github.com/DiUS/pact-jvm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pact JVM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 消费者驱动的合约测试。</font></font></li>
+<li><a href="http://pitest.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PIT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 快速突变测试框架，用于评估现有 JUnit 或 TestNG 测试套件的故障检测能力。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-matchers" class="anchor" aria-hidden="true" tabindex="-1" href="#matchers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">匹配器</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供自定义匹配器的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://joel-costigliola.github.io/assertj/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AssertJ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提高可读性的流畅断言。</font></font></li>
+<li><a href="http://hamcrest.org/JavaHamcrest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hamcrest</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可以组合起来创建灵活的意图表达的匹配器。</font></font></li>
+<li><a href="http://jsonassert.skyscreamer.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JSONAssert</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化 JSON 字符串的测试。</font></font></li>
+<li><a href="https://github.com/lukas-krecan/JsonUnit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JsonUnit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化测试中 JSON 比较的库。</font></font></li>
+<li><a href="https://truth.dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Truth</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Google 流畅的断言和命题框架。</font></font></li>
+<li><a href="https://github.com/xmlunit/xmlunit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XMLUnit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简化 XML 输出的测试。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-miscellaneous-1" class="anchor" aria-hidden="true" tabindex="-1" href="#miscellaneous-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">各种各样的</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他与测试相关的内容。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/Hakky54/console-captor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ConsoleCaptor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 捕获控制台输出以进行单元测试。</font></font></li>
+<li><a href="https://github.com/TNG/junit-dataprovider"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">junit-dataprovider</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - JUnit 的类似于 TestNG 的数据提供程序/运行程序。</font></font></li>
+<li><a href="https://github.com/Hakky54/log-captor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LogCaptor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 捕获日志条目以进行单元测试。</font></font></li>
+<li><a href="https://github.com/dm-drogeriemarkt/log-capture"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">log-capture</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 捕获日志条目并为单元和集成测试提供断言。</font></font></li>
+<li><a href="https://github.com/MutabilityDetector/MutabilityDetector"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可变性检测器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 报告给定类的实例是否不可变。</font></font></li>
+<li><a href="https://github.com/nidi3/raml-tester"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">raml-tester</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 测试请求/响应是否与给定的 RAML 定义匹配。</font></font></li>
+<li><a href="https://github.com/testcontainers/testcontainers-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TestContainers</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供通用数据库、Selenium Web 浏览器或可以在 Docker 容器中运行的任何其他内容的一次性实例。</font></font></li>
+<li><a href="https://www.pojo.pl" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pojo-tester</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自动对基本 POJO 方法执行测试。</font><font style="vertical-align: inherit;">（仅限 LGPL-3.0）</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-mocking" class="anchor" aria-hidden="true" tabindex="-1" href="#mocking"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嘲笑</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟协作者以帮助测试单个隔离单元的工具。</font></font></em></p>
+<ul dir="auto">
+<li><a href="http://jmockit.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMockit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 集成测试、API 模拟和伪造以及代码覆盖率。</font></font></li>
+<li><a href="https://github.com/mockito/mockito"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mockito</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 模拟框架，可让您使用干净简单的 API 编写测试。</font></font></li>
+<li><a href="https://www.mock-server.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MockServer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许模拟与 HTTPS 集成的系统。</font></font></li>
+<li><a href="https://github.com/dreamhead/moco"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Moco</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于存根和模拟的简洁 Web 服务。</font></font></li>
+<li><a href="https://github.com/powermock/powermock"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PowerMock</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 模拟静态方法、构造函数、最终类和方法、私有方法以及静态初始值设定项的删除。</font></font></li>
+<li><a href="http://wiremock.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WireMock</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 存根和模拟 Web 服务。</font></font></li>
+<li><a href="https://github.com/easymock/easymock"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EasyMock</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - EasyMock 是一个 Java 库，它提供了一种在单元测试中使用 Mock 对象的简单方法。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-utility" class="anchor" aria-hidden="true" tabindex="-1" href="#utility"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">公用事业</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供通用实用功能的库。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/alibaba/arthas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arthas</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 允许在不修改代码或重新启动服务器的情况下解决应用程序的生产问题。</font></font></li>
+<li><a href="https://github.com/vladimir-bukhtoyarov/bucket4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bucket4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于令牌桶算法的速率限制库。</font></font></li>
+<li><a href="https://github.com/yegor256/cactoos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cactoos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 面向对象原语的集合。</font></font></li>
+<li><a href="https://github.com/cleopatra27/chocotea"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chocotea</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从 java 代码生成邮递员集合、环境和集成测试。</font></font></li>
+<li><a href="http://www.crashub.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRaSH</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 为运行 CRaSH 的 JVM 提供 shell。</font><font style="vertical-align: inherit;">由 Spring Boot 和其他人使用。</font><font style="vertical-align: inherit;">（LGPL-2.1 或更高版本）</font></font></li>
+<li><a href="https://github.com/PatMartin/Dex"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dex</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java/JavaFX 工具，具有强大的 ETL 和数据可视化功能。</font></font></li>
+<li><a href="https://github.com/marianobarrios/dregex"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dregex</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用确定性有限自动机的正则表达式引擎。</font><font style="vertical-align: inherit;">它支持一些 Perl 风格的功能，但保留了线性匹配时间，并且还提供集合操作。</font></font></li>
+<li><a href="https://github.com/embulk/embulk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Embulk</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 批量数据加载器，有助于在各种数据库、存储、文件格式和云服务之间传输数据。</font></font></li>
+<li><a href="https://github.com/vorburger/ch.vorburger.fswatch"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fswatch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于监视目录文件系统更改的微型库，简化了 java.nio.file.WatchService。</font></font></li>
+<li><a href="https://github.com/gephi/gephi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gephi</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于可视化和操作大型图形网络的跨平台。</font><font style="vertical-align: inherit;">（仅限 GPL-3.0）</font></font></li>
+<li><a href="https://github.com/google/guava"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guava</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 集合、缓存、原语支持、并发库、通用注释、字符串处理、I/O 等。</font></font></li>
+<li><a href="https://jade.tilab.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JADE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建和调试多代理系统的框架和环境。</font><font style="vertical-align: inherit;">（仅限 LGPL-2.0）</font></font></li>
+<li><a href="https://java-diff-utils.github.io/java-diff-utils/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java Diff Utils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于文本或数据比较和修补的实用程序。</font></font></li>
+<li><a href="https://github.com/VerbalExpressions/JavaVerbalExpressions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaVerbalExpressions</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 帮助构建困难的正则表达式的库。</font></font></li>
+<li><a href="https://www.eclipse.org/jgit/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JGit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 实现 Git 版本控制系统的轻量级纯 Java 库。</font></font></li>
+<li><a href="https://github.com/minio/minio-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">minio-java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供简单的 API 来访问任何与 Amazon S3 兼容的对象存储服务器。</font></font></li>
+<li><a href="https://protege.stanford.edu" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Protégé</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 提供本体编辑器和构建基于知识的系统的框架。</font></font></li>
+<li><a href="https://github.com/semver4j/semver4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Semver4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级库，可帮助您处理不同模式的语义版本控制。</font></font></li>
+<li><a href="https://github.com/javadev/underscore-java"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Underscore-java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Underscore.js 函数的端口。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-version-managers" class="anchor" aria-hidden="true" tabindex="-1" href="#version-managers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版本管理器</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">帮助创建开发 shell 环境并在不同 Java 版本之间切换的实用程序。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/shyiko/jabba"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jabba</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受 nvm 启发的 Java 版本管理器. </font><font style="vertical-align: inherit;">支持 macOS、Linux 和 Windows。</font></font></li>
+<li><a href="https://github.com/jenv/jenv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jenv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受 rbenv 启发的 Java 版本管理器. </font><font style="vertical-align: inherit;">可以全局配置或按项目配置。</font><font style="vertical-align: inherit;">在 Debian 和 macOS 上测试。</font></font></li>
+<li><a href="https://github.com/sdkman/sdkman-cli"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SDKMan</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 受 RVM 和 rbenv 启发的 Java 版本管理器。</font><font style="vertical-align: inherit;">支持基于 UNIX 的平台和 Windows。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-web-crawling" class="anchor" aria-hidden="true" tabindex="-1" href="#web-crawling"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网络爬行</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分析网站内容的图书馆。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://nutch.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Nutch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 适用于生产环境的高度可扩展、高度可伸缩的网络爬虫。</font></font></li>
+<li><a href="https://github.com/yasserg/crawler4j"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crawler4j</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 简单且轻量级的网络爬虫。</font></font></li>
+<li><a href="https://jsoup.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jsoup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 抓取、解析、操作和清理 HTML。</font></font></li>
+<li><a href="http://stormcrawler.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">StormCrawler</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于构建低延迟且可扩展的网络爬虫的 SDK。</font></font></li>
+<li><a href="https://github.com/code4craft/webmagic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">webmagic</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可扩展的爬虫，具有下载、url 管理、内容提取和持久性。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-web-frameworks" class="anchor" aria-hidden="true" tabindex="-1" href="#web-frameworks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网络框架</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">处理 Web 应用程序各层之间通信的框架。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://activej.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ActiveJ</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从头开始&ZeroWidthSpace;&ZeroWidthSpace;构建的轻量级异步框架，用于开发高性能 Web 应用程序。</font></font></li>
+<li><a href="https://tapestry.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Tapestry</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 面向组件的框架，用于创建动态、健壮、高度可扩展的 Web 应用程序。</font></font></li>
+<li><a href="https://wicket.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Wicket</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 类似于 Tapestry 的基于组件的 Web 应用程序框架，具有状态 GUI。</font></font></li>
+<li><a href="https://github.com/lets-blade/blade"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blade</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 轻量级、模块化框架，旨在优雅和简单。</font></font></li>
+<li><a href="https://bootique.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootique</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可运行应用程序的最小固执己见的框架。</font></font></li>
+<li><a href="http://www.fireflysource.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Firefly</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于快速开发高性能 Web 应用程序的异步框架。</font></font></li>
+<li><a href="https://javalin.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javalin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 Web 应用程序的微框架。</font></font></li>
+<li><a href="http://www.jooby.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jooby</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 可扩展、快速和模块化的微框架，提供多种编程模型。</font></font></li>
+<li><a href="http://www.ninjaframework.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ninja</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 全栈 Web 框架。</font></font></li>
+<li><a href="http://www.pippo.ro" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pippo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 小型、高度模块化、类似 Sinatra 的框架。</font></font></li>
+<li><a href="https://www.playframework.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Play</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 基于 Akka 构建，它为 Java 和 Scala 中的高度可扩展应用程序提供可预测且最小的资源消耗（CPU、内存、线程）。</font></font></li>
+<li><a href="https://www.primefaces.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PrimeFaces</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 具有免费和商业/支持版本以及前端组件的 JSF 框架。</font></font></li>
+<li><a href="https://ratpack.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ratpack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 一组库，可促进快速、高效、可演进且经过良好测试的 HTTP 应用程序。</font></font></li>
+<li><a href="https://github.com/yegor256/takes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Takes</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 围绕真正的面向对象编程和不变性概念构建的固执己见的 Web 框架。</font></font></li>
+<li><a href="https://vaadin.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vaadin</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 使用标准 Web 组件的事件驱动框架。</font><font style="vertical-align: inherit;">服务器端架构，客户端采用 Ajax。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-workflow-orchestration-engines" class="anchor" aria-hidden="true" tabindex="-1" href="#workflow-orchestration-engines"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作流编排引擎</font></font></h3>
+<ul dir="auto">
+<li><a href="https://cadenceworkflow.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadence</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Uber 的有状态代码平台。</font></font></li>
+<li><a href="https://github.com/flowable/flowable-engine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">flowable</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 紧凑高效的工作流程和业务流程管理平台。</font></font></li>
+<li><a href="https://temporal.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temporal</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 微服务编排平台，从 Cadence 分叉，但基于 gRPC。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资源</font></font></h2>
+<h3 tabindex="-1" dir="auto"><a id="user-content-related-awesome-lists" class="anchor" aria-hidden="true" tabindex="-1" href="#related-awesome-lists"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">相关精彩列表</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与 Java 和 JVM 生态系统相关的精彩列表。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://github.com/gunnarmorling/awesome-annotation-processing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的注释处理</font></font></a></li>
+<li><a href="https://github.com/neomatrix369/awesome-graal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的格拉尔</font></font></a></li>
+<li><a href="https://github.com/ksoichiro/awesome-gradle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的 Gradle 插件</font></font></a></li>
+<li><a href="https://github.com/mhrimaz/AwesomeJavaFX"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的JavaFX</font></font></a></li>
+<li><a href="https://github.com/deephacks/awesome-jvm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的 JVM</font></font></a></li>
+<li><a href="https://github.com/mfornos/awesome-microservices"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的微服务</font></font></a></li>
+<li><a href="https://github.com/marmelab/awesome-rest"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的休息</font></font></a></li>
+<li><a href="https://github.com/christian-bromann/awesome-selenium"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很棒的硒</font></font></a></li>
+<li><a href="https://github.com/ciandcd/awesome-ciandcd"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查安德</font></font></a></li>
+<li><a href="https://github.com/Vedenin/useful-java-links"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有用的 Java 链接</font></font></a></li>
+<li><a href="https://github.com/code-review-checklists/java-concurrency"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 并发检查表</font></font></a></li>
+<li><a href="https://github.com/s4kibs4mi/java-developer-roadmap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 开发者路线图</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-communities" class="anchor" aria-hidden="true" tabindex="-1" href="#communities"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">积极讨论。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.reddit.com/r/java/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">r/java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 社区的 Reddit 子版块。</font></font></li>
+<li><a href="https://stackoverflow.com/questions/tagged/java" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stack Overflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 问答平台。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-frontends" class="anchor" aria-hidden="true" tabindex="-1" href="#frontends"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">前端</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供此列表前端的网站。</font><font style="vertical-align: inherit;">请注意，不会有官方网站。</font><font style="vertical-align: inherit;">我们不与特定网站关联，每个人都可以创建一个网站。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://java.libhunt.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">java.libhunt.com</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-influential-books" class="anchor" aria-hidden="true" tabindex="-1" href="#influential-books"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有影响力的书籍</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产生了巨大影响并且仍然值得一读的书籍。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.amazon.com/Core-Java-I-Fundamentals-10th/dp/0134177304" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">核心 Java 第 I 卷——基础知识</font></font></a></li>
+<li><a href="https://www.amazon.com/Core-Java-II-Advanced-Features-10th/dp/0134177290" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">核心 Java，第二卷——高级特性</font></font></a></li>
+<li><a href="https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有效的Java（第三版）</font></font></a></li>
+<li><a href="https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 并发实践</font></font></a></li>
+<li><a href="https://www.amazon.com/Thinking-Java-Edition-Bruce-Eckel/dp/0131872486" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用Java思考</font></font></a></li>
+<li><a href="https://www.oreilly.com/library/view/head-first-java/9781492091646/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Head First Java（第三版）</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-podcasts-and-screencasts" class="anchor" aria-hidden="true" tabindex="-1" href="#podcasts-and-screencasts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">播客和截屏视频</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编程时可以看或听的东西。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://twitter.com/debugagent/status/1491075324805001219" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">140 Second Ducklings</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Twitter 上的短视频深入解释 Java 调试。</font></font></li>
+<li><a href="https://bootifulpodcast.fm" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一个丰富的播客</font></font></a></li>
+<li><a href="https://foojay.io/today/category/podcast/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">富杰播客</font></font></a></li>
+<li><a href="https://inside.java/podcast" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 内部</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（官方）</font></font></li>
+<li><a href="http://www.javaoffheap.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 堆外</font></font></a></li>
+<li><a href="http://www.javaposse.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java Posse</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自 2015 年 2 月起停产。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-people" class="anchor" aria-hidden="true" tabindex="-1" href="#people"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">人们</font></font></h3>
+<h4 tabindex="-1" dir="auto"><a id="user-content-twitter" class="anchor" aria-hidden="true" tabindex="-1" href="#twitter"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">推特</font></font></h4>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要关注的活跃帐户。</font><font style="vertical-align: inherit;">来自 Twitter 的描述。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://twitter.com/AdamBien" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adam Bien</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 自由作者、JavaOne Rockstar 演讲者、顾问、Java Champion。</font></font></li>
+<li><a href="https://twitter.com/shipilev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aleksey Shipilëv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 性能极客、基准测试沙皇、并发错误猎人。</font></font></li>
+<li><a href="https://twitter.com/agoncal" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Antonio Goncalves</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 冠军、JUG 领导者、Devoxx 法国、Java EE 6/7、JCP、作者。</font></font></li>
+<li><a href="https://twitter.com/arungupta" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arun Gupta</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java Champion、JavaOne Rockstar、JUG Leader、Devoxx4Kids-er、Couchbase 开发人员宣传副总裁。</font></font></li>
+<li><a href="https://twitter.com/BrianGoetz" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Brian Goetz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Oracle 的 Java 语言架构师。</font></font></li>
+<li><a href="https://twitter.com/brunoborges" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bruno Borges</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Oracle 产品经理/Java 运动员。</font></font></li>
+<li><a href="https://twitter.com/noctarius2k" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chris Engelbert</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - TimescaleDB 的开源爱好者、演讲者、开发人员、开发人员倡导者。</font></font></li>
+<li><a href="https://twitter.com/crichardson" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chris Richardson</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 软件架构师、顾问和连续创业者、Java Champion、JavaOne Rock Star、*POJOs in Action- 作者。</font></font></li>
+<li><a href="https://twitter.com/edburns" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ed Burns</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Oracle 技术人员顾问成员。</font></font></li>
+<li><a href="https://twitter.com/baeldung" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eugen Paraschiv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Spring 安全课程的作者。</font></font></li>
+<li><a href="https://twitter.com/heinzkabutz" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Heinz Kabutz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java Champion、演讲者、The Java Specialists' Newsletter 的作者、并发性能专家。</font></font></li>
+<li><a href="https://twitter.com/holly_cummins" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Holly Cummins</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - IBM 伦敦 Bluemix Garage 的技术主管、Java Champion、开发人员、作者、JavaOne 明星。</font></font></li>
+<li><a href="https://twitter.com/JavaFXpert" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">James Weaver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java/JavaFX/IoT 开发人员、作者和演讲者。</font></font></li>
+<li><a href="https://twitter.com/Java_EE" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java EE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java EE 官方 Twitter 帐户。</font></font></li>
+<li><a href="https://twitter.com/Oraclejavamag" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 杂志</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Java 杂志官方帐户。</font></font></li>
+<li><a href="https://twitter.com/java" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 官方 Java Twitter 帐户。</font></font></li>
+<li><a href="https://twitter.com/javinpaul" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javin Paul</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 著名的 Java 博主。</font></font></li>
+<li><a href="https://twitter.com/starbuxman" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Josh Long</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Pivotal 的 Spring 倡导者，O'Reilly 的 Cloud Native Java 和 Building Microservices with Spring Boot、JavaOne Rock Star 的作者。</font></font></li>
+<li><a href="https://twitter.com/lukaseder" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lukas Eder</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 冠军、演讲者、Data Geekery (jOOQ) 创始人兼首席执行官。</font></font></li>
+<li><a href="https://twitter.com/theNeomatrix369" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mani Sarkar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 冠军、通晓多种语言、参与 @graalvm、AI/ML/DL、数据科学、开发者社区、演讲者和博主的软件工匠。</font><font style="vertical-align: inherit;">像这样的几个很棒的列表的创建者。</font></font></li>
+<li><a href="https://twitter.com/mariofusco" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mario Fusco</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - RedHatter、JUG 协调员、经常演讲者和作家。</font></font></li>
+<li><a href="https://twitter.com/MkHeck" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mark Heckler</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Pivotal 首席技术专家和开发者倡导者、会议发言人、出版作家和 Java 冠军，专注于物联网和云。</font></font></li>
+<li><a href="https://twitter.com/mreinhold" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mark Reinhold</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Oracle Java 平台组首席架构师。</font></font></li>
+<li><a href="https://twitter.com/myfear" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Markus Eisele</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java EE 布道者，红帽。</font></font></li>
+<li><a href="https://twitter.com/karianna" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Martijn Verburg</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 伦敦 JUG 联合领导者、演讲者、作家、Java Champion 等等。</font></font></li>
+<li><a href="https://twitter.com/mjpt777" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马丁·汤普森</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 帕斯蒂面对表演黑帮。</font></font></li>
+<li><a href="https://twitter.com/mon_beck" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Monica Beckwith</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 性能顾问，JavaOne Rock Star。</font></font></li>
+<li><a href="https://twitter.com/OpenJDK" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenJDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 官方 OpenJDK 帐户。</font></font></li>
+<li><a href="https://twitter.com/PeterLawrey" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Peter Lawrey</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Peter Lawrey，Java 性能专家。</font></font></li>
+<li><a href="https://twitter.com/randyshoup" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Randy Shoup</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Stitch Fix 工程副总裁、演讲者、JavaOne Rock Star。</font></font></li>
+<li><a href="https://twitter.com/reza_rahman" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reza Rahman</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java EE/GlassFish/WebLogic 布道者、作家、演讲者、开源黑客。</font></font></li>
+<li><a href="https://twitter.com/Sander_Mak" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sander Mak</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java Champion，作者。</font></font></li>
+<li><a href="https://twitter.com/sjmaple" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Simon Maple</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java Champion、VirtualJUG 创始人、LJC 领导者、RebelLabs 作者。</font></font></li>
+<li><a href="https://twitter.com/spencerbgibb" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spencer Gibb</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 软件工程师、爸爸、极客、Spring Cloud Core @pivotal 的联合创始人和负责人。</font></font></li>
+<li><a href="https://twitter.com/jodastephen" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stephen Colebourne</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 冠军、演讲者。</font></font></li>
+<li><a href="https://twitter.com/trisha_gee" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trisha Gee</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Java 冠军和演讲者。</font></font></li>
+<li><a href="https://twitter.com/venkat_s" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Venkat Subramaniam</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 作者、休斯顿大学教授、Microsoft MVP 奖获得者、JavaOne 摇滚明星、Java 冠军。</font></font></li>
+<li><a href="https://twitter.com/vlad_mihalcea" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vlad Mihalcea</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 从事 Hypersistence Optimizer 工作的 Java Champion，数据库爱好者，《High-Performance Java Persistence》一书的作者。</font></font></li>
+</ul>
+<h4 tabindex="-1" dir="auto"><a id="user-content-other-1" class="anchor" aria-hidden="true" tabindex="-1" href="#other-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他</font></font></h4>
+<ul dir="auto">
+<li><a href="https://apexapps.oracle.com/pls/apex/f?p=119297:3::::::" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开创者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- Oracle ACE、开创者大使和 Java 冠军。</font></font></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-websites" class="anchor" aria-hidden="true" tabindex="-1" href="#websites"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></h3>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可供阅读的网站。</font></font></em></p>
+<ul dir="auto">
+<li><a href="https://www.baeldung.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">拜尔东</font></font></a></li>
+<li><a href="https://dzone.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">迪区</font></font></a></li>
+<li><a href="https://foojay.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">foojay.io</font></font></a></li>
+<li><a href="https://google.github.io/styleguide/javaguide.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">谷歌Java风格</font></font></a></li>
+<li><a href="https://www.infoq.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">信息Q</font></font></a></li>
+<li><a href="https://algs4.cs.princeton.edu/code" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 算法和客户端</font></font></a></li>
+<li><a href="https://blog.jooq.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java、SQL 和 jOOQ</font></font></a></li>
+<li><a href="https://community.oracle.com/community/java" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java.net</font></font></a></li>
+<li><a href="https://dzone.com/java-jdk-development-tutorials-tools-news" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爪哇大厅</font></font></a></li>
+<li><a href="https://www.javaworld.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java世界</font></font></a></li>
+<li><a href="https://jaxenter.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JAX输入法</font></font></a></li>
+<li><a href="https://zeroturnaround.com/rebellabs" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">反叛实验室</font></font></a></li>
+<li><a href="https://blog.overops.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OverOps 博客</font></font></a></li>
+<li><a href="http://www.theserverside.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TheServerSide.com</font></font></a></li>
+<li><a href="https://vanilla-java.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">香草爪哇</font></font></a></li>
+<li><a href="https://www.voxxed.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">沃克塞德</font></font></a></li>
+<li><a href="https://discu.eu/weekly/java/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爪哇周刊</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">非常欢迎您的贡献！</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请查看</font></font><a href="https://github.com/akullpp/awesome-java/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南和</font></font><a href="https://github.com/akullpp/awesome-java-lint"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">验证工具</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</article></div>
